@@ -13,5 +13,10 @@
 <p><%= @recipe.cooking_time %> mins</p>
 <p>Serves <%= @recipe.serves %></p>
 
+<% @recipe.recipe_ingredients.each do |ri| %>
+  <p><%= ri.amount %> <%= ri.ingredient.name %></p>
+<% end %>
+
+
 
 <%= link_to "back", recipes_path %>
