@@ -15,13 +15,10 @@ class RecipeIngredientsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
-
   def destroy
+    @recipe_ingredient = RecipeIngredient.find(params[:id])
+    @recipe_ingredient.destroy
+    redirect_to recipe_path(@recipe_ingredient.recipe)
   end
 
   private
