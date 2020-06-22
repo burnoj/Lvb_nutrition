@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'books', to: 'pages#books'
   get 'contact', to: 'pages#contact'
-  get 'recipes_admin', to: 'admin#recipes_admin'
+
+  get 'admin', to: 'admin_recipes#index'
+  get 'admin/:id', to: 'admin_recipes#show', as: "admin_recipe"
 
   resources :recipes
 
