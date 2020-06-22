@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'books', to: 'pages#books'
   get 'contact', to: 'pages#contact'
 
-  resources :recipes
+  resources :recipes do
+    resources :recipe_ingredients
+  end
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
