@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
 
   resources :recipes do
-    resources :recipe_ingredients
+    resources :recipe_ingredients, except: [:index, :show]
   end
 
 

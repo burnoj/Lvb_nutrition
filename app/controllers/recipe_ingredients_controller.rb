@@ -1,11 +1,7 @@
 class RecipeIngredientsController < ApplicationController
-  def index
-  end
-
-  def show
-  end
-
   def new
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredient = RecipeIngredient.new
   end
 
   def create
