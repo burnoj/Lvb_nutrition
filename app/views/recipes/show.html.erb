@@ -1,1 +1,8 @@
-show.html.erb
+<h3><%= @recipe.name %></h3>
+<p><%= @recipe.description %></p>
+<p><%= @recipe.instructions %></p>
+<p><%= @recipe.dietary_info %></p>
+<p><%= @recipe.cooking_time %> mins</p>
+<p>Serves <%= @recipe.serves %></p>
+
+<%= link_to "back", recipes_path %>
