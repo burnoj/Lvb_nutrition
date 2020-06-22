@@ -1,8 +1,0 @@
-<h1>Admin Recipes Page</h1>
-
-<% @recipes.each do |r| %>
-  <h3><%= link_to r.name, admin_recipe_path(r) %></h3>
-  <p><%= r.dietary_info %></p>
-  <p><%= r.cooking_time %> mins</p>
-  <p>Serves <%= r.serves %></p>
-<% end %>
