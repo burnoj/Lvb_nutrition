@@ -1,5 +1,5 @@
 <%= link_to "edit", edit_recipe_path %>
-<%=  link_to "add ingredient" new_recipe_recipe_ingredient_path %>
+<%= link_to "add ingredient", new_recipe_recipe_ingredient_path(@recipe) %>
 <%= link_to "Delete recipe",
       recipe_path(@recipe),
       method: :delete,

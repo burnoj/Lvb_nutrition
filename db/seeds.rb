@@ -12,6 +12,12 @@ puts "resetting done"
 puts "seeding recipes"
 
 100.times do
+  Ingredient.create(
+    name: Faker::Food.ingredient
+  )
+end
+
+100.times do
   Recipe.create(
     name: Faker::Food.dish,
     description: Faker::Food.description,
@@ -22,5 +28,7 @@ puts "seeding recipes"
     serves: rand(1..6)
   )
 end
+
+
 
 puts "seeding done"
