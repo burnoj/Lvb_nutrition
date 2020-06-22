@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  # http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  # http_basic_authenticate_with name: "dhh", password: "secret"
 
   def index
     @recipes = Recipe.all

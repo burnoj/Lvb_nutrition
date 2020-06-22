@@ -1,4 +1,6 @@
 class RecipeIngredientsController < ApplicationController
+  http_basic_authenticate_with name: "dhh", password: "secret"
+
   def new
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_ingredient = RecipeIngredient.new
