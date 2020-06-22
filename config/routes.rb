@@ -4,10 +4,8 @@ Rails.application.routes.draw do
   get 'books', to: 'pages#books'
   get 'contact', to: 'pages#contact'
 
-  get 'admin', to: 'admin_recipes#index'
-  get 'admin/:id', to: 'admin_recipes#show', as: "admin_recipe"
-
-  resources :recipes
+  resources :recipes, only: [:index, :show]
+  resources :admin_recipes
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
