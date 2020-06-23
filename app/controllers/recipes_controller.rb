@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
-    @recipe_of_the_day = @recipes.sample
+    @recipe_of_the_day = false ||
     @recipe = @recipe_of_the_day.id
   end
 
