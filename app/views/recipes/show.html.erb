@@ -1,17 +1,18 @@
-<%= link_to "edit", edit_recipe_path %>
-<%= link_to "add ingredient", new_recipe_recipe_ingredient_path(@recipe) %>
-<%= link_to "Delete recipe",
-      recipe_path(@recipe),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
 
-
+<%= image_tag image_url(@recipe.image_url) %>
 <h3><%= @recipe.name %></h3>
 <p><%= @recipe.description %></p>
 <p><%= @recipe.instructions %></p>
 <p><%= @recipe.dietary_info %></p>
 <p><%= @recipe.cooking_time %> mins</p>
 <p>Serves <%= @recipe.serves %></p>
+
+<%= link_to "edit", edit_recipe_path %>
+<%= link_to "add ingredient", new_recipe_recipe_ingredient_path(@recipe) %>
+<%= link_to "Delete recipe",
+      recipe_path(@recipe),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
 
 <% @recipe.recipe_ingredients.each do |ri| %>
   <p><%= ri.amount %> <%= ri.ingredient.name %></p>
@@ -20,8 +21,5 @@
           method: :delete,
           data: { confirm: "Are you sure?" } %>
 <% end %>
-
-
-
 
 <%= link_to "back", recipes_path %>

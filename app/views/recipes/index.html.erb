@@ -6,9 +6,14 @@
 
 <h1>Recipes Page</h1>
 
+<h2>Recipe of the day</h2>
+<p><%= link_to @recipe_of_the_day.name, user_recipe_path(@recipe) %></p>
+<p><%= @recipe_of_the_day.description %></p>
+
 <%= link_to "new", new_recipe_path %>
 
 <% @recipes.each do |r| %>
+  <%= image_tag image_url(r.image_url) %>
   <h3><%= link_to r.name, recipe_path(r) %></h3>
   <p><%= r.dietary_info %></p>
   <p><%= r.cooking_time %> mins</p>
