@@ -13,6 +13,7 @@
 
 
 <% @recipes.each do |r| %>
+  <%= image_tag image_url(r.image_url) %>
   <h3><%= link_to r.name, user_recipe_path(r) %></h3>
   <p><%= r.dietary_info %></p>
   <p><%= r.cooking_time %> mins</p>
