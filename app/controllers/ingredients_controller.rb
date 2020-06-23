@@ -4,10 +4,9 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.find(params[:id])
     @ingredient = Ingredient.new(ingredient_params)
     if @ingredient.save
-      render :new, notice: "ingredient added"
+      redirect_to recipes_path, notice: "ingredient added"
     else
       render :new, alert: "ingredient invalid or already exists"
     end

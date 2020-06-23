@@ -10,7 +10,8 @@
 <p><%= link_to @recipe_of_the_day.name, user_recipe_path(@recipe) %></p>
 <p><%= @recipe_of_the_day.description %></p>
 
-<%= link_to "new", new_recipe_path %>
+<%= link_to "new recipe", new_recipe_path %>
+<%= link_to "new ingredient", new_ingredient_path %>
 
 <% @recipes.each do |r| %>
   <%= image_tag image_url(r.image_url) %>
