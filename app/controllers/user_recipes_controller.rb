@@ -1,5 +1,3 @@
-require "Date"
-
 class UserRecipesController < ApplicationController
   def index
     @recipes = Recipe.all
