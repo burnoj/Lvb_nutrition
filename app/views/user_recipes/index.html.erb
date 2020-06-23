@@ -1,13 +1,12 @@
 <p><%= link_to "Home", root_path %></p>
 <p><%= link_to "About", about_path %></p>
 <p><%= link_to "Books", books_path %></p>
-<p><%= link_to "Recipes", recipes_path %></p>
 <p><%= link_to "Contact", contact_path %></p>
 
 <h1>Recipes Page</h1>
 
 <h2>Recipe of the day</h2>
-<p><%= @recipe_of_the_day.name %></p>
+<p><%= link_to @recipe_of_the_day.name, user_recipe_path(@recipe) %></p>
 <p><%= @recipe_of_the_day.description %></p>
 
 
