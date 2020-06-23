@@ -1,8 +1,7 @@
 desc "randomising recipe every 24 hours (called by the Heroku scheduler add-on)"
 task randomise_recipe: :environment do
   puts "Updating recipe..."
-  @recipe_of_the_day = Recipe.all.sample
-  @recipe_of_the_day = true
+  @recipe_of_the_day = Rails.cache { Recipe.all.sample(1) }
   puts "done."
 end
 
