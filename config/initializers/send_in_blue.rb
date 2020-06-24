@@ -14,12 +14,15 @@ SibApiV3Sdk.configure do |config|
   config.api_key_prefix['partner-key'] = ENV['otto-api-partner-key']
 end
 
-api_instance = SibApiV3Sdk::AccountApi.new
+api_instance = SibApiV3Sdk::SMTPApi.new
+
+template_id = 1 # Integer | id of the template
+
 
 begin
-  #Get your account information, plan and credits details
-  result = api_instance.get_account
+  #Returns the template information
+  result = api_instance.get_smtp_template(template_id)
   p result
 rescue SibApiV3Sdk::ApiError => e
-  puts "Exception when calling AccountApi->get_account: #{e}"
+  puts "Exception when calling SMTPApi->get_smtp_template: #{e}"
 end
