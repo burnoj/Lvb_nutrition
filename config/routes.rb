@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :subscribers, only: [:new, :create]
+
   root to: 'pages#home'
   get 'about', to: 'pages#about'
   get 'books', to: 'pages#books'
