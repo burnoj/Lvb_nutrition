@@ -23,20 +23,7 @@ require("channels")
 // ----------------------------------------------------
 
 // ------------ Hamburger Menu ------------ //
-  const hamburger = document.querySelector(".hamburger")
-  const hamburgerMenu = document.querySelector(".hamburger-menu")
-  const hamburgerClose = document.querySelector(".hamburger-close")
 
-  function showMenu () {
-    hamburgerMenu.style.display="unset";
-  }
-
-  function hideMenu () {
-    hamburgerMenu.style.display="none";
-  }
-
-  hamburger.addEventListener("click", showMenu);
-  hamburgerClose.addEventListener("click", hideMenu);
 
 // External imports
 import "bootstrap";
