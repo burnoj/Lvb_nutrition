@@ -4,9 +4,10 @@ class SubscribersController < ApplicationController
   end
 
   def create
-    @subscriber = subscriber.find(subscriber_params)
+    @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
       redirect_to root_path
+      flash[:message] = "Sign up Successful"
     else
       render :new
     end
