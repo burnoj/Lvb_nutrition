@@ -6,8 +6,7 @@
 <p><%= link_to "Contact", contact_path %></p>
 
 <%= simple_form_for Subscriber.new, :as => :subscriber, :url => subscribers_path(@subscriber) do |f| %>
-<%= f.input :email %>
-<%= f.button :submit %>
+  <%= f.input :email %>
+  <%= f.button :submit %>
 <% end %>
 
-<%= flash[:message]%>
