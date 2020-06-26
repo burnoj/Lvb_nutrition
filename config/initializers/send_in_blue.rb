@@ -1,8 +1,5 @@
 # Load the Gem
 require 'sib-api-v3-sdk'
-require 'uri'
-require 'net/http'
-require 'openssl'
 
 # Setup authorization
 SibApiV3Sdk.configure do |config|
@@ -21,6 +18,10 @@ rescue SibApiV3Sdk::ApiError => e
 end
 
 # ------------ Contact import ------------ #
+require 'uri'
+require 'net/http'
+require 'openssl'
+
 url = URI("https://api.sendinblue.com/v3/contacts")
 
 http = Net::HTTP.new(url.host, url.port)
