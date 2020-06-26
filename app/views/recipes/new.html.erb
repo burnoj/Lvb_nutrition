@@ -5,5 +5,6 @@
   <%= f.input :dietary_info, collection: @types, as: :radio_buttons%>
   <%= f.input :cooking_time%>
   <%= f.input :serves, collection: 1..8 %>
+  <%= f.input :image_url %>
   <%= f.button :submit %>
 <% end %>

@@ -4,17 +4,12 @@
     <i class="fab fa-instagram"></i>
     <i class="fab fa-amazon"></i>
   </div>
-
-  <div>
-    Lucy Burney Nutrition
-  </div>
-
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-  </div>
+  <div>Lucy Burney Nutrition</div>
+  <span style="font-size:1.5em;cursor:pointer" onclick="openNav()">&#9776;</span>
 </div>
 
 <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
     <p><%= link_to "Home", root_path %></p>
     <p><%= link_to "About", about_path %></p>
@@ -25,13 +20,13 @@
 </div>
 
 <script>
-function openNav() {
-  document.getElementById("myNav").style.height = "100%";
-}
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
 
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-}
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
 </script>
 
 
