@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_152542) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "vegan"
+
   end
 
   create_table "subscribers", force: :cascade do |t|
