@@ -12,7 +12,10 @@
 <% @recipes.each do |r| %>
   <%= image_tag image_url(r.image_url) %>
   <h3><%= link_to r.name, recipe_path(r) %></h3>
-  <p><%= r.vegan %></p>
+  <p><%= "VF" if r.vegan %></p>
+  <p><%= "VeF" if r.vegetarian %></p>
+  <p><%= "DF" if r.dairy_free %></p>
+  <p><%= "GF" if r.gluten_free %></p>
   <p><%= r.cooking_time %> mins</p>
   <p>Serves <%= r.serves %></p>
 <% end %>
