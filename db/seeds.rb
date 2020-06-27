@@ -23,6 +23,9 @@ end
     instructions: Faker::Lorem.paragraphs,
     image_url: "https://source.unsplash.com/featured/?food",
     vegan: true,
+    vegetarian: true,
+    gluten_free: true,
+    dairy_free: true,
     cooking_time: cooking_times.sample,
     serves: rand(1..6)
   )
