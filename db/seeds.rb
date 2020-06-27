@@ -8,7 +8,6 @@ puts "resetting done"
 
 puts "seeding recipes"
 
-diets = ["gluten free", "vegetarian", "vegan", "dairy free"]
 cooking_times = [10, 20, 30, 40]
 
 10.times do
@@ -23,7 +22,7 @@ end
     description: Faker::Food.description,
     instructions: Faker::Lorem.paragraphs,
     image_url: "https://source.unsplash.com/featured/?food",
-    dietary_info: diets.sample,
+    vegan: true,
     cooking_time: cooking_times.sample,
     serves: rand(1..6)
   )

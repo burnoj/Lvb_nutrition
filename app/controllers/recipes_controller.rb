@@ -22,7 +22,6 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
-    @types = Recipe.select(:dietary_info).distinct.map(&:dietary_info)
   end
 
   def create
@@ -55,6 +54,6 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description, :instructions, :dietary_info, :cooking_time, :serves, :image_url)
+    params.require(:recipe).permit(:name, :description, :instructions, :vegan, :cooking_time, :serves, :image_url)
   end
 end

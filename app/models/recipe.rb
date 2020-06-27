@@ -7,6 +7,6 @@ class Recipe < ApplicationRecord
   validates :description, presence: true
   validates :description, presence: true
   validates :instructions, presence: true
-  validates :dietary_info, presence: true
+  validates :vegan, presence: true
   validates :cooking_time, presence: true
 end
