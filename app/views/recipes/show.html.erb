@@ -3,7 +3,12 @@
 <%= image_tag image_url(@recipe.image_url) %>
 <h3><%= @recipe.name %></h3>
 <p><%= @recipe.description %></p>
-<p><%= @recipe.instructions%></p>
+
+<% array = @recipe.instructions.split(",") %>
+<% array.each_with_index do |r, i| %>
+  <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
+<% end %>
+
 <p><%= @recipe.vegan %></p>
 <p><%= @recipe.cooking_time %> mins</p>
 <p>Serves <%= @recipe.serves %></p>
