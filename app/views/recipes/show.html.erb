@@ -1,4 +1,5 @@
 <%= render partial: "shared/navbar" %>
+<%= link_to "back", recipes_path %>
 
 <%= image_tag image_url(@recipe.image_url) %>
 
@@ -39,4 +40,3 @@
 
 <%= link_to "create ingredient", new_ingredient_path %>
 <%= link_to "add ingredient", new_recipe_recipe_ingredient_path(@recipe) %>
-<%= link_to "back", recipes_path %>

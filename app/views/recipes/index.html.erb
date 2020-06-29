@@ -11,8 +11,6 @@
 <p><%= link_to @recipe_of_the_day.name, recipe_path(@recipe) %></p>
 <p><%= @recipe_of_the_day.description %></p>
 
-
-
 <% @recipes.each do |r| %>
   <%= image_tag image_url(r.image_url) %>
   <h3><%= link_to r.name, recipe_path(r) %></h3>
