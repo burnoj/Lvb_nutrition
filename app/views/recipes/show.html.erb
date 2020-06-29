@@ -9,7 +9,10 @@
   <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
 <% end %>
 
-<p><%= @recipe.vegan %></p>
+<p><%= "V" if @recipe.vegan %></p>
+<p><%= "VeF" if @recipe.vegetarian %></p>
+<p><%= "DF" if @recipe.dairy_free %></p>
+<p><%= "GF" if @recipe.gluten_free %></p>
 <p><%= @recipe.cooking_time %> mins</p>
 <p>Serves <%= @recipe.serves %></p>
 
