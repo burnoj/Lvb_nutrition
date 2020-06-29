@@ -1,9 +1,33 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Dr+Sugiyama&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "Baskervville", "Helvetica", "serif";
+$headers-font: "Baskervville", "Helvetica", "serif";
+
+h1 {
+  // HomePage
+  color: white;
+  font-size: 4em;
+}
+
+h2 {
+  // Recipes
+  font-family: "Dr Sugiyama" !important;
+  font-size: 3em;
+}
+
+h3 {
+  // Buy Books
+  font-size: 4em;
+}
+
+h4 {
+  // Newsletter (STAY IN TOUCH)
+  font-size: 2em;
+  letter-spacing: 0.2em;
+}
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

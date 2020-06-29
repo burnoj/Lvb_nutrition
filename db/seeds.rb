@@ -40,9 +40,9 @@ puts "seeding done"
 # const url = "https://www.instagram.com/lucyburneynutrition/"
 # const imgs = document.querySelectorAll(".FFVAD[src]")
 
- srcs = imgs.forEach(img => {
-   console.log(img.src)
- })
+ # srcs = imgs.forEach(img => {
+ #   console.log(img.src)
+ # })
 
 # https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c2.0.1436.1436a/s640x640/105974215_2871656006297266_3850988147593457578_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=110&_nc_ohc=LiC2aOobiD0AX_r7XBl&oh=3acc6d1c1eb0bb3dde6362c17d40cf93&oe=5F2295C9
 # https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c73.0.1293.1293a/s640x640/105963287_601574060736584_6973169067315453131_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=108&_nc_ohc=FXsO7On1KyYAX94oD-D&oh=6be432f7af3babafef6fca19fc934878&oe=5F220596
