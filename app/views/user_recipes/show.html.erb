@@ -14,11 +14,14 @@
 <p><%= "DF" if @recipe.dairy_free %></p>
 <p><%= "GF" if @recipe.gluten_free %></p>
 
-<p><%= @recipe.cooking_time %> mins</p>
+<% mins = (@recipe.cooking_time.to_f % 60).to_i %>
+<% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
+<%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %>
+
 <p>Serves <%= @recipe.serves %></p>
 
 <% @recipe.recipe_ingredients.each do |ri| %>
-  <p><%= ri.amount %> <%= ri.ingredient.name %></p>
+  <p><%= ri.amount %> of <%= ri.ingredient.name %></p>
 <% end %>
 
 <%= link_to "back", user_recipes_path %>

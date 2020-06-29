@@ -1,8 +1,16 @@
 <%= render partial: "shared/navbar" %>
 
 <%= image_tag image_url(@recipe.image_url) %>
+
+<%= link_to "edit recipe", edit_recipe_path %>
+<%= link_to "Delete recipe",
+      recipe_path(@recipe),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
 <h3><%= @recipe.name %></h3>
 <p><%= @recipe.description %></p>
+
 
 <% array = @recipe.instructions.split(",") %>
 <% array.each_with_index do |r, i| %>
@@ -20,19 +28,15 @@
 
 <p>Serves <%= @recipe.serves %></p>
 
-<%= link_to "edit", edit_recipe_path %>
-<%= link_to "add ingredient", new_recipe_recipe_ingredient_path(@recipe) %>
-<%= link_to "Delete recipe",
-      recipe_path(@recipe),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
 
 <% @recipe.recipe_ingredients.each do |ri| %>
-  <p><%= ri.amount %> <%= ri.ingredient.name %></p>
-  <%=  link_to "Remove",
+  <%=  link_to "Delete ingredient",
           recipe_ingredient_path(ri),
           method: :delete,
           data: { confirm: "Are you sure?" } %>
+  <p><%= ri.amount %> of <%= ri.ingredient.name %></p>
 <% end %>
 
+<%= link_to "create ingredient", new_ingredient_path %>
+<%= link_to "add ingredient", new_recipe_recipe_ingredient_path(@recipe) %>
 <%= link_to "back", recipes_path %>
