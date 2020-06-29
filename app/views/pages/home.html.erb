@@ -32,6 +32,24 @@
     </div>
   </div>
 
+  <div class="recipes">
+    <div class="recipe-title recipe">
+      <h3>New Recipes</h3>
+      <p>Enjoy lucy’s newest recipes, bursting with flavour, superfoods and nutrients to better support that healthy lifestyle we all aspire to have</p>
+    </div>
+    <div class="recipe-pictures-container">
+      <div class="recipe-pictures recipe">
+        <div class="recipe-image" id="recipe-image-one"></div>
+      </div>
+      <div class="recipe-pictures">
+         <div class="recipe-image" id="recipe-image-two"></div>
+      </div>
+      <div class="recipe-pictures recipe">
+         <div class="recipe-image" id="recipe-image-three"></div>
+      </div>
+    </div>
+  </div>
+
   <div class="newsletter">
     <%= simple_form_for Subscriber.new, :as => :subscriber, :url => subscribers_path(@subscriber) do |f| %>
       <%= f.input :email %>
