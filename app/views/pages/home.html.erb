@@ -1,11 +1,22 @@
-<%= render partial: "shared/navbar" %>
+<div class="home-container">
+  <%= render partial: "shared/navbar" %>
+  <div class="home-banner">
+    <div class="banner-content">
+      <div class="banner-box-big">
+        <h1 class="banner-text">KNOWLEDGE</h1>
+        <h1 class="banner-text">WISDOM</h1>
+        <h1 class="banner-text">EXPERIENCE</h1>
+      </div>
+      <div class="banner-box-small">
+        <button class="btn home-button">DISCOVER</button>
+      </div>
+    </div>
+  </div>
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<%= simple_form_for Subscriber.new, :as => :subscriber, :url => subscribers_path(@subscriber) do |f| %>
-  <%= f.input :email %>
-  <%= f.button :submit %>
-<% end %>
-
+  </div>
+  <%= simple_form_for Subscriber.new, :as => :subscriber, :url => subscribers_path(@subscriber) do |f| %>
+    <%= f.input :email %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
 
