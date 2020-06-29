@@ -3,9 +3,11 @@
   width: 100vw;
   height: auto;
   display: grid;
-  grid-template-rows: 10vh 90vh 1fr auto 100vh 25vh;
+  grid-template-rows: 10vh 90vh 1fr auto 100vh 100vh 100vh;
   grid-template-columns: 1fr;
 }
+
+// ---------- Banner ---------- //
 
 .home-banner {
   background-image: linear-gradient(19.61deg, rgba(0, 0, 0, 0.2) 49.15%, rgba(255, 255, 255, 0) 72.11%), url(Bluebells.jpg);
@@ -28,6 +30,8 @@
   align-items: left;
   background: rgba(0, 0, 0, 0.10);
 }
+
+// ---------- Profile ---------- //
 
 .profile {
   display: flex;
@@ -77,11 +81,14 @@
   align-items: center;
 }
 
+// ---------- Recipes ---------- //
+
 .recipe-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2em 0em;
 }
 
 .recipe-pictures-container {
@@ -131,4 +138,56 @@
   background-image: url("https://images.unsplash.com/photo-1473093226795-af9932fe5856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
   background-size: cover;
 }
+
+// ---------- Books ---------- //
+
+.books {
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("https://images.unsplash.com/photo-1528873981-36c6afde7b9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 6em;
+}
+
+.book-image {
+  width: 22vh;
+  height: 33vh;
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/51NL0+vhrKL._SX329_BO1,204,203,200_.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.book-buy-book {
+  height: 60%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-text {
+  color: #eef1f0;
+  margin-left: 20%;
+}
+
+// ---------- Books ---------- //
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
 
