@@ -102,11 +102,7 @@
 
 @media screen and (min-width: 600px) {
   .home-container {
-    width: 100vw;
-    height: auto;
-    display: grid;
     grid-template-rows: 10vh 90vh 120vh 120vh 100vh 100vh 100vh;
-    grid-template-columns: 1fr;
   }
 
   // ------- PROFILE ------- //
