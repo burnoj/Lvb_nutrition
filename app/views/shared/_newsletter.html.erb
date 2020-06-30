@@ -1,0 +1,8 @@
+<div class="newsletter">
+  <h4>Newsletter</h4>
+  <p>Stay in touch via my newsletter. I share my newest recipes, tips, tricks and useful superfood facts. You may opt out at any time.</p>
+  <%= simple_form_for Subscriber.new, :as => :subscriber, :url => subscribers_path(@subscriber) do |f| %>
+    <%= f.input :email %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

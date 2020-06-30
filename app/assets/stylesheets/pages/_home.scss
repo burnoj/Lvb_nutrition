@@ -79,6 +79,13 @@
   width: 80%;
 }
 
+.home-recipes-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-recipe-images {
   display:flex;
   flex-direction: column;
