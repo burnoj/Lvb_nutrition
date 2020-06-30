@@ -64,6 +64,8 @@
   justify-content: center;
 }
 
+// ------- RECIPES ------- //
+
 .home-recipes {
   display: flex;
   justify-content: center;
@@ -72,7 +74,21 @@
 .home-recipes-box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 80%;
+}
+
+.home-recipe-images {
+  display:flex;
+  flex-direction: column;
+  width: 80vw;
+}
+
+.home-recipe-image {
+  height: 60vh;
+  width: 80vw;
+  margin: 2em 0;
 }
 
 // ------- MEDIA QUERIES ------- //
@@ -82,9 +98,11 @@
     width: 100vw;
     height: auto;
     display: grid;
-    grid-template-rows: 10vh 90vh 120vh 100vh 100vh 100vh 100vh;
+    grid-template-rows: 10vh 90vh 120vh 120vh 100vh 100vh 100vh;
     grid-template-columns: 1fr;
   }
+
+  // ------- PROFILE ------- //
 
   .home-profile-box {
     flex-direction: row;
@@ -102,6 +120,18 @@
   .home-profile-image {
     width: 90%;
     height: 90%;
+  }
+
+  // ------- RECIPES ------- //
+
+  .home-recipe-images {
+    flex-direction: row;
+    width: 80vw;
+  }
+
+  .home-recipe-image {
+    height: 80vh;
+    padding: 2em;
   }
 }
 
