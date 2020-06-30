@@ -1,0 +1,38 @@
+.books {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.books-box {
+  height: 50%;
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+}
+
+.book-image-box {
+  height: 100%;
+  width: 100%;
+}
+
+.book-content-box {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .books-box {
+    flex-direction: row;
+  }
+
+  .book-image-box {
+    width: 50%;
+  }
+
+  .book-content-box {
+  width: 50%;
+}
+}
