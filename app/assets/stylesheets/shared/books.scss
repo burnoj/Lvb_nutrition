@@ -16,16 +16,25 @@
 .book-image-box {
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.book-image {
+  width: 70%;
+  height: 100%;
 }
 
 .book-content-box {
   height: 100%;
   width: 100%;
+  text-align: center;
 }
 
 @media screen and (min-width: 600px) {
   .books-box {
     flex-direction: row;
+    width: 50%;
   }
 
   .book-image-box {
@@ -34,5 +43,8 @@
 
   .book-content-box {
   width: 50%;
-}
+  display:flex;
+  align-items: center;
+  text-align: left;
+  }
 }
