@@ -1,8 +1,12 @@
 <div class="newsletter">
-  <h4>Newsletter</h4>
-  <p>Stay in touch via my newsletter. I share my newest recipes, tips, tricks and useful superfood facts. You may opt out at any time.</p>
+  <div class="newsletter-contents">
+    <div class="newsletter-title">
+      <h4>STAY IN TOUCH</h4>
+      <p>Stay in touch via my newsletter. I share my newest recipes, tips, tricks and useful superfood facts. You may opt out at any time.</p>
+    </div>
   <%= simple_form_for Subscriber.new, :as => :subscriber, :url => subscribers_path(@subscriber) do |f| %>
-    <%= f.input :email %>
+    <div class="newsletter-input"><%= f.input :email, label: false, placeholder: 'enter your email address here...' %></div>
     <%= f.button :submit %>
   <% end %>
+  </div>
 </div>
