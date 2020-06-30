@@ -1,10 +1,108 @@
-// Specific CSS for your home-page
+// ------- LAYOUT ------- //
+
 .home-container {
   width: 100vw;
   height: auto;
   display: grid;
   grid-template-rows: 10vh 90vh 1fr auto 100vh 100vh 100vh;
   grid-template-columns: 1fr;
+}
+
+
+// ------- BANNER ------- //
+
+.home-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-banner-box {
+  height: 50%;
+  width: 80%;
+}
+
+// ------- PROFILE ------- //
+
+.home-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.home-profile-box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.home-profile-image-container {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-profile-image-border {
+  height: 44vh;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-profile-image {
+  height: 40vh;
+  width: 90%;
+}
+
+.home-profile-content {
+  width: 100%;
+  padding: 2em;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-recipes {
+  display: flex;
+  justify-content: center;
+}
+
+.home-recipes-box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+// ------- MEDIA QUERIES ------- //
+
+@media screen and (min-width: 600px) {
+  .home-container {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-rows: 10vh 90vh 120vh 100vh 100vh 100vh 100vh;
+    grid-template-columns: 1fr;
+  }
+
+  .home-profile-box {
+    flex-direction: row;
+  }
+
+  .home-profile {
+    height: 120vh;
+  }
+
+  .home-profile-image-border {
+    width: 80%;
+    height: 90vh;
+  }
+
+  .home-profile-image {
+    width: 90%;
+    height: 90%;
+  }
 }
 
 

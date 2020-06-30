@@ -1,9 +1,14 @@
-.icon {
-  padding-right: 1em;
+.navbar-original {
+  display: flex;
+  justify-content: center;
 }
 
-.navbar {
-  padding-right: 2em;
+.navbar-content {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 100%;
 }
 
 .overlay {
