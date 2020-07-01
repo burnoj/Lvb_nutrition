@@ -1,23 +1,28 @@
-<%= render partial: "shared/navbar" %>
 
-<h1>Recipes Page</h1>
-<p>---------------</p>
-<%= link_to "new recipe", new_recipe_path %>
-<p>---------------</p>
-<%= link_to "new ingredient", new_ingredient_path %>
-<p>---------------</p>
+  <%= render partial: "shared/navbar" %>
 
-<h2>Recipe of the day</h2>
-<p><%= link_to @recipe_of_the_day.name, recipe_path(@recipe) %></p>
-<p><%= @recipe_of_the_day.description %></p>
+  <p>---------------</p>
+  <%= link_to "new recipe", new_recipe_path %>
+  <p>---------------</p>
+  <%= link_to "new ingredient", new_ingredient_path %>
+  <p>---------------</p>
 
-<% @recipes.each do |r| %>
-  <%= image_tag image_url(r.image_url) %>
-  <h3><%= link_to r.name, recipe_path(r) %></h3>
-  <p><%= "VF" if r.vegan %></p>
-  <p><%= "VeF" if r.vegetarian %></p>
-  <p><%= "DF" if r.dairy_free %></p>
-  <p><%= "GF" if r.gluten_free %></p>
-  <p><%= r.cooking_time %> mins</p>
-  <p>Serves <%= r.serves %></p>
-<% end %>
+  <h2>Recipe of the day</h2>
+  <p><%= link_to @recipe_of_the_day.name, recipe_path(@recipe) %></p>
+  <p><%= @recipe_of_the_day.description %></p>
+
+  <% @recipes.each do |r| %>
+    <%= image_tag image_url(r.image_url) %>
+    <h3><%= link_to r.name, recipe_path(r) %></h3>
+    <p><%= "VF" if r.vegan %></p>
+    <p><%= "VeF" if r.vegetarian %></p>
+    <p><%= "DF" if r.dairy_free %></p>
+    <p><%= "GF" if r.gluten_free %></p>
+    <p><%= r.cooking_time %> mins</p>
+    <p>Serves <%= r.serves %></p>
+  <% end %>
+
+  <%= render partial: "shared/books" %>
+
+  <%= render partial: "shared/footer" %>
+
