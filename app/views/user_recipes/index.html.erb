@@ -3,16 +3,19 @@
   <%= render partial: "shared/navbar" %>
 
   <div class="recipe_of_the_day">
-    <div class="recipe_of_the_day-img">
+    <div class="recipe_of_the_day_border">
+      <div class="recipe_of_the_day_img">
 
-    </div>
-    <div>
-      <h2>Recipe of the day: <%= link_to @recipe_of_the_day.name, user_recipe_path(@recipe) %></h2>
-      <p><%= @recipe_of_the_day.description %></p>
-      <h3>INGREDIENTS</h3>
-      <% @recipe_of_the_day.ingredients.each do |i| %>
-        <p><%= i.name %></p>
-      <% end %>
+      </div>
+      <div class="recipe_of_the_day-content">
+        <h2>Recipe of the day: <%= link_to @recipe_of_the_day.name, user_recipe_path(@recipe) %></h2>
+        <p><%= @recipe_of_the_day.description %></p>
+        <h3>INGREDIENTS</h3>
+        <% @recipe_of_the_day.ingredients.each do |i| %>
+          <p><%= i.name %></p>
+        <% end %>
+        <button class="btn">SHOW MORE</button>
+      </div>
     </div>
   </div>
 
