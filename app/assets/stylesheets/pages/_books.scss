@@ -1,0 +1,30 @@
+.books-container {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-rows: 10vh 1fr 1fr 100vh;
+  grid-template-columns: 1fr;
+}
+
+.book-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.book-1 {
+  width: 80%;
+}
+
+.book-2 {
+  width: 80%;
+}
+
+
+
+@media screen and (min-width: 600px) {
+  .books-container {
+    grid-template-rows: 10vh 100vh 100vh 100vh;
+  }
+}
+
