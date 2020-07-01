@@ -2,7 +2,7 @@
   width: 100vw;
   height: auto;
   display: grid;
-  grid-template-rows: 10vh 1fr 1fr 100vh;
+  grid-template-rows: 10vh 1fr 1fr 1fr 100vh;
   grid-template-columns: 1fr;
 }
 
@@ -24,7 +24,7 @@
 
 @media screen and (min-width: 600px) {
   .books-container {
-    grid-template-rows: 10vh 100vh 100vh 100vh;
+    grid-template-rows: 10vh 100vh 100vh 100vh 100vh;
   }
 
   .book-content {
