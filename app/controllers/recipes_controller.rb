@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  # http_basic_authenticate_with name: "dhh", password: "secret"
+  # http_basic_authenticate_with name: ENV["HTTP_NAME"], password: ENV["HTTP_PASSWORD"]
   def daystamp
     Time.now.strftime("%y%m%d").to_i
   end
