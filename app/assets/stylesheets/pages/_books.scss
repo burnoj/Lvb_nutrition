@@ -26,5 +26,29 @@
   .books-container {
     grid-template-rows: 10vh 100vh 100vh 100vh;
   }
+
+  .book-content {
+    width: 25%;
+  }
+
+  .book-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .book-1-img {
+    width: 25%;
+  }
+
+  .book-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+   .book-2-img {
+    width: 25%;
+  }
 }
 
