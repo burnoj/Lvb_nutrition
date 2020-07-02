@@ -6,7 +6,7 @@
     </div>
   <%= simple_form_for Subscriber.new, :as => :subscriber, :url => subscribers_path(@subscriber) do |f| %>
     <div class="newsletter-input"><%= f.input :email, label: false, placeholder: 'enter your email address here...' %></div>
-    <%= f.button :submit %>
+    <%= f.button :submit, "Subscribe" %>
   <% end %>
   </div>
 </div>
