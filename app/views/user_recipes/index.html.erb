@@ -2,12 +2,12 @@
 
   <%= render partial: "shared/navbar" %>
 
-  <div class="recipe_of_the_day">
-    <div class="recipe_of_the_day_border">
-      <div class="recipe_of_the_day_img">
+  <div class="recipe-of-the-day">
+    <div class="recipe-of-the-day-border">
+      <div class="recipe-of-the-day-img">
 
       </div>
-      <div class="recipe_of_the_day-content">
+      <div class="recipe-of-the-day-content">
         <h2>Recipe of the day: <%= link_to @recipe_of_the_day.name, user_recipe_path(@recipe) %></h2>
         <p><%= @recipe_of_the_day.description %></p>
         <h3>INGREDIENTS</h3>
@@ -19,16 +19,20 @@
     </div>
   </div>
 
-  <div>
-    <% @recipes.each do |r| %>
-      <h3><%= link_to r.name, user_recipe_path(r) %></h3>
-      <p><%= "VF" if r.vegan %></p>
-      <p><%= "VeF" if r.vegetarian %></p>
-      <p><%= "DF" if r.dairy_free %></p>
-      <p><%= "GF" if r.gluten_free %></p>
-      <p><%= r.cooking_time %> mins</p>
-      <p>Serves <%= r.serves %></p>
-    <% end %>
+  <div class="user-recipes-grid-container">
+    <div class="user-recipes-grid">
+      <% @recipes.each do |r| %>
+        <div>
+          <h3><%= link_to r.name, user_recipe_path(r) %></h3>
+          <p><%= "VF" if r.vegan %></p>
+          <p><%= "VeF" if r.vegetarian %></p>
+          <p><%= "DF" if r.dairy_free %></p>
+          <p><%= "GF" if r.gluten_free %></p>
+          <p><%= r.cooking_time %> mins</p>
+          <p>Serves <%= r.serves %></p>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <%= render partial: "shared/books" %>
