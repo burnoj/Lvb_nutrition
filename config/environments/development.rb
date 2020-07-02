@@ -63,12 +63,12 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors= true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.lucyburney.co.uk',
+   config.action_mailer.smtp_settings = {
+    address:              'smtp.com',
     port:                 587,
-    domain:               'lucyburney.co.uk',
-    user_name:            ENV["EMAIL"],
-    password:             ENV["PASSWORD"],
+    domain:               'gmail.com',
+    user_name:            "ENV['EMAIL']",
+    password:             "ENV['PASSWORD']",
     authentication:       'plain',
     enable_starttls_auto: true  }
 end
