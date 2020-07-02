@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get 'user_recipes', to: 'user_recipes#index'
   get 'user_recipes/:id', to: 'user_recipes#show', as: "user_recipe"
 
-  resources :messages, only: [:new, :create]
   resources :contacts, only: [:index, :new, :create]
   resources :subscribers, only: [:new, :create]
   resources :ingredients, only: [:new, :create]
