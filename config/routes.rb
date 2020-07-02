@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contact/new'
   resources :subscribers, only: [:new, :create]
 
   root to: 'pages#home'
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
   get 'user_recipes', to: 'user_recipes#index'
   get 'user_recipes/:id', to: 'user_recipes#show', as: "user_recipe"
 
-  resources :contacts, only: [:index, :new, :create]
+  resources :contacts, only: [:new, :create]
   resources :subscribers, only: [:new, :create]
   resources :ingredients, only: [:new, :create]
 
