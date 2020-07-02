@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'dotenv-rails'
+gem 'mail_form'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'sib-api-v3-sdk', git: 'https://github.com/sendinblue/APIv3-ruby-library.git'

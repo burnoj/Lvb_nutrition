@@ -1,0 +1,11 @@
+<%= render partial: "shared/navbar" %>
+
+<%= simple_form_for @contact do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :message %>
+  <%= f.button :submit, "Send Message" %>
+  <% flash.each do |message_type, message| %>
+    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+  <% end %>
+<% end %>
