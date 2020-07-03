@@ -1,1 +1,7 @@
-
+.recipes-show-container {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-rows: 10vh auto;
+  grid-template-columns: 1fr;
+}
