@@ -1,36 +1,44 @@
 <div class="recipes-show-container">
   <%= render partial: "shared/navbar" %>
 
-  <div class="recipe-show-img-container">
-    <div class='recipe-show-img'></div>
-  </div>
+  <div class="recipes-show-recipe-container">
+    <div class="recipes-show-recipe">
+      <div class="recipe-show-img-container">
+        <div class='recipe-show-img'></div>
+      </div>
 
-  <div class="recipe-show-content-container">
-    <div class="recipe-show-content">
-      <h3><%= @recipe.name %></h3>
-      <p><%= @recipe.description %></p>
+      <div class="recipe-show-content-container">
+        <div class="recipe-show-content">
+          <h3><%= @recipe.name %></h3>
+          <p><%= @recipe.description %></p>
 
-      <% array = @recipe.instructions.split(",") %>
-      <% array.each_with_index do |r, i| %>
-        <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
-      <% end %>
+          <% array = @recipe.instructions.split(",") %>
+          <% array.each_with_index do |r, i| %>
+            <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
+          <% end %>
 
-      <p><%= "V" if @recipe.vegan %></p>
-      <p><%= "VeF" if @recipe.vegetarian %></p>
-      <p><%= "DF" if @recipe.dairy_free %></p>
-      <p><%= "GF" if @recipe.gluten_free %></p>
+          <p><%= "V" if @recipe.vegan %></p>
+          <p><%= "VeF" if @recipe.vegetarian %></p>
+          <p><%= "DF" if @recipe.dairy_free %></p>
+          <p><%= "GF" if @recipe.gluten_free %></p>
 
-      <% mins = (@recipe.cooking_time.to_f % 60).to_i %>
-      <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
-      <%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %>
+          <% mins = (@recipe.cooking_time.to_f % 60).to_i %>
+          <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
+          <%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %>
 
-      <p>Serves <%= @recipe.serves %></p>
+          <p>Serves <%= @recipe.serves %></p>
 
-      <% @recipe.recipe_ingredients.each do |ri| %>
-        <p><%= ri.amount %> of <%= ri.ingredient.name %></p>
-      <% end %>
+          <% @recipe.recipe_ingredients.each do |ri| %>
+            <p><%= ri.amount %> of <%= ri.ingredient.name %></p>
+          <% end %>
 
-      <%= link_to "back", user_recipes_path %>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa dolorum, repellat soluta. Quae sunt recusandae quod animi iusto accusamus itaque magnam eaque, dolorem nulla vero veniam eum porro nihil.</p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa dolorum, repellat soluta. Quae sunt recusandae quod animi iusto accusamus itaque magnam eaque, dolorem nulla vero veniam eum porro nihil.</p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa dolorum, repellat soluta. Quae sunt recusandae quod animi iusto accusamus itaque magnam eaque, dolorem nulla vero veniam eum porro nihil.</p>
+
+          <%= link_to "back", user_recipes_path %>
+        </div>
+      </div>
     </div>
   </div>
 
