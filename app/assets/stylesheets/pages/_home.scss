@@ -104,11 +104,26 @@
   width: 80vw;
 }
 
+.r-img-1 {
+  background-image: url(home_recipes_1.JPG)
+}
+
+.r-img-2 {
+  background-image: url(home_recipes_2.JPG)
+}
+
+.r-img-3 {
+  background-image: url(home_recipes_3.JPG)
+}
+
 .home-recipe-image {
   height: 60vh;
   width: 80vw;
   margin: 2em 0;
+  background-position: center;
+  background-size: cover;
 }
+
 
 // ------- MEDIA QUERIES ------- //
 
