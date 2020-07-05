@@ -2,6 +2,29 @@
   width: 100vw;
   height: auto;
   display: grid;
-  grid-template-rows: 10vh auto;
+  grid-template-rows: 10vh auto auto;
   grid-template-columns: 1fr;
+}
+
+.recipe-show-img-container {
+  height: 50vh;
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-show-img {
+  width: 80%;
+  height: 100%;
+}
+
+.recipe-show-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-show-content {
+  width: 80%;
 }

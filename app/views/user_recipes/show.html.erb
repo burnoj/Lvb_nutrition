@@ -1,27 +1,37 @@
 <div class="recipes-show-container">
   <%= render partial: "shared/navbar" %>
-  <%= link_to "back", user_recipes_path %>
 
-  <h3><%= @recipe.name %></h3>
-  <p><%= @recipe.description %></p>
+  <div class="recipe-show-img-container">
+    <div class='recipe-show-img'></div>
+  </div>
 
-  <% array = @recipe.instructions.split(",") %>
-  <% array.each_with_index do |r, i| %>
-    <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
-  <% end %>
+  <div class="recipe-show-content-container">
+    <div class="recipe-show-content">
+      <h3><%= @recipe.name %></h3>
+      <p><%= @recipe.description %></p>
 
-  <p><%= "V" if @recipe.vegan %></p>
-  <p><%= "VeF" if @recipe.vegetarian %></p>
-  <p><%= "DF" if @recipe.dairy_free %></p>
-  <p><%= "GF" if @recipe.gluten_free %></p>
+      <% array = @recipe.instructions.split(",") %>
+      <% array.each_with_index do |r, i| %>
+        <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
+      <% end %>
 
-  <% mins = (@recipe.cooking_time.to_f % 60).to_i %>
-  <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
-  <%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %>
+      <p><%= "V" if @recipe.vegan %></p>
+      <p><%= "VeF" if @recipe.vegetarian %></p>
+      <p><%= "DF" if @recipe.dairy_free %></p>
+      <p><%= "GF" if @recipe.gluten_free %></p>
 
-  <p>Serves <%= @recipe.serves %></p>
+      <% mins = (@recipe.cooking_time.to_f % 60).to_i %>
+      <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
+      <%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %>
 
-  <% @recipe.recipe_ingredients.each do |ri| %>
-    <p><%= ri.amount %> of <%= ri.ingredient.name %></p>
-  <% end %>
+      <p>Serves <%= @recipe.serves %></p>
+
+      <% @recipe.recipe_ingredients.each do |ri| %>
+        <p><%= ri.amount %> of <%= ri.ingredient.name %></p>
+      <% end %>
+
+      <%= link_to "back", user_recipes_path %>
+    </div>
+  </div>
+
 </div>
