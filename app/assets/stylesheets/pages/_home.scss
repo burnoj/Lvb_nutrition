@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: image-url(Bluebells.jpg);
+  background: image-url('Bluebells.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -63,7 +63,7 @@
 .home-profile-image {
   height: 40vh;
   width: 90%;
-  background: image-url(profile_home.JPG);
+  background: image-url('profile_home.JPG');
   background-position: center;
   background-size: cover;
 }
@@ -107,15 +107,15 @@
 }
 
 .r-img-1 {
-  background: image-url(home_recipes_1.JPG);
+  background: image-url('home_recipes_1.JPG');
 }
 
 .r-img-2 {
-  background: image-url(home_recipes_2.JPG);
+  background: image-url('home_recipes_2.JPG');
 }
 
 .r-img-3 {
-  background: image-url(home_recipes_3.JPG);
+  background: image-url('home_recipes_3.JPG');
 }
 
 .home-recipe-image {
