@@ -81,7 +81,8 @@
 .home-recipes {
   display: flex;
   justify-content: center;
-  margin: 2em 0;
+  padding: 2em 0;
+  background: $light-blue;
 }
 
 .home-recipes-box {
@@ -165,7 +166,7 @@
   }
 
   .home-recipe-image {
-    height: 80vh;
+    height: 70vh;
   }
 
   .r-img {
