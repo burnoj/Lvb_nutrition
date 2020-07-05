@@ -81,6 +81,7 @@
 .home-recipes {
   display: flex;
   justify-content: center;
+  margin: 2em 0;
 }
 
 .home-recipes-box {
@@ -105,19 +106,19 @@
 }
 
 .r-img-1 {
-  background-image: url(home_recipes_1.JPG)
+  background-image: url(home_recipes_1.JPG);
 }
 
 .r-img-2 {
-  background-image: url(home_recipes_2.JPG)
+  background-image: url(home_recipes_2.JPG);
 }
 
 .r-img-3 {
-  background-image: url(home_recipes_3.JPG)
+  background-image: url(home_recipes_3.JPG);
 }
 
 .home-recipe-image {
-  height: 60vh;
+  height: 50vh;
   width: 80vw;
   margin: 2em 0;
   background-position: center;

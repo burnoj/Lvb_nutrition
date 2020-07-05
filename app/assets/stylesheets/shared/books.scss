@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(Blueberries.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .books-box {
@@ -23,6 +27,9 @@
 .book-image {
   width: 70%;
   height: 100%;
+  background-image: url(home_book.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .book-content-box {
