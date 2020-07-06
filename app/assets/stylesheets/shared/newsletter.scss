@@ -28,13 +28,18 @@
   margin-bottom: 0.5em;
 }
 
-// .newsletter-subscribe-button {
-//   border: 1px solid #ced4da;
-//   width: 30%;
-// }
+.newsletter-subscribe-button {
+  border: 1px solid grey;
+  width: 50%;
+  display: inline-block;
+}
 
 @media screen and (min-width: 600px) {
   .newsletter-input {
     width: 40vw;
+  }
+
+  .newsletter-subscribe-button {
+    width: 30%;
   }
 }
