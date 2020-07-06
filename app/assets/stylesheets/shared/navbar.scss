@@ -1,9 +1,12 @@
 .logo {
   height: 100%;
-  width:210px;
-  background: image-url('logo.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 220px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1em;
+  color: $purple;
 }
 
 .icon {
@@ -30,6 +33,25 @@
   align-items: center;
   width: 80%;
   height: 100%;
+}
+
+.logo-top {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 !important;
+}
+
+
+.logo-bottom {
+  text-align: center;
+}
+
+
+.navbar-bluebell {
+  height: 2em;
+  width: 2em;
+  background: image-url('bluebell.png');
+  background-size: cover;
 }
 
 .overlay {
@@ -81,7 +103,7 @@
   }
 
   .logo {
-    width: 230px;
+    height: 100%;
     margin-right: 3em;
   }
 }
