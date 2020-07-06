@@ -4,7 +4,7 @@
   width: 100vw;
   height: auto;
   display: grid;
-  grid-template-rows: 12vh 100vh 1fr auto 100vh 100vh 100vh;
+  grid-template-rows: 14vh 100vh 1fr auto 100vh 100vh 100vh;
   grid-template-columns: 1fr;
 }
 
@@ -132,7 +132,7 @@
 
 @media screen and (min-width: 600px) {
   .home-container {
-    grid-template-rows: 12vh 90vh 120vh 120vh 100vh 100vh 100vh;
+    grid-template-rows: 14vh 90vh 120vh 120vh 100vh 100vh 100vh;
   }
 
 
