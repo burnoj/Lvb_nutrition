@@ -10,6 +10,15 @@
   align-items: center;
 }
 
+.footer-icons {
+  display: flex;
+  color: $gray;
+}
+
+.footer-icon {
+  padding: 0 0.5em;
+}
+
 .footer-copyright {
   text-align: center;
 }
