@@ -10,6 +10,14 @@
   align-items: center;
 }
 
+.single-bluebell-img {
+  background: image-url('bluebell.png');
+  background-position: center;
+  background-size: cover;
+  height: 2em;
+  width: 2em;
+}
+
 .footer-icons {
   display: flex;
   color: $gray;
