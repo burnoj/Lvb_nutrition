@@ -21,14 +21,24 @@
 .footer-icons {
   display: flex;
   color: $gray;
+  margin-bottom: 0.5em;
 }
 
 .footer-icon {
   padding: 0 0.5em;
 }
 
+.footer-links {
+  margin: 1em;
+}
+
 .footer-copyright {
   text-align: center;
+}
+
+.footer-p-copyright {
+  margin: 0;
+  font-size: 1em;
 }
 
 .footer-img {
