@@ -157,6 +157,15 @@
 
   // ------- RECIPES ------- //
 
+  .home-recipes {
+    padding: none;
+  }
+
+  .home-recipes-content {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+
   .home-recipe-images {
     flex-direction: row;
     width: 80vw;
