@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: image-url('Bluebells.jpg');
+  background: linear-gradient(330.42deg, rgba(255, 255, 255, 0) 48.41%, rgba(0, 0, 0, 0.32) 53.24%),image-url('Bluebells.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -134,9 +134,6 @@
     grid-template-rows: 10vh 90vh 120vh 120vh 100vh 100vh 100vh;
   }
 
-  .home-banner-box {
-    justify-content: flex-end;
-  }
 
   // ------- PROFILE ------- //
 
@@ -155,7 +152,7 @@
 
   .home-profile-image {
     width: 90%;
-    height: 90%;
+    height: 93%;
   }
 
   // ------- RECIPES ------- //
