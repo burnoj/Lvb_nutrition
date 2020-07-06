@@ -1,9 +1,22 @@
+.logo {
+  height: 100%;
+  width:200px;
+  background: image-url('logo.jpg');
+  background-size: cover;
+}
+
+.icon {
+  padding: 0;
+}
+
 .navbar-original {
   display: flex;
   justify-content: center;
 }
 
 .nav-icons {
+  display: flex;
+  flex-direction: column;
   color: $gray;
 }
 
@@ -51,4 +64,10 @@
   position: absolute;
   right: 1em;
   font-size: 2em;
+}
+
+@media screen and (min-width: 600px) {
+  .nav-icons {
+    flex-direction: row;
+  }
 }
