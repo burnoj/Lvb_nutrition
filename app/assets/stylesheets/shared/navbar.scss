@@ -12,6 +12,7 @@
 .navbar-original {
   display: flex;
   justify-content: center;
+  height: 100%;
 
 }
 
@@ -79,6 +80,7 @@
   }
 
   .logo {
+    width: 230px;
     margin-right: 3em;
   }
 }
