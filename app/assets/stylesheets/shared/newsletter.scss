@@ -14,6 +14,7 @@
   text-align: center;
   background: white;
   height: 50vh;
+  padding: 0 1em;
 }
 
 .newsletter-title {
@@ -22,7 +23,9 @@
 
 .newsletter-input {
   height: 50%;
-  width: 80vw;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 0.5em;
 }
 
 // .newsletter-subscribe-button {
