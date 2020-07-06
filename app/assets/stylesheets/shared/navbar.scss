@@ -2,7 +2,8 @@
   height: 100%;
   width:210px;
   background: image-url('logo.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .icon {
