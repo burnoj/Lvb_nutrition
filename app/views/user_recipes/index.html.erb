@@ -28,14 +28,22 @@
   <div class="user-recipes-grid-container">
     <div class="user-recipes-grid">
       <% @recipes.each do |r| %>
-        <div>
-          <h3><%= link_to r.name, user_recipe_path(r) %></h3>
-          <p><%= "VF" if r.vegan %></p>
-          <p><%= "VeF" if r.vegetarian %></p>
-          <p><%= "DF" if r.dairy_free %></p>
-          <p><%= "GF" if r.gluten_free %></p>
-          <p><%= r.cooking_time %> mins</p>
-          <p>Serves <%= r.serves %></p>
+        <div class="recipe-index-img">
+          <div class="recipe-grid">
+            <div class="recipe-type">
+              <p><%= "VF" if r.vegan %></p>
+              <p><%= "VeF" if r.vegetarian %></p>
+              <p><%= "DF" if r.dairy_free %></p>
+              <p><%= "GF" if r.gluten_free %></p>
+            </div>
+            <div class="recipe-name">
+              <h3><%= link_to r.name, user_recipe_path(r) %></h3>
+            </div>
+            <div class="cooking-time-and-serves">
+              <p><%= r.cooking_time %> mins</p>
+              <p>Serves <%= r.serves %></p>
+            </div>
+          </div>
         </div>
       <% end %>
     </div>
