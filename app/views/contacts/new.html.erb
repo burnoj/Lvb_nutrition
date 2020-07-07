@@ -1,19 +1,22 @@
-<%= render partial: "shared/navbar" %>
+<div class="contact-container">
+  <%= render partial: "shared/navbar" %>
 
-<% flash.each do |type, msg| %>
-  <div class="alert alert-info fade in">
-    <%= msg %>
-  </div>
-<% end %>
-
-<div class="contact-form-container">
-  <div class="contact-form">
-    <h2 class="contact-us-title">Contact Us</h2>
-  <%= simple_form_for @contact, defaults: {required: false} do |f| %>
-    <%= f.input :name%>
-    <%= f.input :email %>
-    <%= f.input :message, as: :text %>
-    <%= f.button :submit, "Send Message", class: "purple-button" %>
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-info fade in">
+      <%= msg %>
+    </div>
   <% end %>
+
+  <div class="contact-form-container">
+    <div class="contact-form">
+      <h2 class="contact-us-title">Contact Us</h2>
+    <%= simple_form_for @contact, defaults: {required: false} do |f| %>
+      <%= f.input :name%>
+      <%= f.input :email %>
+      <%= f.input :message, as: :text %>
+      <%= f.button :submit, "Send Message", class: "purple-button" %>
+    <% end %>
+    </div>
   </div>
 </div>
+

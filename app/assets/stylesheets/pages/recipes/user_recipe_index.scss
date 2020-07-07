@@ -2,7 +2,7 @@
   width: 100vw;
   height: auto;
   display: grid;
-  grid-template-rows: 12vh auto 1fr 100vh 100vh;
+  grid-template-rows: 14vh auto 1fr 100vh 100vh;
   grid-template-columns: 1fr;
 }
 
@@ -93,7 +93,7 @@
 
 @media screen and (min-width: 600px) {
   .recipe-index-container {
-    grid-template-rows: 12vh 90vh 1fr 100vh 100vh;
+    grid-template-rows: 14vh 90vh 1fr 100vh 100vh;
   }
 
   .recipe-of-the-day-container {

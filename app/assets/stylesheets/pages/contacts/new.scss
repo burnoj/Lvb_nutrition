@@ -1,3 +1,11 @@
+.contact-container {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-rows: 14vh 86vh;
+  grid-template-columns: 1fr;
+}
+
 .contact-form {
   width: 80%;
   background: white;
