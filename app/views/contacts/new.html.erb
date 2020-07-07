@@ -1,10 +1,13 @@
-  <%= render partial: "shared/navbar" %>
+<%= render partial: "shared/navbar" %>
+
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
 
 <div>
   <%= form_for @contact do |f| %>
-    <% if flash[:error].present? %>
-        <p> flash[:error]</p>
-    <% end %>
     <%= f.label :name %> <br>
     <%= f.text_field :name, required: true %>
 
