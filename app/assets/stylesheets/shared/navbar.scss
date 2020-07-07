@@ -5,8 +5,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 1em;
   color: $purple;
+}
+
+.b-1 {
+  margin: 0 0.2em;
 }
 
 .icon {
@@ -37,13 +40,14 @@
 
 .logo-top {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 0 !important;
 }
 
 
 .logo-bottom {
   text-align: center;
+  margin: 0 !important;
 }
 
 
