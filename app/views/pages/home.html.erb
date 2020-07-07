@@ -5,7 +5,7 @@
   <%= render partial: "shared/navbar" %>
 
   <% flash.each do |type, msg| %>
-    <div class="alert alert-info">
+    <div class="alert alert-info alert-dismissible fade in">
       <%= msg %>
     </div>
   <% end %>

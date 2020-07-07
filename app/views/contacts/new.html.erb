@@ -1,28 +1,14 @@
 <%= render partial: "shared/navbar" %>
 
 <% flash.each do |type, msg| %>
-  <div class="alert alert-info">
+  <div class="alert alert-info fade in">
     <%= msg %>
   </div>
 <% end %>
 
-<div>
-  <%= form_for @contact do |f| %>
-    <%= f.label :name %> <br>
-    <%= f.text_field :name, required: true %>
-
-    <br>
-    <%= f.label :email %> <br>
-    <%= f.text_field :email, required: true %>
-
-    <br>
-    <%= f.label :message %> <br>
-    <%= f.text_area :message, as: :text %>
-
-
-    <%= f.label :nickname %> <br>
-    <%= f.text_field :nickname, hint: 'leave this field blank' %>
-
-    <%= f.submit 'Send Message', class: "button" %>
-  <% end %>
-</div>
+<%= simple_form_for @contact, defaults: {required: false} do |f| %>
+  <%= f.input :name, label: "Name" %>
+  <%= f.input :email %>
+  <%= f.input :message, as: :text %>
+  <%= f.button :submit, "Send Message", class: "purple-button" %>
+<% end %>
