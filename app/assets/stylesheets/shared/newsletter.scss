@@ -13,8 +13,8 @@
   justify-content: center;
   text-align: center;
   background: white;
-  height: 50vh;
-  padding: 0 1em;
+  height: 60vh;
+  padding: 1em 1em;
 }
 
 .newsletter-title {
@@ -41,5 +41,9 @@
 
   .newsletter-subscribe-button {
     width: 30%;
+  }
+
+    .newsletter-contents {
+    height: 50vh;
   }
 }
