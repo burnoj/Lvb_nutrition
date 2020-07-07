@@ -6,9 +6,14 @@
   </div>
 <% end %>
 
-<%= simple_form_for @contact, defaults: {required: false} do |f| %>
-  <%= f.input :name, label: "Name" %>
-  <%= f.input :email %>
-  <%= f.input :message, as: :text %>
-  <%= f.button :submit, "Send Message", class: "purple-button" %>
-<% end %>
+<div class="contact-form-container">
+  <div class="contact-form">
+    <h2 class="contact-us-title">Contact Us</h2>
+  <%= simple_form_for @contact, defaults: {required: false} do |f| %>
+    <%= f.input :name%>
+    <%= f.input :email %>
+    <%= f.input :message, as: :text %>
+    <%= f.button :submit, "Send Message", class: "purple-button" %>
+  <% end %>
+  </div>
+</div>
