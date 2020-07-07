@@ -13,7 +13,7 @@ div {
 h1 {
   // HomePage
   color: white;
-  font-size: 4em;
+  font-size: 2em !important;
 }
 
 h2 {
@@ -50,6 +50,14 @@ i {
 
 a {
   color: #A393E2 !important;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    // HomePage
+    color: white;
+    font-size: 2.5em !important;
+  }
 }
 
 
