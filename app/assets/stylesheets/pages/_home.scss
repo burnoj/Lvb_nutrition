@@ -32,15 +32,17 @@
 // ------- PROFILE ------- //
 
 .home-profile {
-  padding: 2em 0;
+  padding: 4em 0;
   display: flex;
   justify-content: center;
+   background: rgba(78, 108, 215, 0.1);
 }
 
 .home-profile-box {
   display: flex;
   flex-direction: column;
   width: 80%;
+  background: white;
 }
 
 .home-profile-image-container {
@@ -57,7 +59,7 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  background: $light-blue;
+  background: rgba(78, 108, 215, 0.1);
 }
 
 .home-profile-image {
@@ -82,7 +84,6 @@
   display: flex;
   justify-content: center;
   padding: 2em 0;
-  background: $light-blue;
 }
 
 .home-recipes-title {
