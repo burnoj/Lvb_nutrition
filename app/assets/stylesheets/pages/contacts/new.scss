@@ -1,6 +1,7 @@
 .contact-form {
-  width: 30%;
+  width: 80%;
   background: white;
+  padding: 2em;
 }
 .contact-form-container {
   display: flex;
@@ -12,4 +13,12 @@
 
 .contact-us-title {
   padding-bottom: 1em;
+}
+
+@media screen and (min-width: 600px) {
+  .contact-form {
+    width: 30%;
+    background: white;
+    padding: 2em;
+  }
 }
