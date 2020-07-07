@@ -12,7 +12,6 @@
   flex-direction: column;
   align-items: center;
   padding: 2em 0;
-  border-top: 1px solid #F2F2F2;
 }
 
 .recipe-of-the-day-border {
@@ -56,7 +55,7 @@
 }
 
 .recipe-index-img {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 100%, rgba(255, 255, 255, 0) 104.37%), image-url("recipe.jpg");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 100%, rgba(255, 255, 255, 0) 104.37%), image-url("recipe.jpg");
   background-size: cover;
   position: relative;
 }
@@ -68,7 +67,7 @@
 }
 
 .recipe-type {
-  height: 14vh;
+  height: 18vh;
   display:flex;
   justify-content: flex-end;
   p {
@@ -147,7 +146,7 @@
 
 
   .user-recipes-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

@@ -6,6 +6,10 @@
 $body-font: "Baskervville", "Helvetica", "serif";
 $headers-font: "Baskervville", "Helvetica", "serif";
 
+// body {
+//   background: #F3EFF9 !important;
+// }
+
 div {
   // border: 1px solid grey;
 }
@@ -50,6 +54,7 @@ i {
 
 a {
   color: #A393E2 !important;
+  text-decoration: none !important;
 }
 
 q:hover {
