@@ -12,3 +12,17 @@
   width: 9em;
   height: 3em;
 }
+
+.red-button {
+  border: 1px solid $red;
+  margin-top: 1em;
+  background: white;
+  padding: 0.5em 1.5em;
+  :hover {
+    transition: opacity 0.4s;
+    opacity: 0.7;
+  }
+  a {
+    color: $red !important;
+  }
+}
