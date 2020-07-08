@@ -53,12 +53,19 @@ i {
 }
 
 a {
-  // color: #A393E2 !important;
+  color: #A393E2 !important;
   text-decoration: none !important;
 }
 
+a:hover {
+  transition: opacity 0.4s;
+  opacity: 0.7 !important;
+}
+
 q:hover {
+  transition: color 0.3s;
   color: #A393E2 !important;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 600px) {
