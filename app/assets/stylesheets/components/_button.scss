@@ -1,7 +1,12 @@
 .home-button {
   color: white;
+  padding: 0.4em 0.2em;
+  background: none;
   border: 1px solid white;
   width: 10em;
+  :hover {
+    opacity: 0.7;
+  }
 }
 
 .purple-button {
