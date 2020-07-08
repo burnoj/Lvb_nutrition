@@ -9,6 +9,7 @@
 .about-section-1 {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100vw;
 }
 
@@ -53,6 +54,7 @@
 .about-section-3 {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100vw;
 }
 
@@ -90,7 +92,9 @@
     align-items: center;
   }
 
-    .about-section-1 {
+  .about-section-1-border {
+    height: 85%;
+    background: white
   }
 
 
@@ -100,17 +104,17 @@
   }
 
     .section-1-img {
-    height: 60%;
+    height: 80%;
     width: 60%;
   }
 
    .section-2-img {
-    height: 60%;
+    height: 80%;
     width: 80%;
   }
 
    .section-3-img {
-    height: 60%;
+    height: 80%;
     width: 60%;
   }
 
