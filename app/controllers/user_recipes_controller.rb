@@ -1,4 +1,5 @@
 class UserRecipesController < ApplicationController
+
   def daystamp
     Time.now.strftime("%y%m%d").to_i
   end

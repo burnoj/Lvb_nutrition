@@ -31,10 +31,31 @@
         <div class="recipe-index-img">
           <div class="recipe-grid">
             <div class="recipe-type">
-              <p><%= "VF" if r.vegan %></p>
-              <p><%= "VeF" if r.vegetarian %></p>
-              <p><%= "DF" if r.dairy_free %></p>
-              <p><%= "GF" if r.gluten_free %></p>
+
+              <% if r.vegan %>
+               <div class="white-box">
+                 <div class="diet-icon vegan"></div>
+              </div>
+              <% end %>
+
+              <% if r.vegetarian %>
+              <div class="white-box">
+                 <div class="diet-icon vegetarian"></div>
+              </div>
+              <% end %>
+
+              <% if r.dairy_free %>
+              <div class="white-box">
+                 <div class="diet-icon dairy_free"></div>
+              </div>
+              <% end %>
+
+              <% if r.gluten_free %>
+              <div class="white-box">
+                 <div class="diet-icon gluten_free"></div>
+              </div>
+              <% end %>
+
             </div>
             <div class="recipe-name">
               <h3><%= link_to r.name, user_recipe_path(r) %></h3>

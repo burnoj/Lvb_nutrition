@@ -75,6 +75,45 @@
   }
 }
 
+.white-box {
+  height: 2em;
+  width: 2em;
+  margin-top: 0.25em;
+  margin-right: 0.25em;
+  background: white;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.diet-icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.vegan {
+  background: image-url('vegan.png');
+  background-size: cover;
+}
+
+.vegetarian {
+  background: image-url('vegetarian.png');
+  background-size: cover;
+}
+
+.dairy_free {
+  background: image-url('dairy_free.png');
+  background-size: cover;
+}
+
+.gluten_free {
+  background: image-url('gluten_free.png');
+  background-size: cover;
+}
+
+
 .recipe-name {
   display:flex;
   justify-content: center;
