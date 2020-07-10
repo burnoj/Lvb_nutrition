@@ -22,10 +22,11 @@
           <p>--------------------------------------</p>
 
           <h4>INGREDIENTS</h4>
-
+          <ul>
           <% @recipe.recipe_ingredients.each do |ri| %>
-            <p><%= ri.amount %> of <%= ri.ingredient.name %>, <%= ri.extra_info %></p>
+            <li><%= ri.amount %> of <%= ri.ingredient.name %>, <%= ri.extra_info %></li>
           <% end %>
+          </ul>
 
           <p>--------------------------------------</p>
 
