@@ -64,15 +64,18 @@
 }
 
 .recipe-index-img {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 100%, rgba(255, 255, 255, 0) 104.37%), image-url("recipe.jpg");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 100%, rgba(255, 255, 255, 0) 104.37%), image-url("recipe.jpg");
   background-size: cover;
   position: relative;
+  border-radius: 3px;
 }
 .recipe-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows:  1fr 1fr 1fr;
   color: white;
+  height: 60vh;
+  border-radius: 3px;
 }
 
 .recipe-type {
@@ -85,12 +88,12 @@
 }
 
 .white-box {
-  height: 2em;
-  width: 2em;
+  height: 1.5em;
+  width: 1.5em;
   margin-top: 0.25em;
   margin-right: 0.25em;
   background: white;
-  border-radius: 7px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,8 +101,8 @@
 }
 
 .diet-icon {
-  height: 1.5em;
-  width: 1.5em;
+  height: 1em;
+  width: 1em;
 }
 
 .vegan {
@@ -128,7 +131,7 @@
   justify-content: center;
   align-items: center;
   a {
-    color: white;
+    color: white !important;
   }
 }
 
@@ -137,6 +140,9 @@
   justify-content: space-between;
   align-items: flex-end;
   padding: 0 0.5em;
+  p {
+    margin: 0 !important;
+  }
 }
 
 @media screen and (min-width: 600px) {
