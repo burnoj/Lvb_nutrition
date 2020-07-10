@@ -75,10 +75,14 @@
     max-height: 90vh;
   }
 
+
   .book {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background: white;
+    padding: 0;
+    margin: 4em 0;
   }
 
   .book-1-img {

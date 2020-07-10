@@ -16,8 +16,8 @@
             <p class="recipe-of-the-day-description"><%= @recipe_of_the_day.description %></p>
             <h3>INGREDIENTS</h3>
             <ul>
-            <% @recipe_of_the_day.ingredients.each do |i| %>
-              <li><%= i.name %></li>
+            <% @recipe_of_the_day.recipe_ingredients.each do |ri| %>
+               <li><%= ri.amount %> of <%= ri.ingredient.name %>, <%= ri.extra_info %></li>
             <% end %>
             </ul>
             <%= link_to "SHOW MORE", user_recipe_path(@recipe_of_the_day) %>
