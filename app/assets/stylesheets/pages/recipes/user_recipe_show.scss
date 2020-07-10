@@ -53,24 +53,27 @@
 
   .recipe-show-img-container {
     height: 100vh;
-    width: 50vw;
+    width: 30%;
     margin: 0;
     justify-content: flex-start;
     padding: 4em 0;
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
+    top: 14%;
   }
 
   .recipe-show-img {
     width: 100%;
     position: sticky;
-    height: 60%;
+    height: 80%;
+  }
+
+  .recipe-show-content-container {
+    width: 70%;
   }
 
   .recipe-show-content {
     width: 90%;
     padding: 4em;
   }
-
 }
