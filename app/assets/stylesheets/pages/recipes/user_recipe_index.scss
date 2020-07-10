@@ -26,7 +26,7 @@
 
 .recipe-of-the-day-title {
   text-decoration: underline;
-  padding: 1em;
+  padding: 0.5em 0;
 }
 
 
@@ -48,6 +48,9 @@
 
 .recipe-of-the-day-content {
   width: 100%;
+  h4 {
+    font-size: 1em;
+  }
 }
 
 .user-recipes-grid-container {
@@ -180,10 +183,6 @@
     background-color: $light-blue;
   }
 
-  .recipe-of-the-day-title {
-    text-align: center;
-  }
-
   .recipe-of-the-day-content-container {
     display: flex;
     justify-content: flex-start;
@@ -192,18 +191,20 @@
   }
 
    .recipe-of-the-day-content {
-    width: 80%;
+    width: 100%;
     height: 80%;
+    padding-left: 4em;
     overflow: hidden;
+    p {
+      line-height: 1.6;
+    }
   }
 
   .recipe-of-the-day-description {
-    height: 30%;
     overflow: hidden;
   }
 
   .recipe-of-the-day-img-container {
-    order: 2;
     height: 100%;
     width: 40%;
     display: flex;
