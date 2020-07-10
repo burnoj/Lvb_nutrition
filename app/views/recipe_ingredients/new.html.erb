@@ -3,5 +3,6 @@
 <%= simple_form_for [@recipe, @recipe_ingredient] do |f| %>
   <%= f.input :amount %>
   <%= f.input :ingredient_id, collection: Ingredient.all %>
+  <%= f.input :extra_info %>
   <%= f.submit %>
 <% end %>

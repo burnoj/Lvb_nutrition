@@ -10,26 +10,143 @@ puts "seeding recipes"
 
 cooking_times = [10, 20, 30, 40]
 
-10.times do
+1.times do
   Ingredient.create(
     name: Faker::Food.ingredient
   )
 end
 
-10.times do
-  Recipe.create(
-    name: Faker::Food.dish,
-    description: Faker::Food.description,
-    instructions: Faker::Lorem.paragraphs,
-    image_url: "https://source.unsplash.com/featured/?food",
-    vegan: true,
-    vegetarian: true,
-    gluten_free: true,
-    dairy_free: true,
-    cooking_time: cooking_times.sample,
-    serves: rand(1..6)
-  )
-end
+Recipe.create(
+  name: "Beetroot and sesame salad 1",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6,
+  fact: "This recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!"
+)
+
+Recipe.create(
+  name: "Beetroot and sesame salad 2",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6
+)
+
+Recipe.create(
+  name: "Beetroot and sesame salad 3",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6
+)
+
+Recipe.create(
+  name: "Beetroot and sesame salad 4",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6
+)
+
+Recipe.create(
+  name: "Beetroot and sesame salad 5",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6
+)
+
+Recipe.create(
+  name: "Beetroot and sesame sala 6",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6
+)
+
+Recipe.create(
+  name: "Beetroot and sesame salad 7",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6
+)
+
+Recipe.create(
+  name: "Beetroot and sesame salad 8",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6
+)
+
+Recipe.create(
+  name: "Beetroot and sesame salad 9",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6
+)
+
+Recipe.create(
+  name: "Beetroot and sesame salad 10",
+  description: "Beetroot just makes me smile!  Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet.  I first published this recipe 20 years ago, but it has evolved and got better and better!  It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil.  However, sometimes, the simplest is the best!  We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
+  instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
+  image_url: "https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/106697357_195460111875437_4260796934238193957_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=G3oB89dUkp4AX9wUNJg&oh=69445326ecf538c5e530699cedf26798&oe=5F333FF4",
+  vegan: true,
+  vegetarian: true,
+  gluten_free: true,
+  dairy_free: true,
+  cooking_time: 5,
+  serves: 6
+)
+
 
 puts "seeding done"
 

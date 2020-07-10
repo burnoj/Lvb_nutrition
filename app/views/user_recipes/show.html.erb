@@ -10,31 +10,39 @@
       <div class="recipe-show-content-container">
         <div class="recipe-show-content">
           <h3><%= @recipe.name %></h3>
+          <div class="cooking-time-and-serves">
+            <% mins = (@recipe.cooking_time.to_f % 60).to_i %>
+            <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
+            <p> <%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %></p>
+            <p>Serves <%= @recipe.serves %></p>
+          </div>
+
           <p><%= @recipe.description %></p>
 
-          <% array = @recipe.instructions.split(",") %>
+          <p>--------------------------------------</p>
+
+          <h4>INGREDIENTS</h4>
+
+          <% @recipe.recipe_ingredients.each do |ri| %>
+            <p><%= ri.amount %> of <%= ri.ingredient.name %>, <%= ri.extra_info %></p>
+          <% end %>
+
+          <p>--------------------------------------</p>
+
+          <h2>Instructions</h2>
+
+          <% array = @recipe.instructions.split("/") %>
           <% array.each_with_index do |r, i| %>
             <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
           <% end %>
 
-          <p><%= "V" if @recipe.vegan %></p>
-          <p><%= "VeF" if @recipe.vegetarian %></p>
-          <p><%= "DF" if @recipe.dairy_free %></p>
-          <p><%= "GF" if @recipe.gluten_free %></p>
+           <p>--------------------------------------</p>
 
-          <% mins = (@recipe.cooking_time.to_f % 60).to_i %>
-          <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
-          <%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %>
-
-          <p>Serves <%= @recipe.serves %></p>
-
-          <% @recipe.recipe_ingredients.each do |ri| %>
-            <p><%= ri.amount %> of <%= ri.ingredient.name %></p>
+          <% if @recipe.fact != nil %>
+            <h2>Super Nutrition fact</h2>
+            <p><%= @recipe.fact %></p>
+          <% else %>
           <% end %>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa dolorum, repellat soluta. Quae sunt recusandae quod animi iusto accusamus itaque magnam eaque, dolorem nulla vero veniam eum porro nihil.</p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa dolorum, repellat soluta. Quae sunt recusandae quod animi iusto accusamus itaque magnam eaque, dolorem nulla vero veniam eum porro nihil.</p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsa dolorum, repellat soluta. Quae sunt recusandae quod animi iusto accusamus itaque magnam eaque, dolorem nulla vero veniam eum porro nihil.</p>
 
           <%= link_to "back", user_recipes_path %>
         </div>
