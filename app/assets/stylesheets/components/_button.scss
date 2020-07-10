@@ -14,10 +14,13 @@
 .purple-button {
   background: #A393E2;
   border-radius: 7px;
-  color: white;
+  color: white !important;
   font-size: 0.8em;
   width: 9em;
   height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .red-button {

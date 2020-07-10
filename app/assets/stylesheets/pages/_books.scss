@@ -69,10 +69,14 @@
   }
 
   .book-content {
-    width: 30%;
+    width: 40%;
     padding-left: 4em;
     overflow: hidden;
     max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
 
