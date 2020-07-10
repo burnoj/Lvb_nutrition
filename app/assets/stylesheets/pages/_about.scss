@@ -2,9 +2,16 @@
   width: 100vw;
   height: auto;
   display: grid;
-  grid-template-rows: 14vh 1fr 1fr 1fr 100vh 100vh;
+  grid-template-rows: 14vh auto auto auto 100vh 100vh;
   grid-template-columns: 1fr;
 }
+
+.content {
+    padding: 2em 0;
+   h2 {
+      padding-bottom: 0.5em;
+    }
+  }
 
 .about-section-1 {
   display: flex;
