@@ -76,6 +76,7 @@
   color: white;
   height: 60vh;
   border-radius: 3px;
+  padding: 1em;
 }
 
 .recipe-type {
@@ -91,7 +92,7 @@
   height: 1.5em;
   width: 1.5em;
   margin-top: 0.25em;
-  margin-right: 0.25em;
+  margin-left: 0.25em;
   background: white;
   border-radius: 50%;
   display: flex;
@@ -132,6 +133,9 @@
   align-items: center;
   a {
     color: white !important;
+  }
+  h3 {
+    text-align: center;
   }
 }
 
