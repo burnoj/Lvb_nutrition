@@ -32,7 +32,8 @@
   <div class="user-recipes-grid-container">
     <div class="user-recipes-grid">
       <% @recipes.each do |r| %>
-        <div class="recipe-index-img">
+        <div class="recipe-index-img" style="background-image: url(<%= r.image_url %>)">
+
           <div class="recipe-grid">
             <div class="recipe-type">
 
