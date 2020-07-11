@@ -18,25 +18,25 @@ rescue SibApiV3Sdk::ApiError => e
 end
 
 # ------------ Contact import ------------ #
-require 'uri'
-require 'net/http'
-require 'openssl'
+# require 'uri'
+# require 'net/http'
+# require 'openssl'
 
-url = URI("https://api.sendinblue.com/v3/contacts")
+# url = URI("https://api.sendinblue.com/v3/contacts")
 
-http = Net::HTTP.new(url.host, url.port)
-http.use_ssl = true
-http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+# http = Net::HTTP.new(url.host, url.port)
+# http.use_ssl = true
+# http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-subs = Subscriber.all.to_a
-subscribers = subs.map {|s| s.email}
+# subs = Subscriber.all.to_a
+# subscribers = subs.map {|s| s.email}
 
-subscribers.each do |s|
-  request = Net::HTTP::Post.new(url)
-  request["accept"] = 'application/json'
-  request["content-type"] = 'application/json'
-  request["api-key"] = ENV['SIB_API_KEY']
-  request.body = "{\"updateEnabled\":false,\"email\":\"#{s}\"}"
-  response = http.request(request)
-  puts response.read_body
-end
+# subscribers.each do |s|
+#   request = Net::HTTP::Post.new(url)
+#   request["accept"] = 'application/json'
+#   request["content-type"] = 'application/json'
+#   request["api-key"] = ENV['SIB_API_KEY']
+#   request.body = "{\"updateEnabled\":false,\"email\":\"#{s}\"}"
+#   response = http.request(request)
+#   puts response.read_body
+# end
