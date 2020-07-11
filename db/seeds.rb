@@ -5,16 +5,7 @@ Ingredient.destroy_all
 
 puts "resetting done"
 
-
 puts "seeding recipes"
-
-cooking_times = [10, 20, 30, 40]
-
-1.times do
-  Ingredient.create(
-    name: Faker::Food.ingredient
-  )
-end
 
   Recipe.create(
     name: "Beetroot and Sesame Salad",
@@ -160,9 +151,50 @@ end
     serves: 10
   )
 
+puts "seeding ingredients"
+
+# For Beetroot and sesame salad
+Ingredient.create(name: 'carrots')
+Ingredient.create(name: 'beetroot')
+Ingredient.create(name: 'sesame seeds')
+Ingredient.create(name: 'walnuts')
+Ingredient.create(name: 'raisins')
+Ingredient.create(name: "Lucy's salad dressing")
+Ingredient.create(name: 'dijon mustard')
+Ingredient.create(name: 'cold pressed runny honey')
+Ingredient.create(name: 'small clove of garlic')
+Ingredient.create(name: 'apple cider vinegar')
+Ingredient.create(name: 'extra virgin olive oil')
+
+# Date and almond slices
+Ingredient.create(name: 'plain wholemeal flour')
+Ingredient.create(name: 'ground almonds')
+Ingredient.create(name: 'porridge oats')
+Ingredient.create(name: 'butter')
+Ingredient.create(name: 'medjool dates')
+Ingredient.create(name: 'water')
+
+# Salmon Fishcakes
+Ingredient.create(name: 'salmon fillet')
+Ingredient.create(name: 'large potato')
+Ingredient.create(name: 'egg')
+Ingredient.create(name: 'parsley')
+
+# Panna
+Ingredient.create(name: 'olive oil')
+Ingredient.create(name: 'large onion')
+Ingredient.create(name: 'fennel bulb')
+Ingredient.create(name: 'spinach')
+Ingredient.create(name: 'tarragon')
+Ingredient.create(name: 'garlic')
+# Ingredient.create(name: 'parsley')
+Ingredient.create(name: 'eggs')
+Ingredient.create(name: 'sardines')
+Ingredient.create(name: 'fresh anchovy fillets')
+Ingredient.create(name: 'lemon')
+
 
 puts "seeding done"
-
 
 
 # ------ IMAGE URL's FROM INSTA (MOST RECENT FIRST) --------- #
