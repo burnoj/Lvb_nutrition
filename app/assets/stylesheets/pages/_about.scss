@@ -1,5 +1,5 @@
 .about-container {
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: grid;
   grid-template-rows: 14vh auto auto auto 100vh 100vh;
@@ -17,7 +17,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   margin-top: 2em;
 }
 
@@ -40,7 +39,6 @@
 .about-section-2 {
   display: flex;
   justify-content: center;
-  width: 100vw;
 }
 
 .about-section-2-img-container {
@@ -63,7 +61,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
 }
 
 .about-section-3-img-container {

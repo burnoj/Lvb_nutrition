@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <% flash.each do |type, msg| %>
+      <div class="alert alert-info collapsible" style="opacity: 0.9;">
+        <button class="close close-alert" data-dismiss="alert" style="padding-left: 0.25em; cursor: pointer;">&times;</button>
+        <%= msg %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

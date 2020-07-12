@@ -6,10 +6,9 @@ class SubscribersController < ApplicationController
   def create
     @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
-      redirect_to root_path, notice: 'You are now Subcribed!'
+      redirect_to root_path, notice: 'Great! You are now Subcribed'
     else
-      flash.now[:error] = 'Cannot send message'
-      render :new
+      redirect_to root_path, alert: 'Email Already Taken.'
     end
   end
 
