@@ -53,11 +53,36 @@
   }
 }
 
+.user-recipe-section-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .user-recipes-grid-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 2em 0;
+  // padding: 2em 0;
+}
+
+
+.user-recipe-grid-top {
+  width: 80%;
+}
+
+.user-recipes-dietary-key {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 0.5em;
+  background: $light-blue;
+}
+
+.dietary-key-items {
+  margin: 0.25em !important;
+
 }
 
 .user-recipes-grid {
