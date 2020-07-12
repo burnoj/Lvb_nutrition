@@ -33,7 +33,7 @@
             recipe_ingredient_path(ri),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
-            <li><%= ri.amount %> of <%= ri.ingredient.name %>, <%= ri.extra_info %></li>
+            <li><%= ri.amount %> <%= ri.ingredient.name %> <%= ri.extra_info %></li>
           <% end %>
           </ul>
 
