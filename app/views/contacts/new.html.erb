@@ -3,12 +3,12 @@
 
   <div class="contact-form-container">
     <div class="contact-form">
-      <h2 class="contact-us-title">Contact Us</h2>
+      <h2 class="contact-us-title">Contact Lucy</h2>
     <%= simple_form_for @contact, defaults: {required: false} do |f| %>
-      <%= f.input :name%>
-      <%= f.input :email %>
-      <%= f.input :message, as: :text %>
-      <%= f.button :submit, "Send Message", class: "purple-button" %>
+      <%= f.input :name, placeholder: "John Doe"%>
+      <%= f.input :email, placeholder: "johndoe@gmail.com" %>
+      <%= f.input :message, as: :text, placeholder: "Hi lucy...." %>
+      <div class="contact-button-container"><%= f.button :submit, "Send Message", class: "purple-button contact-button" %></div>
     <% end %>
     </div>
   </div>
