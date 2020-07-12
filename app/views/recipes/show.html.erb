@@ -1,42 +1,61 @@
 <%= render partial: "shared/navbar" %>
-<%= link_to "back", recipes_path %>
-
-<%= image_tag image_url(@recipe.image_url) %>
-
-<%= link_to "edit recipe", edit_recipe_path %>
-<%= link_to "Delete recipe",
-      recipe_path(@recipe),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-
-<h3><%= @recipe.name %></h3>
-<p><%= @recipe.description %></p>
 
 
-<% array = @recipe.instructions.split(",") %>
-<% array.each_with_index do |r, i| %>
-  <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
-<% end %>
 
-<p><%= "V" if @recipe.vegan %></p>
-<p><%= "VeF" if @recipe.vegetarian %></p>
-<p><%= "DF" if @recipe.dairy_free %></p>
-<p><%= "GF" if @recipe.gluten_free %></p>
+<div class="recipes-show-recipe-container">
+    <div class="recipes-show-recipe">
+      <div class="recipe-show-img-container">
+        <div class='recipe-show-img' style="background-image: url(<%= @recipe.image_url %>)"></div>
+      </div>
 
-<% mins = (@recipe.cooking_time.to_f % 60).to_i %>
-<% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
-<%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %>
+      <div class="recipe-show-content-container">
+        <div class="recipe-show-content">
+          <h3><%= @recipe.name %></h3>
+          <p><%= link_to "edit recipe", edit_recipe_path %></p>
+          <p><%= link_to "Delete recipe", recipe_path(@recipe), method: :delete, data: { confirm: "Are you sure?" } %></p>
+          <div class="cooking-time-and-serves">
+            <% mins = (@recipe.cooking_time.to_f % 60).to_i %>
+            <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
+            <p> <%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %></p>
+            <p>Serves <%= @recipe.serves %></p>
+          </div>
 
-<p>Serves <%= @recipe.serves %></p>
+          <p><%= @recipe.description %></p>
 
+          <p>--------------------------------------</p>
 
-<% @recipe.recipe_ingredients.each do |ri| %>
-  <%=  link_to "Delete ingredient",
-          recipe_ingredient_path(ri),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
-  <p><%= ri.amount %> of <%= ri.ingredient.name %></p>
-<% end %>
+          <h4>INGREDIENTS</h4>
+          <p><%= link_to "create ingredient", new_ingredient_path %></p>
+          <p><%= link_to "add ingredient", new_recipe_recipe_ingredient_path(@recipe) %></p>
 
-<%= link_to "create ingredient", new_ingredient_path %>
-<%= link_to "add ingredient", new_recipe_recipe_ingredient_path(@recipe) %>
+          <% @recipe.recipe_ingredients.each do |ri| %>
+           <%=  link_to "Delete ingredient",
+            recipe_ingredient_path(ri),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+            <li><%= ri.amount %> of <%= ri.ingredient.name %>, <%= ri.extra_info %></li>
+          <% end %>
+          </ul>
+
+          <p>--------------------------------------</p>
+
+          <h2>Instructions</h2>
+
+          <% array = @recipe.instructions.split("/") %>
+          <% array.each_with_index do |r, i| %>
+            <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
+          <% end %>
+
+           <p>--------------------------------------</p>
+
+          <% if @recipe.fact != nil %>
+            <h2>Super Nutrition fact</h2>
+            <p><%= @recipe.fact %></p>
+          <% else %>
+          <% end %>
+
+          <%= link_to "back", user_recipes_path %>
+        </div>
+      </div>
+    </div>
+  </div>
