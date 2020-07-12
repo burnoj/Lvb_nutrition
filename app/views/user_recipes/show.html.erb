@@ -10,11 +10,11 @@
       <div class="recipe-show-content-container">
         <div class="recipe-show-content">
           <h3><%= @recipe.name %></h3>
-          <div class="cooking-time-and-serves">
+          <div class="cooking-time-and-serves-show">
             <% mins = (@recipe.cooking_time.to_f % 60).to_i %>
             <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
-            <p> <%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %></p>
-            <p>Serves <%= @recipe.serves %></p>
+            <p><i class="far fa-clock" style="padding: 0 0.5em;"></i><%= @recipe.cooking_time %> mins</p>
+            <p><i class="fas fa-user-friends" style="padding: 0 0.5em;"></i><%= @recipe.serves %></p>
           </div>
 
           <p><%= @recipe.description %></p>
@@ -30,7 +30,7 @@
 
           <p>--------------------------------------</p>
 
-          <h2>Instructions</h2>
+          <h2 class="recipe-instructions">Instructions</h2>
 
           <% array = @recipe.instructions.split("/") %>
           <% array.each_with_index do |r, i| %>
