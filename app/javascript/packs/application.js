@@ -22,7 +22,21 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
-// ------------ Hamburger Menu ------------ //
+// ------------ Smooth Scroll ------------ //
+function smoothScroll () {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+    });
+  });
+}
+
+smoothScroll();
+
 
 
 // External imports
