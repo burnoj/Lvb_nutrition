@@ -1,7 +1,9 @@
+<%= render partial: "shared/anchor-link" %>
+
 <div class="recipes-show-container">
   <%= render partial: "shared/navbar" %>
 
-  <div class="recipes-show-recipe-container">
+  <div class="recipes-show-recipe-container"><a id="top" style="position: absolute; top: 0;"></a>
     <div class="recipes-show-recipe">
       <div class="recipe-show-img-container">
         <div class='recipe-show-img' style="background-image: url(<%= @recipe.image_url %>)"></div>
