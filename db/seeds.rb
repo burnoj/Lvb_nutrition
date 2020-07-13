@@ -7,7 +7,9 @@ puts "resetting done"
 
 puts "seeding recipes"
 
-  Recipe.create(
+# -------------------- Beetroot Salad -------------------- #
+
+  beetroot_salad = Recipe.create(
     name: "Beetroot and Sesame Salad",
     description: "Beetroot just makes me smile! Being so vibrant in colour, the whole plant celebrates what is truly spectacular about a summer veggie diet. I first published this recipe 20 years ago, but it has evolved and got better and better! It can be kept plainer for little ones or dressed up for adults with an oriental dressing of grated ginger, soy sauce and sesame oil. However, sometimes, the simplest is the best! We didn’t have any raisins or walnuts and it was still scrumptious! Combining beetroot, carrot and sesame, this recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!",
     instructions: "To make the dressing, combine the mustard and honey and mix to a smooth paste. Add the garlic and the cider vinegar and blend well. Finally add the olive oil and mix well./Combine with the vegetables, nuts and seeds./Serve alongside a baked potato and hummus and a green salad.",
@@ -21,7 +23,33 @@ puts "seeding recipes"
     fact: "This recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!"
   )
 
-  Recipe.create(
+  carrots = Ingredient.create(name: 'carrots')
+  beetroot = Ingredient.create(name: 'beetroot')
+  sesame_seeds =Ingredient.create(name: 'sesame seeds')
+  walnuts = Ingredient.create(name: 'walnuts')
+  raisins = Ingredient.create(name: 'raisins')
+  salad_dressing = Ingredient.create(name: "Lucy's salad dressing")
+  dijon = Ingredient.create(name: 'dijon mustard')
+  honey = Ingredient.create(name: 'cold pressed runny honey')
+  garlic = Ingredient.create(name: 'small clove of garlic')
+  cider_vinegar = Ingredient.create(name: 'apple cider vinegar')
+  olive_oil = Ingredient.create(name: 'extra virgin olive oil')
+
+  RecipeIngredient.create(amount: "3", ingredient_id: carrots.id, recipe_id: beetroot_salad.id, extra_info:"peeled and grated")
+  RecipeIngredient.create(amount: "1 large raw", ingredient_id: beetroot.id, recipe_id: beetroot_salad.id, extra_info:"peeled and grated")
+  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: sesame_seeds.id, recipe_id: beetroot_salad.id, extra_info:"")
+  RecipeIngredient.create(amount: "Chopped", ingredient_id: walnuts.id, recipe_id: beetroot_salad.id, extra_info:"optional")
+  RecipeIngredient.create(amount: "", ingredient_id: raisins.id, recipe_id: beetroot_salad.id, extra_info:"optional")
+  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: salad_dressing.id, recipe_id: beetroot_salad.id, extra_info:"")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: dijon.id, recipe_id: beetroot_salad.id, extra_info:"")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: honey.id, recipe_id: beetroot_salad.id, extra_info:"")
+  RecipeIngredient.create(amount: "1", ingredient_id: garlic.id, recipe_id: beetroot_salad.id, extra_info:"crushed")
+  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: cider_vinegar.id, recipe_id: beetroot_salad.id, extra_info:"")
+  RecipeIngredient.create(amount: "6 tbsps", ingredient_id: olive_oil.id, recipe_id: beetroot_salad.id, extra_info:"")
+
+# -------------------- Date and Almond Slices -------------------- #
+
+  date_and_almond_slices = Recipe.create(
     name: "Date and Almond Slices",
     description: "A new baking sensation! These melt in mouth date and almond bars are super delicious. 100% wholegrain and natural without any added sugar. A firm family favourite in our house and popular with children of all ages. Ground almonds add protein, which helps to balance blood sugar levels for sustained energy. They also make you feel fuller for longer. The best teatime treat in the world! This recipe can easily be doubles or tripled and cooked in a traybake tin.",
     instructions: "Put the dates into a food processor and whizz up until they form a smooth paste. Add a tbsp of boiling water at a time for the right consistency./In a mixing bowl put the almonds, flour and porridge oats. Add the butter and, using your hands mix to resemble breadcrumbs and then form a dough. Add 1-2 tbsps water if too crumbly./Use half the dough to line the bottom of a 20x20 cm non-stick baking tin (line with baking parchment if not). Push the mixture down firmly./Smooth the date puree over the oat mixture and then roll out the remaining dough to cover the date mixture./Don’t worry if there are small gaps showing the date puree coming through (see next step)/Bake in the oven for 15 mins at 180. Take the tin out, and, using a fork, scrape the crumbly top layer until it covers the date mixture evenly./Using a potato masher, push down on the mixture to creature a firm, smooth top./Return to the oven and cook for another 10-15 mins until the top is turning lightly golden./Cool completely in the tin and then mark up into squares and remove carefully with a spatula./Makes 16 slices",
@@ -34,7 +62,23 @@ puts "seeding recipes"
     serves: 10
   )
 
-  Recipe.create(
+  flour = Ingredient.create(name: 'plain wholemeal flour')
+  almonds = Ingredient.create(name: 'ground almonds')
+  porridge_oats =Ingredient.create(name: 'porridge oats')
+  butter = Ingredient.create(name: 'butter')
+  medjool_dates = Ingredient.create(name: 'medjool dates')
+  water = Ingredient.create(name: "water")
+
+  RecipeIngredient.create(amount: "3", ingredient_id: flour.id, recipe_id: date_and_almond_slices.id, extra_info: "or gluten free")
+  RecipeIngredient.create(amount: "1 large raw", ingredient_id: almonds.id, recipe_id: date_and_almond_slices.id, extra_info: "")
+  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: porridge_oats.id, recipe_id: date_and_almond_slices.id, extra_info: "")
+  RecipeIngredient.create(amount: "Chopped", ingredient_id: butter.id, recipe_id: date_and_almond_slices.id, extra_info: "vegan butter or unhydrogenated margarine")
+  RecipeIngredient.create(amount: "", ingredient_id: medjool_dates.id, recipe_id: date_and_almond_slices.id, extra_info: "pitted, or dried dates soaked in a little boiled water to soften")
+  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: water.id, recipe_id: date_and_almond_slices.id, extra_info: "")
+
+# -------------------- Salmon Fishcakes -------------------- #
+
+  salmon_fishcakes =  Recipe.create(
     name: "Salmon Fishcakes",
     description: "Salmon fishcakes are a family favourite for all ages. Once you have made them, you will be hooked! Salmon is rich in omega-3 essential fatty acids that play an important part in immune health. They also exhibit anti-inflammatory properties, useful in protecting against disease. Either fresh or canned salmon works well in this recipe.",
     instructions: "Cover the salmon and bake, drizzled with olive oil and seasoned for 20-25 mins (depending on quantity) until cooked through. Once cooled remove skin and flake into a large mixing bowl./Peel and chop the potatoes and boil for 30 mins until soft. Mash and add to the salmon. Add the beaten egg and mix well./Chop the parsley and add to the bowl./Mix well, season and form into fish cakes/Cook in a little olive oil until golden brown on each side – don’t turn until the fishcake has turned brown golden and formed a crust./Serve with lots of green veg and your favourite sauce. My children love ‘pink sauce’ which is an equal quantity of mayonnaise and tomato sauce mixed well.",
@@ -47,7 +91,19 @@ puts "seeding recipes"
     serves: 4
   )
 
-  Recipe.create(
+  salmon_fillet = Ingredient.create(name: 'salmon fillet')
+  potato = Ingredient.create(name: 'large potato')
+  egg = Ingredient.create(name: 'egg')
+  parsley = Ingredient.create(name: 'parsley')
+
+  RecipeIngredient.create(amount: "4", ingredient_id: flour.id, recipe_id: salmon_fishcakes.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "4", ingredient_id: flour.id, recipe_id: salmon_fishcakes.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "1", ingredient_id: flour.id, recipe_id: salmon_fishcakes.id, extra_info:"beaten")
+  RecipeIngredient.create(amount: "1 large handful of", ingredient_id: flour.id, recipe_id: salmon_fishcakes.id, extra_info:"or any herb of your liking, e.g chives, wild garlic")
+
+  # -------------------- Salmon Fishcakes -------------------- #
+
+  panna = Recipe.create(
     name: "Panna",
     description: "You can’t beat this super easy, nutrient packed, recipe. I first published it in “Boost Your Child’s Immune System”. This new and improved version has a slightly more sophisticated twist but can be adapted to suit young children as well as older families. A fabulous superfood staple for all as well as students looking for healthy budget meals",
     instructions: "In a pan, cook the onion and fennel in the olive oil on a gentle heat until soft./Add the spinach, garlic and couple of tbsps of water./Continue cooking gently until the spinach has wilted./Put all the ingredients in a blender and whizz for a couple of minutes. Use a spatula to sweep round the sides and do another quick blitz./Allow to cool and then pop in the fridge, covered, for a couple of hours./Serve with wholegrain bread, crackers, seed biscuits and salad or crudités.",
@@ -59,6 +115,31 @@ puts "seeding recipes"
     cooking_time: 30,
     serves: 6
   )
+
+  olive_oil = Ingredient.create(name: 'olive oil')
+  onion = Ingredient.create(name: 'large onion')
+  fennel = Ingredient.create(name: 'fennel bulb')
+  spinach = Ingredient.create(name: 'spinach')
+  tarragon = Ingredient.create(name: 'tarragon')
+  garlic = Ingredient.create(name: 'garlic')
+  garlic = Ingredient.create(name: 'garlic')
+  garlic = Ingredient.create(name: 'garlic')
+  garlic = Ingredient.create(name: 'garlic')
+  garlic = Ingredient.create(name: 'garlic')
+  garlic = Ingredient.create(name: 'garlic')
+
+  RecipeIngredient.create(amount: "1-2 tbsp", ingredient_id: olive_oil.id, recipe_id: panna.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "1/2 a", ingredient_id: onion.id, recipe_id: panna.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "1/2 a", ingredient_id: fennel.id, recipe_id: panna.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "A large bunch of", ingredient_id: spinach.id, recipe_id: panna.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "a sprig of", ingredient_id: tarragon.id, recipe_id: panna.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "1 clove of", ingredient_id: garlic.id, recipe_id: panna.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "A handful of", ingredient_id: parsley.id, recipe_id: panna.id, extra_info:"per person")
+
+
+
+
+# -------------------- Salmon Fishcakes -------------------- #
 
   Recipe.create(
     name: "Elderflower Squash",
@@ -73,6 +154,8 @@ puts "seeding recipes"
     serves: 10
   )
 
+  # -------------------- Salmon Fishcakes -------------------- #
+
   Recipe.create(
     name: "Prawn and Veg Courgetti",
     description: "Prawns are rich in selenium, a powerful antioxidant that helps protect your body against disease and plays an important role in immune health by helping with antibody production. This quick and light dish is perfect as a simple, superfood supper for all ages. Packed with antibacterial and antiviral agents to help keep your immune system in tip-top shape. It is easy to halve or double or adapt with the vegetables that you have to hand.",
@@ -85,6 +168,8 @@ puts "seeding recipes"
     cooking_time: 30,
     serves: 3
   )
+
+  # -------------------- Salmon Fishcakes -------------------- #
 
   Recipe.create(
     name: "Apple Cake",
@@ -99,6 +184,8 @@ puts "seeding recipes"
     serves: 10
   )
 
+  # -------------------- Salmon Fishcakes -------------------- #
+
   Recipe.create(
     name: "Stuffed Portobello Mushrooms",
     description: "Here is a delicious super quick mushroom recipe packed full of vitamin D and rich in powerful antioxidants.",
@@ -111,6 +198,8 @@ puts "seeding recipes"
     cooking_time: 30,
     serves: 4
   )
+
+  # -------------------- Salmon Fishcakes -------------------- #
 
   Recipe.create(
     name: "Super Seeded Oatcakes",
@@ -125,6 +214,8 @@ puts "seeding recipes"
     serves: 10
   )
 
+  # -------------------- Salmon Fishcakes -------------------- #
+
   Recipe.create(
     name: "Soda Bread",
     description: "100% whole grain and yeast free, soda bread takes 5 mins to prepare and 40mins to cook. Excellent for digestive health. ",
@@ -137,6 +228,8 @@ puts "seeding recipes"
     cooking_time: 45,
     serves: 10
   )
+
+  # -------------------- Salmon Fishcakes -------------------- #
 
   Recipe.create(
     name: "The Ultimate Cake",
@@ -151,42 +244,11 @@ puts "seeding recipes"
     serves: 10
   )
 
+  # -------------------- Salmon Fishcakes -------------------- #
+
 puts "seeding ingredients"
 
-# For Beetroot and sesame salad
-Ingredient.create(name: 'carrots')
-Ingredient.create(name: 'beetroot')
-Ingredient.create(name: 'sesame seeds')
-Ingredient.create(name: 'walnuts')
-Ingredient.create(name: 'raisins')
-Ingredient.create(name: "Lucy's salad dressing")
-Ingredient.create(name: 'dijon mustard')
-Ingredient.create(name: 'cold pressed runny honey')
-Ingredient.create(name: 'small clove of garlic')
-Ingredient.create(name: 'apple cider vinegar')
-Ingredient.create(name: 'extra virgin olive oil')
 
-# Date and almond slices
-Ingredient.create(name: 'plain wholemeal flour')
-Ingredient.create(name: 'ground almonds')
-Ingredient.create(name: 'porridge oats')
-Ingredient.create(name: 'butter')
-Ingredient.create(name: 'medjool dates')
-Ingredient.create(name: 'water')
-
-# Salmon Fishcakes
-Ingredient.create(name: 'salmon fillet')
-Ingredient.create(name: 'large potato')
-Ingredient.create(name: 'egg')
-Ingredient.create(name: 'parsley')
-
-# Panna
-Ingredient.create(name: 'olive oil')
-Ingredient.create(name: 'large onion')
-Ingredient.create(name: 'fennel bulb')
-Ingredient.create(name: 'spinach')
-Ingredient.create(name: 'tarragon')
-Ingredient.create(name: 'garlic')
 # Ingredient.create(name: 'parsley')
 Ingredient.create(name: 'eggs')
 Ingredient.create(name: 'sardines')
