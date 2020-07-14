@@ -176,11 +176,11 @@
   // ------- RECIPES ------- //
 
   .home-recipes {
-    padding: none;
+    padding: none !important;
   }
 
   .home-recipes-content {
-    margin-bottom: 1pem;
+    margin-bottom: 1em;
     text-align: center;
     width: 60%;
   }
