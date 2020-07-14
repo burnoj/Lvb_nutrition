@@ -5,7 +5,7 @@ Ingredient.destroy_all
 
 puts "resetting done"
 
-puts "seeding recipes"
+puts "seeding first 10 recipes with ingredients"
 
 # -------------------- Beetroot Salad -------------------- #
 
@@ -33,7 +33,7 @@ puts "seeding recipes"
   honey = Ingredient.create(name: 'cold pressed runny honey')
   garlic = Ingredient.create(name: 'small clove of garlic')
   cider_vinegar = Ingredient.create(name: 'apple cider vinegar')
-  olive_oil = Ingredient.create(name: 'extra virgin olive oil')
+  olive_oil = Ingredient.create(name: 'olive oil')
 
   RecipeIngredient.create(amount: "3", ingredient_id: carrots.id, recipe_id: beetroot_salad.id, extra_info:"peeled and grated")
   RecipeIngredient.create(amount: "1 large raw", ingredient_id: beetroot.id, recipe_id: beetroot_salad.id, extra_info:"peeled and grated")
@@ -96,10 +96,10 @@ puts "seeding recipes"
   egg = Ingredient.create(name: 'egg')
   parsley = Ingredient.create(name: 'parsley')
 
-  RecipeIngredient.create(amount: "4", ingredient_id: flour.id, recipe_id: salmon_fishcakes.id, extra_info:"per person")
-  RecipeIngredient.create(amount: "4", ingredient_id: flour.id, recipe_id: salmon_fishcakes.id, extra_info:"per person")
-  RecipeIngredient.create(amount: "1", ingredient_id: flour.id, recipe_id: salmon_fishcakes.id, extra_info:"beaten")
-  RecipeIngredient.create(amount: "1 large handful of", ingredient_id: flour.id, recipe_id: salmon_fishcakes.id, extra_info:"or any herb of your liking, e.g chives, wild garlic")
+  RecipeIngredient.create(amount: "4", ingredient_id: salmon_fillet.id, recipe_id: salmon_fishcakes.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "4", ingredient_id: potato.id, recipe_id: salmon_fishcakes.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "1", ingredient_id: egg.id, recipe_id: salmon_fishcakes.id, extra_info:"beaten")
+  RecipeIngredient.create(amount: "1 large handful of", ingredient_id: parsley.id, recipe_id: salmon_fishcakes.id, extra_info:"or any herb of your liking, e.g chives, wild garlic")
 
   # -------------------- Salmon Fishcakes -------------------- #
 
@@ -117,31 +117,31 @@ puts "seeding recipes"
   )
 
   olive_oil = Ingredient.create(name: 'olive oil')
-  onion = Ingredient.create(name: 'large onion')
+  onion = Ingredient.create(name: 'onion')
   fennel = Ingredient.create(name: 'fennel bulb')
   spinach = Ingredient.create(name: 'spinach')
   tarragon = Ingredient.create(name: 'tarragon')
   garlic = Ingredient.create(name: 'garlic')
-  garlic = Ingredient.create(name: 'garlic')
-  garlic = Ingredient.create(name: 'garlic')
-  garlic = Ingredient.create(name: 'garlic')
-  garlic = Ingredient.create(name: 'garlic')
-  garlic = Ingredient.create(name: 'garlic')
+  eggs = Ingredient.create(name: 'eggs')
+  sardines = Ingredient.create(name: 'sardines')
+  anchovy_fillets = Ingredient.create(name: 'anchovy fillets')
+  lemon = Ingredient.create(name: 'lemon')
 
-  RecipeIngredient.create(amount: "1-2 tbsp", ingredient_id: olive_oil.id, recipe_id: panna.id, extra_info:"per person")
-  RecipeIngredient.create(amount: "1/2 a", ingredient_id: onion.id, recipe_id: panna.id, extra_info:"per person")
-  RecipeIngredient.create(amount: "1/2 a", ingredient_id: fennel.id, recipe_id: panna.id, extra_info:"per person")
-  RecipeIngredient.create(amount: "A large bunch of", ingredient_id: spinach.id, recipe_id: panna.id, extra_info:"per person")
-  RecipeIngredient.create(amount: "a sprig of", ingredient_id: tarragon.id, recipe_id: panna.id, extra_info:"per person")
-  RecipeIngredient.create(amount: "1 clove of", ingredient_id: garlic.id, recipe_id: panna.id, extra_info:"per person")
-  RecipeIngredient.create(amount: "A handful of", ingredient_id: parsley.id, recipe_id: panna.id, extra_info:"per person")
+  RecipeIngredient.create(amount: "1-2 tbsp", ingredient_id: olive_oil.id, recipe_id: panna.id, extra_info:"")
+  RecipeIngredient.create(amount: "1/2 a large", ingredient_id: onion.id, recipe_id: panna.id, extra_info:"chopped")
+  RecipeIngredient.create(amount: "1/2 a", ingredient_id: fennel.id, recipe_id: panna.id, extra_info:"chopped")
+  RecipeIngredient.create(amount: "A large bunch of", ingredient_id: spinach.id, recipe_id: panna.id, extra_info:"washed, shredded from stalks and chopped")
+  RecipeIngredient.create(amount: "a sprig of", ingredient_id: tarragon.id, recipe_id: panna.id, extra_info:"or 1 tsp dried tarragon")
+  RecipeIngredient.create(amount: "1 clove of", ingredient_id: garlic.id, recipe_id: panna.id, extra_info:"chopped")
+  RecipeIngredient.create(amount: "A handful of", ingredient_id: parsley.id, recipe_id: panna.id, extra_info:"")
+  RecipeIngredient.create(amount: "2 hard boiled", ingredient_id: eggs.id, recipe_id: panna.id, extra_info:"")
+  RecipeIngredient.create(amount: "1 tin 120g sardines", ingredient_id: sardines.id, recipe_id: panna.id, extra_info:"drained")
+  RecipeIngredient.create(amount: "5 fresh", ingredient_id: anchovy_fillets.id, recipe_id: panna.id, extra_info:"50g, or 1/2 a small tin: optional")
+  RecipeIngredient.create(amount: "Juice of half a", ingredient_id: lemon.id, recipe_id: panna.id, extra_info:"")
 
+# -------------------- Elderflower Squash -------------------- #
 
-
-
-# -------------------- Salmon Fishcakes -------------------- #
-
-  Recipe.create(
+  elderflower_squash = Recipe.create(
     name: "Elderflower Squash",
     description: "Elderflower is everywhere and what a bonus for us! Five minutes to prepare and all you need is water, sugar and some vinegar and hey presto! It tastes so much better than cordial. Even better, I have added a sugar free version for those on special diets. It is the most delicious instant drink, free of all additives and as nature intended.",
     instructions: "Put all the ingredients into a bowl./Stir well to dissolve sugar and mix contents./Cover and allow to stand in a cool place for 24 hours/Strain through a sieve/Keep bottled in a fridge/Serve with lots of ice and a slice of lemon. No need to dilute at all./Keeps refrigerated. After a couple of weeks it turns fizzy which is delicious and so refreshing.",
@@ -154,9 +154,19 @@ puts "seeding recipes"
     serves: 10
   )
 
-  # -------------------- Salmon Fishcakes -------------------- #
+  elder_flowers = Ingredient.create(name: 'elder flowers')
+  caster_sugar = Ingredient.create(name: 'caster sugar')
+  lemons = Ingredient.create(name: 'lemons')
 
-  Recipe.create(
+  RecipeIngredient.create(amount: "5 big heads of", ingredient_id: elder_flowers.id, recipe_id: elderflower_squash.id, extra_info:"shredded from their stalks")
+  RecipeIngredient.create(amount: "", ingredient_id: .id, recipe_id: .id, extra_info:"")
+  RecipeIngredient.create(amount: "", ingredient_id: .id, recipe_id: .id, extra_info:"")
+  RecipeIngredient.create(amount: "", ingredient_id: .id, recipe_id: .id, extra_info:"")
+  RecipeIngredient.create(amount: "", ingredient_id: .id, recipe_id: .id, extra_info:"")
+
+  # -------------------- Prawn Courgetti -------------------- #
+
+  prawn_courgetti = Recipe.create(
     name: "Prawn and Veg Courgetti",
     description: "Prawns are rich in selenium, a powerful antioxidant that helps protect your body against disease and plays an important role in immune health by helping with antibody production. This quick and light dish is perfect as a simple, superfood supper for all ages. Packed with antibacterial and antiviral agents to help keep your immune system in tip-top shape. It is easy to halve or double or adapt with the vegetables that you have to hand.",
     instructions: " Soak the noodles in boiling water for a few minutes until soft. Drain and set aside./Heat the oil in a wok or large non-stick pan and cook the prawns until pink./Add garlic, ginger, chilli flakes and cook for a min./Add courgetti and cook for 3-4 mins until just starting to soften./Take off the heat, squeeze the lemon over the pan./Pour boiling water over the drained noodles to heat them if cooled. Toss the rice noodles in sesame oil and soy sauce./Serve the courgetti mixture on top of noodles, season and sprinkle with plenty of chopped coriander",
@@ -168,6 +178,26 @@ puts "seeding recipes"
     cooking_time: 30,
     serves: 3
   )
+
+  raw_prawns = Ingredient.create(name: 'raw prawns')
+  courgettes = Ingredient.create(name: 'courgettes')
+  rice_noodle_nests = Ingredient.create(name: 'rice noodle nests')
+  chilli_flakes = Ingredient.create(name: 'chilli flakes')
+  ginger = Ingredient.create(name: 'ginger')
+  sesame_oil = Ingredient.create(name: 'sesame oil')
+  coriander = Ingredient.create(name: 'coriander')
+
+  RecipeIngredient.create(amount: "400g", ingredient_id: raw_prawns.id, recipe_id: prawn_courgetti.id, extra_info:"100g per person")
+  RecipeIngredient.create(amount: "4 large", ingredient_id: courgettes.id, recipe_id: prawn_courgetti.id, extra_info:"spiralled")
+  RecipeIngredient.create(amount: "3 large", ingredient_id: carrots.id, recipe_id: prawn_courgetti.id, extra_info:"spiralled")
+  RecipeIngredient.create(amount: "4", ingredient_id: rice_noodle_nests.id, recipe_id: prawn_courgetti.id, extra_info:"")
+  RecipeIngredient.create(amount: "2 cloves of", ingredient_id: garlic.id, recipe_id: prawn_courgetti.id, extra_info:"chopped")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: chilli_flakes.id, recipe_id: prawn_courgetti.id, extra_info:"optional")
+  RecipeIngredient.create(amount: "A knob of", ingredient_id: ginger.id, recipe_id: prawn_courgetti.id, extra_info:"grated, thumbnail size")
+  RecipeIngredient.create(amount: "1-2 tbsps", ingredient_id: olive_oil.id, recipe_id: prawn_courgetti.id, extra_info:"")
+  RecipeIngredient.create(amount: "Juice of 1/2 a", ingredient_id: lemon.id, recipe_id: prawn_courgetti.id, extra_info:"")
+  RecipeIngredient.create(amount: "Sprinkle of", ingredient_id: sesame_oil.id, recipe_id: prawn_courgetti.id, extra_info:"and tamari sauce for noodles")
+  RecipeIngredient.create(amount: "Handful of fresh ", ingredient_id: coriander.id, recipe_id: prawn_courgetti.id, extra_info:"chopped")
 
   # -------------------- Salmon Fishcakes -------------------- #
 
@@ -184,9 +214,29 @@ puts "seeding recipes"
     serves: 10
   )
 
-  # -------------------- Salmon Fishcakes -------------------- #
+  apples = Ingredient.create(name: 'apples')
+  sugar = Ingredient.create(name: 'sugar')
+  flour = Ingredient.create(name: 'flour')
+  baking_powder = Ingredient.create(name: 'baking_powder')
+  mixed_spice = Ingredient.create(name: 'mixed spice')
+  sunflower_oil = Ingredient.create(name: 'sunflower oil'
+  cream_cheese = Ingredient.create(name: 'cream cheese')
+  vanilla_essence = Ingredient.create(name: 'vanilla essence')
 
-  Recipe.create(
+  RecipeIngredient.create(amount: "4-5", ingredient_id: apples.id, recipe_id: .id, extra_info:"roughly 500g, peeled and chopped")
+  RecipeIngredient.create(amount: "125g, just over 1/2 a cup brown", ingredient_id: sugar.id, recipe_id: .id, extra_info:"or sugar free Zucrin Gold")
+  RecipeIngredient.create(amount: "2", ingredient_id: eggs.id, recipe_id: .id, extra_info:"beaten")
+  RecipeIngredient.create(amount: "250g (2 cups) wholemeal", ingredient_id: flour.id, recipe_id: .id, extra_info:"or self raising gluten free. If using plain  make sure you use some 1/2 tsp xanthum gum to blend the flour properly")
+  RecipeIngredient.create(amount: "2 tsp", ingredient_id: baking_powder.id, recipe_id: .id, extra_info:"")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: mixed_spice.id, recipe_id: .id, extra_info:"or ground cinnamon if none")
+  RecipeIngredient.create(amount: "150 ml", ingredient_id: sunflower_oil.id, recipe_id: .id, extra_info:"")
+  RecipeIngredient.create(amount: "150g light", ingredient_id: cream_cheese.id, recipe_id: .id, extra_info:"you can use more or less as you like")
+  RecipeIngredient.create(amount: "1 tbsp light brown", ingredient_id: sugar.id, recipe_id: .id, extra_info:"or icing sugar")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: vanilla_essence.id, recipe_id: .id, extra_info:"optional")
+
+  # -------------------- Stuffed Mushrooms -------------------- #
+
+  stuffed_mushrooms = Recipe.create(
     name: "Stuffed Portobello Mushrooms",
     description: "Here is a delicious super quick mushroom recipe packed full of vitamin D and rich in powerful antioxidants.",
     instructions: "In a dry pan, cook the chorizo (if using) for a couple mins stirring frequently./Add the onion and a tbsp of olive oil and cook until soft./Add the pepper, garlic and courgette and cook for a further couple of mins./Spray the smooth side with a little olive oil and place in a roasting tin./Divide the vegetable mixture into the four mushrooms./Nestle the ricotta into the middle of the vegetables./Season well and bake in the oven for 15-20 mins until the mushroom is cooked through./Serve on its own with a green salad or with crunchy wholegrain bread./",
@@ -199,9 +249,25 @@ puts "seeding recipes"
     serves: 4
   )
 
-  # -------------------- Salmon Fishcakes -------------------- #
+  portabello_mushrooms = Ingredient.create(name: 'portabello mushrooms')
+  red_onion = Ingredient.create(name: 'red onion')
+  red_pepper = Ingredient.create(name: 'red pepper')
+  courgette = Ingredient.create(name: 'courgette')
+  chorizo = Ingredient.create(name: 'chorizo')
+  ricotta = Ingredient.create(name: 'ricotta')
 
-  Recipe.create(
+  RecipeIngredient.create(amount: "4 large", ingredient_id: portabello_mushrooms.id, recipe_id: stuffed_mushrooms.id, extra_info:"stalks removed")
+  RecipeIngredient.create(amount: "1", ingredient_id: red_onion.id, recipe_id: stuffed_mushrooms.id, extra_info:"chopped finely")
+  RecipeIngredient.create(amount: "1", ingredient_id: red_pepper.id, recipe_id: stuffed_mushrooms.id, extra_info:"diced")
+  RecipeIngredient.create(amount: "1", ingredient_id: courgette.id, recipe_id: stuffed_mushrooms.id, extra_info:"diced")
+  RecipeIngredient.create(amount: "2 cloves of", ingredient_id: garlic.id, recipe_id: stuffed_mushrooms.id, extra_info:"pressed")
+  RecipeIngredient.create(amount: "10cm length of", ingredient_id: chorizo.id, recipe_id: stuffed_mushrooms.id, extra_info:"diced, or puy lentils for vegan alternative")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: ricotta.id, recipe_id: stuffed_mushrooms.id, extra_info:"vegan cream cheese for each mushroom")
+  RecipeIngredient.create(amount: "a handful of", ingredient_id: parsley.id, recipe_id: stuffed_mushrooms.id, extra_info:"and basil, chopped")
+
+  # -------------------- Seeded Oatcakes -------------------- #
+
+  oat_cakes = Recipe.create(
     name: "Super Seeded Oatcakes",
     description: "Sesame seed oatcakes are my brand new baking sensation. They can be vegan, gluten free, dairy free and superior to anything shop bought. Made from store cupboard items, quick and easy, they are delicious with dips, pates, avocado slices, cheese or nut butters.Oats help to reduce cholesterol, provide sustained energy, can aid weight loss and support gut and immune health. Combined with seeds, you are adding extra protective power as both chia and sesame seeds contain anti-inflammatory compounds and are rich in nutrients that can protect your cells from oxidative stress. Crackers about these!",
     instructions: "Mix melted butter, water and chia seeds./In a mixing bowl, place the oats and, making a well in the middle, add the wet ingredients./Using your hands, mix well to create a well blended dough./Turn out onto a clean surface. Use a little oat flour if is too sticky (I didn’t need to)./Roll out as thin as you can before they start breaking up./Using a cookie cutter, form the oatcakes./Lightly season and lift them gently onto a lightly oiled baking sheet./Bake at 180 in the middle of the oven for 20 mins./Turn them over and cook for a further 10 mins until golden brown. Do not allow to burn./You will be able to reform the remainder of the dough and repeat the process several times./Makes 36-40 oatcakes./Once cooled, store in an airtight tin.",
@@ -214,9 +280,20 @@ puts "seeding recipes"
     serves: 10
   )
 
-  # -------------------- Salmon Fishcakes -------------------- #
+  oats = Ingredient.create(name: 'oats')
+  chia_seeds = Ingredient.create(name: 'chia seeds')
+  vegan_margarine = Ingredient.create(name: 'vegan margarine')
 
-  Recipe.create(
+  RecipeIngredient.create(amount: "250g", ingredient_id: oats.id, recipe_id: oat_cakes.id, extra_info:"1 used porridge oats as all I had, Blitz half the oats in a food processor until finely ground. You can also use oatmeal but I haven’t tried this so let me know")
+  RecipeIngredient.create(amount: "2 tbsps", ingredient_id: chia_seeds.id, recipe_id: oat_cakes.id, extra_info:"covered in water and soaked for 30 mins")
+  RecipeIngredient.create(amount: "50 g (just under 1/2 cup)", ingredient_id: sesame_seeds.id, recipe_id: oat_cakes.id, extra_info:"")
+  RecipeIngredient.create(amount: "50g (1/4 cup)", ingredient_id: vegan_margarine.id, recipe_id: oat_cakes.id, extra_info:"or butter, melted")
+  RecipeIngredient.create(amount: "75ml (1/3 cup)", ingredient_id: water.id, recipe_id: oat_cakes.id, extra_info:"")
+
+
+  # -------------------- Soda Bread -------------------- #
+
+  soda_bread = Recipe.create(
     name: "Soda Bread",
     description: "100% whole grain and yeast free, soda bread takes 5 mins to prepare and 40mins to cook. Excellent for digestive health. ",
     instructions: "Put the flour, bicarb and salt in a mixing bowl./Add the yoghurt, water and melted butter and mix into a dough. Do not knead./Form into a round loaf and turn out onto a baking sheet./Make a cross across the top./Brush with melted butter and sprinkle with the seeds and the cumin seeds (optional)./Bake for 40 mins at 180.",
@@ -229,9 +306,26 @@ puts "seeding recipes"
     serves: 10
   )
 
-  # -------------------- Salmon Fishcakes -------------------- #
+  natural_yoghurt = Ingredient.create(name: 'natural yoghurt')
+  bicarbonate_of_soda = Ingredient.create(name: 'bicarbonate of soda')
+  sea_salt = Ingredient.create(name: 'sea salt')
+  mixed_seeds = Ingredient.create(name: 'mixed seeds')
+  cumin_seeds = Ingredient.create(name: 'cumin seeds')
 
-  Recipe.create(
+  RecipeIngredient.create(amount: "450g (1lb) wholemeal", ingredient_id: flour.id, recipe_id: soda_bread.id, extra_info:"")
+  RecipeIngredient.create(amount: "300ml (1heaped cup)", ingredient_id: natural_yoghurt.id, recipe_id: soda_bread.id, extra_info:"or buttermilk")
+  RecipeIngredient.create(amount: "1 heaped tsp", ingredient_id: bicarbonate_of_soda.id, recipe_id: soda_bread.id, extra_info:"")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: sea_salt.id, recipe_id: soda_bread.id, extra_info:"")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: butter.id, recipe_id: soda_bread.id, extra_info:"melted")
+  RecipeIngredient.create(amount: "40ml (1/2 cup)", ingredient_id: water.id, recipe_id: soda_bread.id, extra_info:"")
+  RecipeIngredient.create(amount: "Melted", ingredient_id: butter.id, recipe_id: soda_bread.id, extra_info:"to brush surface")
+  RecipeIngredient.create(amount: "Handful", ingredient_id: mixed_seeds.id, recipe_id: soda_bread.id, extra_info:"")
+  RecipeIngredient.create(amount: "A sprinkle of", ingredient_id: cumin_seeds.id, recipe_id: soda_bread.id, extra_info:"optional")
+
+
+  # -------------------- The Ultimate Cake -------------------- #
+
+  ultimate_cake = Recipe.create(
     name: "The Ultimate Cake",
     description: "It is both delicious and good for you! This wholegrain treat is cheap and easy to make and is full of fruit and vegetables with only naturally occurring sugars. I first published a version of this cake twenty years ago in “Optimum Nutrition for babies and young Children” @littlebrownbookgroup @piatkusliving but this updated recipe is even better! Gorgeously moist and moreish.",
     instructions: "Preheat oven to 180./Put all the dry ingredients into a mixing bowl and blend well./Add the grated vegetables and dates and mix together. (easier to use your hands and children love this bit!)/Beat the egg and add along with the oil and mix well./Put the mixture into a large lined cake tin (or tray bake tray) and bake for 40 mins - 1 hour depending on thickness./Allow to cool before placing on a rack./Once completely cool cover in icing (optional) and cut into slices.",
@@ -244,80 +338,21 @@ puts "seeding recipes"
     serves: 10
   )
 
-  # -------------------- Salmon Fishcakes -------------------- #
+  sunflower_seeds = Ingredient.create(name: 'sunflower seeds')
+  dates = Ingredient.create(name: 'dates')
+  coconut_sugar = Ingredient.create(name: 'coconut sugar')
 
-puts "seeding ingredients"
-
-
-# Ingredient.create(name: 'parsley')
-Ingredient.create(name: 'eggs')
-Ingredient.create(name: 'sardines')
-Ingredient.create(name: 'fresh anchovy fillets')
-Ingredient.create(name: 'lemon')
-
+  RecipeIngredient.create(amount: "11/2 cups (200g) wholemeal", ingredient_id: flour.id, recipe_id: ultimate_cake.id, extra_info:"or gluten free")
+  RecipeIngredient.create(amount: "2 cups (240g)", ingredient_id: oats.id, recipe_id: ultimate_cake.id, extra_info:"I used porridge oats as all I had")
+  RecipeIngredient.create(amount: "2 tsp", ingredient_id: mixed_spice.id, recipe_id: ultimate_cake.id, extra_info:"cinnamon would do")
+  RecipeIngredient.create(amount: "3 level tsp", ingredient_id: baking_powder.id, recipe_id: ultimate_cake.id, extra_info:"")
+  RecipeIngredient.create(amount: "1/2 cup (75g)", ingredient_id: sunflower_seeds.id, recipe_id: ultimate_cake.id, extra_info:"")
+  RecipeIngredient.create(amount: "1 cup (100g)", ingredient_id: walnuts.id, recipe_id: ultimate_cake.id, extra_info:"broken into small pieces")
+  RecipeIngredient.create(amount: "500g", ingredient_id: dates.id, recipe_id: ultimate_cake.id, extra_info:"combine with other dried fruits if you don’t have enough dates) Soak them in boiling water for 1/2 hour, drain and blend lightly to create a mush")
+  RecipeIngredient.create(amount: "1", ingredient_id: courgette.id, recipe_id: ultimate_cake.id, extra_info:"grated")
+  RecipeIngredient.create(amount: "2", ingredient_id: carrots.id, recipe_id: ultimate_cake.id, extra_info:"grated")
+  RecipeIngredient.create(amount: "4 large organic", ingredient_id: eggs.id, recipe_id: ultimate_cake.id, extra_info:"")
+  RecipeIngredient.create(amount: "2 cups (440ml)", ingredient_id: sunflower_oil.id, recipe_id: ultimate_cake.id, extra_info:"")
+  RecipeIngredient.create(amount: " 1/4 cup (55g)", ingredient_id: coconut_sugar.id, recipe_id: ultimate_cake.id, extra_info:"or brown sugar, or sugar alternative")
 
 puts "seeding done"
-
-
-# ------ IMAGE URL's FROM INSTA (MOST RECENT FIRST) --------- #
-
-# const url = "https://www.instagram.com/lucyburneynutrition/"
-# const imgs = document.querySelectorAll(".FFVAD[src]")
-
- # srcs = imgs.forEach(img => {
- #   console.log(img.src)
- # })
-
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c2.0.1436.1436a/s640x640/105974215_2871656006297266_3850988147593457578_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=110&_nc_ohc=LiC2aOobiD0AX_r7XBl&oh=3acc6d1c1eb0bb3dde6362c17d40cf93&oe=5F2295C9
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c73.0.1293.1293a/s640x640/105963287_601574060736584_6973169067315453131_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=108&_nc_ohc=FXsO7On1KyYAX94oD-D&oh=6be432f7af3babafef6fca19fc934878&oe=5F220596
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/104679892_613158962638567_1413967302591427161_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=107&_nc_ohc=hcu3MzEwraYAX-h7_LJ&oh=f9c24d8e2fa95308de02dcba4c27d2bc&oe=5F21D715
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c263.0.914.914a/s640x640/104469522_923390284752594_7624220430160961158_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=106&_nc_ohc=zVoJngDRz2QAX-D5D7e&oh=9e98c077f69d6978c2932dd02e9f84c4&oe=5F244376
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/104250427_113999393506639_5043562156139713206_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=107&_nc_ohc=fpSo11KhrGcAX_rWYTM&oh=74d65c1f6a49ab54576aab6ffc315bf8&oe=5F236A2B
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c2.0.1436.1436a/s640x640/104017837_568607737138468_6011445774385923218_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=104&_nc_ohc=jCucBTyaugcAX-2gdAv&oh=948f956323e9ddf11a4000f488d64a8a&oe=5F22D62E
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/104342449_352412292403334_7272117204874985911_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=102&_nc_ohc=Wlw0dBYZ610AX-Gy6gw&oh=67702f70b774200950269582cf1e5e46&oe=5F21CE06
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/104194165_3105328692848008_2271348305934889006_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=104&_nc_ohc=IbCCozjJ_I0AX8QZlVo&oh=8008dcc2e2a8ba2cac3d5a7cce4e2837&oe=5F22D51E
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/103958140_367683447543154_8554180473024286614_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=110&_nc_ohc=m-CAKiUT7p4AX-nUOsP&oh=1519373085c44d030e9e70c2c78eb947&oe=5F23297C
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/102859141_267865667789167_975000171205888004_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=107&_nc_ohc=HvfLKIiLil0AX9y5nQQ&oh=e43c332f27151aed3b5b88699d3e67a2&oe=5F222051
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/103123137_261927955128238_4159356257740279747_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=110&_nc_ohc=NZWJqnSE6D4AX8EU11Y&oh=57bdbd644a22876e6a5bf268a189ca37&oe=5F21AEA3
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c163.0.1113.1113a/s640x640/101680152_562306114430271_1325095108198648466_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=103&_nc_ohc=Nm3Eh8NUXjsAX9s_PTj&oh=0ef0ec9ff7d009ae99ee6aa25856dda6&oe=5F230650
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/101413009_126222505753545_7173338564668982696_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=109&_nc_ohc=aAvuWDAk93kAX9o5cPF&oh=a1bf791afc3368506b520294700d6491&oe=5F22E99F
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/101496925_168793084599478_1178593086345363494_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=110&_nc_ohc=kUTeoYDLndEAX-gTNzY&oh=9bd9b6c5d160c751a019a01203df4cb5&oe=5F230D52
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/101379870_278065563375256_8106968788420254336_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=104&_nc_ohc=UzXBbcPO19AAX-JygSJ&oh=fe199d4940b89cf7cec68870f2e267f8&oe=5F235D47
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/101498459_263626674841879_3460696709050328180_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=107&_nc_ohc=Zx-CpBove4YAX8r2q7K&oh=bff6cc3fbe1410e755fceddba808cfcb&oe=5F24DBF6
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/100900228_728350571246271_2817982750150026787_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=103&_nc_ohc=dai-mNx1IAgAX9t_096&oh=7f62d578330f624b8e7ea31902814c19&oe=5F21898B
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/101028885_561405041182951_3327304912003846746_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=107&_nc_ohc=lZiY8H4weMwAX8OS39V&oh=cc3e83f1b6a9d9b675f0e1f434737545&oe=5F22C353
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c1.0.1438.1438a/s640x640/100912996_858740251204011_3584271881265312112_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=103&_nc_ohc=qAaS2iiKiVAAX9m7UQb&oh=c0d8f248a74878d1875eedbd7b8c153c&oe=5F21A5B1
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/100940618_626958677856878_3050804579447950558_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=102&_nc_ohc=RmN13ZdKmyYAX_1FW8g&oh=ee44f263f568c64f725e1a0e717de5e1&oe=5F24A121
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c2.0.1436.1436a/s640x640/98458364_196115801412159_3962221299333663701_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=103&_nc_ohc=Hjk1kx8nXp8AX-tAp_N&oh=d086fe9b9aba06d230eeee3eb761cec9&oe=5F221C98
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c5.0.1430.1430a/s640x640/97265286_1124350704587114_4941007503439031868_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=102&_nc_ohc=N2p2px5chSwAX85HWr1&oh=f23ad6bf76c13b91371f1013189991c9&oe=5F21A2FC
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/97068020_483406002378744_2620297776162114016_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=100&_nc_ohc=wViS00ZvxXwAX97hLWl&oh=1dc1929c87fdef65574eb9e61bae39bf&oe=5F233822
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c3.0.1434.1434a/s640x640/97951797_961854617567085_1974269730559594976_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=109&_nc_ohc=AyMNzGG8e5YAX_3dbTO&oh=b8050d746b371e42b3582f90cddb098a&oe=5F24ECB1
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c3.0.1434.1434a/s640x640/96845688_549468795998625_1051471078410752042_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=109&_nc_ohc=8yQKKBEHgasAX_SHH59&oh=07891129cc842f3f934177e46cf600dd&oe=5F24CDDB
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c2.0.1435.1435a/s640x640/95872964_1535995406583417_8952862500805385399_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=109&_nc_ohc=3sS2UKxI2dcAX8X0y_N&oh=2c8326d83becf1e9585a14555f4bdb83&oe=5F222EDB
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/96405864_1207697456067662_2781906734786482552_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=102&_nc_ohc=NTIfGsU87eUAX_kimos&oh=66674cb2a077024af4d07790bc3bbeb8&oe=5F2254E8
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/96149945_318108102506707_3963449349704092273_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=107&_nc_ohc=KMynjGevHuoAX8m3CGt&oh=a01694ddc72b47fd9c738a5a5926064f&oe=5F234315
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/95632758_147050130197346_3798566088554202012_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=106&_nc_ohc=VP_D-NtCHMcAX8Qj2l_&oh=777f9c65efe86be731b4c2c21373d2b7&oe=5F23984A
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c2.0.1436.1436a/s640x640/95436895_120481669634293_6191412327693206340_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=101&_nc_ohc=JbWzuhhf8Y8AX8RIN9I&oh=0462b072c2e243fa2f2200ca2bc76052&oe=5F239F2B
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c2.0.1436.1436a/s640x640/95665486_160953702020583_3799667020087013414_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=103&_nc_ohc=bTcuwmVTr_EAX94aCg5&oh=689ee669c0aa43a624996373cf09c122&oe=5F226FF7
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/95375018_228578885071144_4022528574643628053_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=104&_nc_ohc=rDcLKnfgAD4AX-pcA4Y&oh=ece0a64078aa0bab0bb8605ab6e78c69&oe=5F236542
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c1.0.1438.1438a/s640x640/95344236_231634241613408_6190172596100382129_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=100&_nc_ohc=dLCfaY5BiLsAX8cN9o5&oh=5b82282dfbece53b69827b135700a5ce&oe=5F22580D
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c2.0.1436.1436a/s640x640/94575692_2788195418070961_1122885663105990141_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=101&_nc_ohc=W2XB-IOHtTcAX912V9J&oh=ae64a6ac34d3c9306fa308f01b340461&oe=5F2497AF
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/94494012_224338851998793_5301462208100623920_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=109&_nc_ohc=21biwIxmTL0AX8ztxml&oh=b0117625af313e52ac8b3d35032a1da3&oe=5F22217B
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/94574624_2685208825096843_1913253897248598650_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=107&_nc_ohc=fy7bW2t_9B0AX9XL711&oh=001e08798904160fab5beeec5c2cdc8b&oe=5F217FB7
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/94223889_257312828724448_2362995373222854609_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=104&_nc_ohc=EYtR4NsZz0gAX8ODyZn&oh=dcdc53c7b567787aca12c0e63c458be5&oe=5F24EB9F
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c2.0.1436.1436a/s640x640/93825330_1147700478918977_4732070726758429814_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=ffG2DWmtyp4AX_9XJtb&oh=78d5ad2a627be84f0e0b01517d666f31&oe=5F232856
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/94138869_918090408613386_7169711631744258915_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=106&_nc_ohc=O4s8YxHA1ZoAX8l6qNw&oh=cdf0685e3630a83c9d69224287dc12ab&oe=5F227BD9
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/93631328_300068587627589_7069714885557314242_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=105&_nc_ohc=SxFMNT-YmE8AX9Isxo5&oh=8009e5cdb7a602f3cc0c25e41b04fad7&oe=5F2377B9
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/93273184_690344118387124_3941687782520866701_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=104&_nc_ohc=qAcbydIsYkEAX-iFcOf&oh=6a12fd86082d2f007da9aaa46912489b&oe=5F236D69
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/92984058_561460661167888_8495876867993975103_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=104&_nc_ohc=LPJOAhxQ2roAX_yLOEj&oh=481a06aa81c03ee0c7d3bb5198526ecb&oe=5F2375AA
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/92721720_643996886175955_1464958119177305034_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=107&_nc_ohc=TO5IOM7wppoAX-UTIld&oh=5c5b780a4e946e021e73ef5865e1f2b8&oe=5F244616
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/93366967_546440492945470_7893333144712532087_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=110&_nc_ohc=yw8cPQAJ-BcAX_HWORI&oh=ffeef522dc4e281778bffeb52a9555f4&oe=5F21A373
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/93055211_1270110833188875_6914103502436539225_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=103&_nc_ohc=SfUxLhqbBmMAX8tFKpG&oh=a9c5baa3c1627105033a4f706cc37969&oe=5F21E4A0
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/92694219_546002626330558_7316441858316348803_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=110&_nc_ohc=1LxTjDWh2LEAX8GdDE5&oh=bab28e3fc1f8cb3e41ac6b315414947c&oe=5F23114A
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/92343626_215524009680625_6269226645257000818_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=101&_nc_ohc=H_i7iMlSfx0AX9yf8YE&oh=d1dfcaac66ce9487ad07775695344b4d&oe=5F23860A
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/92182162_293605628288583_8380148914812005975_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=103&_nc_ohc=L32KF-l8veMAX8sKEeq&oh=3049ce6ac445f09a3db149437e70bb8b&oe=5F21FE45
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c1.0.1438.1438a/s640x640/92409645_548270222757020_686522432095801612_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=108&_nc_ohc=PRHd8DJzUCsAX_C2sZC&oh=dd24bff9bc79525bdde39adc3329af69&oe=5F250362
-# https://scontent-lht6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/92075861_203031577815560_832779347168274988_n.jpg?_nc_ht=scontent-lht6-1.cdninstagram.com&_nc_cat=108&_nc_ohc=J7wlfsKpM2EAX8VZNMG&oh=f2c522260a4a8ec069d5538d4eb52cad&oe=5F22A875
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/91607501_234902971037567_5931167770178152645_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=111&_nc_ohc=T6aQkQvn9UwAX-W05gQ&oh=2864a4031ee9b96114ab3a941dd84152&oe=5F253065
-# https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c343.0.754.754a/s640x640/91861529_128184028777895_6085498413254113620_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=111&_nc_ohc=reEyX4NiYfEAX_X1_cl&oh=b38c06b2eb22f1f758579ea5b47e5f5c&oe=5F245C0C
-
