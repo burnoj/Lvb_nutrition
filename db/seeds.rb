@@ -157,12 +157,13 @@ puts "seeding first 10 recipes with ingredients"
   elder_flowers = Ingredient.create(name: 'elder flowers')
   caster_sugar = Ingredient.create(name: 'caster sugar')
   lemons = Ingredient.create(name: 'lemons')
+  apple_cider_vinegar = Ingredient.create(name: 'apple cider vinegar')
 
   RecipeIngredient.create(amount: "5 big heads of", ingredient_id: elder_flowers.id, recipe_id: elderflower_squash.id, extra_info:"shredded from their stalks")
-  RecipeIngredient.create(amount: "", ingredient_id: .id, recipe_id: .id, extra_info:"")
-  RecipeIngredient.create(amount: "", ingredient_id: .id, recipe_id: .id, extra_info:"")
-  RecipeIngredient.create(amount: "", ingredient_id: .id, recipe_id: .id, extra_info:"")
-  RecipeIngredient.create(amount: "", ingredient_id: .id, recipe_id: .id, extra_info:"")
+  RecipeIngredient.create(amount: "250g (11/2 cups)", ingredient_id: caster_sugar.id, recipe_id: elderflower_squash.id, extra_info:"or 3 tsp of liquid steviol")
+  RecipeIngredient.create(amount: "2 tbsps", ingredient_id: apple_cider_vinegar.id, recipe_id: elderflower_squash.id, extra_info:"")
+  RecipeIngredient.create(amount: "4 litres", ingredient_id: water.id, recipe_id: elderflower_squash.id, extra_info:"")
+  RecipeIngredient.create(amount: "2", ingredient_id: lemons.id, recipe_id: elderflower_squash.id, extra_info:"squeezed and quartered")
 
   # -------------------- Prawn Courgetti -------------------- #
 
@@ -201,7 +202,7 @@ puts "seeding first 10 recipes with ingredients"
 
   # -------------------- Salmon Fishcakes -------------------- #
 
-  Recipe.create(
+  apple_cake = Recipe.create(
     name: "Apple Cake",
     description: "This apple cake is moist and light and very moreish. Children and adults alike will love it. Low in sugar, 100% wholegrain and full of fruit, it is a healthy alternative to commercially made cakes and biscuits as well as being a good store cupboard recipe that anyone can cook. There is even a gluten free, sugar free version for those on special diets. The icing is optional, as it is moist enough to be eaten without. ",
     instructions: "Put the chopped apple into a pan with a couple of tbsps of water, cover and simmer gently for 20 minutes until soft. Liquidize to puree the apple./In a mixing bowl, combine the eggs, sugar, oil and the apple puree./Sieve the flour and mixed spice into the mixture and mix well./Bake in a lined and greased cake tin at 180 for 35 mins. The gluten free version takes longer. Ours was in for just over an hour./Allow to cool before turning out on a plate./Cover with icing, if using, or lightly dust the surface with a little icing sugar or sugar alternative.",
@@ -219,20 +220,20 @@ puts "seeding first 10 recipes with ingredients"
   flour = Ingredient.create(name: 'flour')
   baking_powder = Ingredient.create(name: 'baking_powder')
   mixed_spice = Ingredient.create(name: 'mixed spice')
-  sunflower_oil = Ingredient.create(name: 'sunflower oil'
+  sunflower_oil = Ingredient.create(name: 'sunflower oil')
   cream_cheese = Ingredient.create(name: 'cream cheese')
   vanilla_essence = Ingredient.create(name: 'vanilla essence')
 
-  RecipeIngredient.create(amount: "4-5", ingredient_id: apples.id, recipe_id: .id, extra_info:"roughly 500g, peeled and chopped")
-  RecipeIngredient.create(amount: "125g, just over 1/2 a cup brown", ingredient_id: sugar.id, recipe_id: .id, extra_info:"or sugar free Zucrin Gold")
-  RecipeIngredient.create(amount: "2", ingredient_id: eggs.id, recipe_id: .id, extra_info:"beaten")
-  RecipeIngredient.create(amount: "250g (2 cups) wholemeal", ingredient_id: flour.id, recipe_id: .id, extra_info:"or self raising gluten free. If using plain  make sure you use some 1/2 tsp xanthum gum to blend the flour properly")
-  RecipeIngredient.create(amount: "2 tsp", ingredient_id: baking_powder.id, recipe_id: .id, extra_info:"")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: mixed_spice.id, recipe_id: .id, extra_info:"or ground cinnamon if none")
-  RecipeIngredient.create(amount: "150 ml", ingredient_id: sunflower_oil.id, recipe_id: .id, extra_info:"")
-  RecipeIngredient.create(amount: "150g light", ingredient_id: cream_cheese.id, recipe_id: .id, extra_info:"you can use more or less as you like")
-  RecipeIngredient.create(amount: "1 tbsp light brown", ingredient_id: sugar.id, recipe_id: .id, extra_info:"or icing sugar")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: vanilla_essence.id, recipe_id: .id, extra_info:"optional")
+  RecipeIngredient.create(amount: "4-5", ingredient_id: apples.id, recipe_id: apple_cake.id, extra_info:"roughly 500g, peeled and chopped")
+  RecipeIngredient.create(amount: "125g, just over 1/2 a cup brown", ingredient_id: sugar.id, recipe_id: apple_cake.id, extra_info:"or sugar free Zucrin Gold")
+  RecipeIngredient.create(amount: "2", ingredient_id: eggs.id, recipe_id: apple_cake.id, extra_info:"beaten")
+  RecipeIngredient.create(amount: "250g (2 cups) wholemeal", ingredient_id: flour.id, recipe_id: apple_cake.id, extra_info:"or self raising gluten free. If using plain  make sure you use some 1/2 tsp xanthum gum to blend the flour properly")
+  RecipeIngredient.create(amount: "2 tsp", ingredient_id: baking_powder.id, recipe_id: apple_cake.id, extra_info:"")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: mixed_spice.id, recipe_id: apple_cake.id, extra_info:"or ground cinnamon if none")
+  RecipeIngredient.create(amount: "150 ml", ingredient_id: sunflower_oil.id, recipe_id: apple_cake.id, extra_info:"")
+  RecipeIngredient.create(amount: "150g light", ingredient_id: cream_cheese.id, recipe_id: apple_cake.id, extra_info:"you can use more or less as you like")
+  RecipeIngredient.create(amount: "1 tbsp light brown", ingredient_id: sugar.id, recipe_id: apple_cake.id, extra_info:"or icing sugar")
+  RecipeIngredient.create(amount: "1 tsp", ingredient_id: vanilla_essence.id, recipe_id: apple_cake.id, extra_info:"optional")
 
   # -------------------- Stuffed Mushrooms -------------------- #
 

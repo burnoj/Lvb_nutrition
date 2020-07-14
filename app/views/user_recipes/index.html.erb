@@ -18,7 +18,7 @@
             <h5><%= link_to @recipe_of_the_day.name, user_recipe_path(@recipe) %></h5>
             <p class="recipe-of-the-day-description"><%= @recipe_of_the_day.description.split(".")[0] %></p>
             <h4>INGREDIENTS</h4>
-            <ul>
+            <ul class="recipe-of-the-day-ingredient-list">
             <% @recipe_of_the_day.recipe_ingredients.first(6).each do |ri| %>
             <li><%= ri.amount %> of <%= ri.ingredient.name %>, <%= ri.extra_info %></li>
             <% end %>
