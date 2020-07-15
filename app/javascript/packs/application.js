@@ -36,29 +36,6 @@ function smoothScroll () {
 }
 
 
-// -------------------- Navbar Overlay  -------------------- //
-const hamburger = document.querySelector(".hamburger")
-const myNav = document.querySelector("#myNav")
-const closeBtn = document.querySelector(".closebtn")
-
-function openNav() {
-  myNav.style.height = "100%";
-}
-
-function closeNav() {
-  myNav.style.height = "0%";
-}
-
-function clickNav() {
-  hamburger.addEventListener("click", openNav)
-}
-
-function UnclickNav() {
-  closeBtn.addEventListener("click", closeNav)
-}
-
-
-
 // External imports
 import "bootstrap";
 
@@ -67,6 +44,7 @@ import "bootstrap";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+   gtag('config', 'UA-172748466-1', {'page_location': event.data.url});
    smoothScroll();
    clickNav();
    UnclickNav();
