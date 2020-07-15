@@ -1,7 +1,7 @@
 .books-container {
   height: auto;
   display: grid;
-  grid-template-rows: 14vh 1fr 1fr 1fr 100vh;
+  grid-template-rows: 14vh 1fr 1fr 1fr 100vh 100vh 100vh;
   grid-template-columns: 1fr;
 }
 
@@ -68,7 +68,7 @@
 
 @media screen and (min-width: 600px) {
   .books-container {
-    grid-template-rows: 14vh 100vh 100vh 100vh 100vh;
+    grid-template-rows: 14vh 100vh 100vh 100vh 100vh 100vh 100vh;
   }
 
   .book-content {
