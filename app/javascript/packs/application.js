@@ -22,6 +22,41 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
+// -------------------- Smooth Scroll  -------------------- //
+function smoothScroll () {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+    });
+  });
+}
+
+
+// -------------------- Navbar Overlay  -------------------- //
+const hamburger = document.querySelector(".hamburger")
+const myNav = document.querySelector("#myNav")
+const closeBtn = document.querySelector(".closebtn")
+
+function openNav() {
+  myNav.style.height = "100%";
+}
+
+function closeNav() {
+  myNav.style.height = "0%";
+}
+
+function clickNav() {
+  hamburger.addEventListener("click", openNav)
+}
+
+function UnclickNav() {
+  closeBtn.addEventListener("click", closeNav)
+}
+
 
 
 // External imports
@@ -32,7 +67,13 @@ import "bootstrap";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+   smoothScroll();
+   clickNav();
+   UnclickNav();
   // initSelect2();
 });
+
+
+
 
 
