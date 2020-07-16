@@ -17,15 +17,13 @@
 }
 
 .book-image-box {
-  height: 30vh;
-  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .book-image {
-  width: 100%;
-  height: 100%;
+  width: 177px;
+  height: 267px;
   background-image: url(home_book.jpg);
   background-position: center;
   background-size: cover;
@@ -55,10 +53,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .book-image {
-    height: 80%;
   }
 
   .book-content-box {
