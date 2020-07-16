@@ -27,7 +27,6 @@
   background: linear-gradient(270.22deg, rgba(255, 255, 255, 0) 46.98%, rgba(0, 0, 0, 0.31) 53.04%), image-url('Bluebells.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .home-banner-box {
@@ -151,8 +150,12 @@
     grid-template-rows: 14vh 90vh auto 120vh 100vh 100vh 100vh;
   }
 
+  .home-banner {
+    background-attachment: fixed;
+  }
 
   // ------- PROFILE ------- //
+
 
   .home-profile-box {
     flex-direction: row;
