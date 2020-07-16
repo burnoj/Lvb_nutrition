@@ -146,9 +146,9 @@
 
 // ------- MEDIA QUERIES ------- //
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .home-container {
-    grid-template-rows: 14vh 90vh 120vh 120vh 100vh 100vh 100vh;
+    grid-template-rows: 14vh 90vh auto 120vh 100vh 100vh 100vh;
   }
 
 
@@ -159,7 +159,7 @@
   }
 
   .home-profile {
-    height: 120vh;
+
   }
 
   .home-profile-image-border {
