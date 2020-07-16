@@ -9,7 +9,7 @@
     <%= simple_form_for @contact, defaults: {required: false} do |f| %>
       <%= f.input :name, placeholder: "John Doe"%>
       <%= f.input :email, placeholder: "johndoe@gmail.com" %>
-      <%= f.input :message, as: :text, placeholder: "Hi lucy...." %>
+      <%= f.input :message, as: :text, placeholder: "Hi Lucy...." %>
       <div class="contact-button-container"><%= f.button :submit, "Send Message", class: "purple-button contact-button" %></div>
     <% end %>
     </div>
