@@ -158,14 +158,18 @@
     flex-direction: row;
   }
 
-  .home-profile {
-
+  .home-profile-image-container {
+    align-items: flex-start;
   }
 
   .home-profile-image-border {
     width: 80%;
-    height: 80vh;
+    height: 70vh;
     background: rgba(78, 108, 215, 0.1);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 14%;
+    margin: 3em 0;
   }
 
   .home-profile-image {
