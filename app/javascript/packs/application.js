@@ -46,7 +46,7 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
    gtag('config', 'UA-172748466-1', {'page_location': event.data.url});
    smoothScroll();
-  // initSelect2();
+  // initSelect2();.
 });
 
 

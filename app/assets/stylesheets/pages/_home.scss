@@ -73,7 +73,8 @@ html,body {
 
 .home-profile-image {
   height: 40vh;
-  width: 90%;
+  width: 25em;
+  max-width: 80%;
   background: image-url('profile_home.JPG');
   background-position: center;
   background-size: cover;
@@ -119,6 +120,7 @@ html,body {
 .home-recipe-images {
   display:flex;
   flex-direction: column;
+  align-items: center;
   width: 80vw;
 }
 
@@ -136,7 +138,8 @@ html,body {
 
 .home-recipe-image {
   height: 60vh;
-  width: 80vw;
+  width: 25em;
+  max-width: 80vw;
   background-position: center;
   background-size: cover;
   margin-bottom: 2em;
@@ -172,13 +175,14 @@ html,body {
   }
 
   .home-profile-image-border {
-    width: 80%;
+    max-width: 30em;
+    min-width: 20em;
     height: 70vh;
     background: rgba(78, 108, 215, 0.1);
     position: sticky;
     position: -webkit-sticky;
     top: 14%;
-    margin: 3em 0;
+    margin: 3em 2em;
   }
 
   .home-profile-image {
@@ -205,6 +209,7 @@ html,body {
 
   .home-recipe-image {
     height: 70vh;
+    width: 80%;
   }
 
   .r-img {

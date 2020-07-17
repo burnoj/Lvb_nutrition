@@ -173,7 +173,7 @@
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .recipe-index-container {
     grid-template-rows: 14vh 90vh 1fr 100vh 100vh;
   }
@@ -187,7 +187,7 @@
   }
 
   .recipe-of-the-day-ingredient-list {
-    max-height: 16vh;
+    max-height: 16.5vh;
     overflow: hidden;
   }
 
