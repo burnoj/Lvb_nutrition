@@ -31,7 +31,8 @@
 
 
 .recipe-of-the-day-img-container {
-  width: 100%;
+  width: 25em;
+  max-width: 80vw;
   height: 40vh;
 }
 
@@ -173,7 +174,7 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .recipe-index-container {
     grid-template-rows: 14vh 90vh 1fr 100vh 100vh;
   }
@@ -213,7 +214,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 60%;
+    width: 50%;
   }
 
    .recipe-of-the-day-content {
@@ -233,7 +234,7 @@
 
   .recipe-of-the-day-img-container {
     height: 100%;
-    width: 40%;
+    width: 20em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,7 +249,6 @@
   .user-recipes-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-
 }
 
 
