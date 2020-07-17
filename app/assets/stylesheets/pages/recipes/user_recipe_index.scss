@@ -187,7 +187,7 @@
   }
 
   .recipe-of-the-day-ingredient-list {
-    max-height: 20vh;
+    max-height: 16vh;
     overflow: hidden;
   }
 
@@ -227,6 +227,7 @@
   }
 
   .recipe-of-the-day-description {
+    max-height: 10vh;
     overflow: hidden;
   }
 
