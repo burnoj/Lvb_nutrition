@@ -1,3 +1,11 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 // ------- ARROW BOTTOM RIGHT ------- //
 
 .arrow-bottom-right {
@@ -54,14 +62,6 @@
   background: white;
 }
 
-.home-profile-image-container {
-  height: 100%;
-  width: 100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .home-profile-image-border {
   height: 44vh;
   width: 100%;
@@ -84,7 +84,6 @@
   padding: 2em;
   display:flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 // ------- RECIPES ------- //
@@ -136,7 +135,7 @@
 }
 
 .home-recipe-image {
-  height: 50vh;
+  height: 60vh;
   width: 80vw;
   background-position: center;
   background-size: cover;
@@ -165,6 +164,10 @@
   }
 
   .home-profile-image-container {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
     align-items: flex-start;
   }
 
