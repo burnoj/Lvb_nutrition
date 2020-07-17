@@ -179,7 +179,13 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 550px) {
+  .user-recipes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 850px) {
   .recipe-index-container {
     grid-template-rows: 14vh 90vh 1fr 100vh 100vh;
   }
@@ -252,9 +258,18 @@
 
 
   .user-recipes-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .user-recipes-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+
 
 
 
