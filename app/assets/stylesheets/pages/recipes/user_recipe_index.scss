@@ -189,16 +189,16 @@
   .user-recipes-grid {
     grid-template-columns: 1fr 1fr;
   }
-
-  .user-recipes-dietary-key {
-    flex-direction: row;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 }
 
 @media screen and (min-width: 850px) {
   .recipe-index-container {
     grid-template-rows: 16vh 90vh 1fr 100vh 100vh;
+  }
+
+  .user-recipes-dietary-key {
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .recipe-of-the-day-container {
