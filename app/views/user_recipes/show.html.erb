@@ -27,7 +27,7 @@
 
           <p>--------------------------------------</p>
 
-          <h4>INGREDIENTS</h4>
+          <h4 class="ingredients">INGREDIENTS</h4>
           <ul>
           <% @recipe.recipe_ingredients.each do |ri| %>
             <li><%= ri.amount %> <%= ri.ingredient.name %> <%= ri.extra_info %></li>
@@ -36,12 +36,13 @@
 
           <p>--------------------------------------</p>
 
-          <h2 class="recipe-instructions">Instructions</h2>
-
+          <h4 class="recipe-instructions">INSTRUCTIONS</h4>
+          <ol>
           <% array = @recipe.instructions.split("/") %>
-          <% array.each_with_index do |r, i| %>
-            <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
+          <% array.each do |r| %>
+            <li><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></li>
           <% end %>
+          </ol>
 
            <p>--------------------------------------</p>
 

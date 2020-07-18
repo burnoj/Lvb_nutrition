@@ -2,7 +2,7 @@
   width: 100vw;
   height: auto;
   display: grid;
-  grid-template-rows: 14vh auto 100vh 100vh;
+  grid-template-rows: 16vh auto 100vh 100vh;
   grid-template-columns: 1fr;
 }
 
@@ -19,6 +19,10 @@
 }
 
 .recipe-instructions {
+  padding-bottom: 0.25em;
+}
+
+.ingredients {
   padding-bottom: 0.25em;
 }
 

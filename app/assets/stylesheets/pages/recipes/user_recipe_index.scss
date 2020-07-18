@@ -1,7 +1,7 @@
 .recipes-index-container {
   height: auto;
   display: grid;
-  grid-template-rows: 14vh auto 1fr 100vh 100vh;
+  grid-template-rows: 16vh auto 1fr 100vh 100vh;
   grid-template-columns: 1fr;
 }
 
@@ -30,7 +30,8 @@
 
 .recipe-of-the-day-title {
   text-decoration: underline;
-  padding: 0.5em 0;
+  padding: 0.20em 0;
+  font-size: 1.5em !important;
 }
 
 
@@ -187,7 +188,7 @@
 
 @media screen and (min-width: 850px) {
   .recipe-index-container {
-    grid-template-rows: 14vh 90vh 1fr 100vh 100vh;
+    grid-template-rows: 16vh 90vh 1fr 100vh 100vh;
   }
 
   .recipe-of-the-day-container {
@@ -195,7 +196,7 @@
     display: flex;
     justify-content: center;
     padding: 0;
-    background: $light-blue;
+    background: rgba(163, 147, 226, 0.15);
   }
 
   .recipe-of-the-day-ingredient-list {
@@ -212,6 +213,7 @@
     width: 94%;
     height: 90%;
     padding: 0 4em;
+    border: 1px solid rgba(163, 147, 226, 0.5);
   }
   .recipe-of-the-day-border {
     width: 80%;
