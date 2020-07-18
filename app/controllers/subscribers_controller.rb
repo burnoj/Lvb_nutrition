@@ -5,8 +5,7 @@ class SubscribersController < ApplicationController
 
   def create
     @subscriber = Subscriber.new(subscriber_params)
-    validation = Truemail.validate("#{@subscriber.email}", with: :regex)
-    if @subscriber.save && validation.result[0] == true
+    if @subscriber.save
       redirect_to root_path, notice: 'Great! You are now Subcribed'
     else
       redirect_to root_path, alert: 'Invalid Email, try again.'

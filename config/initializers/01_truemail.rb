@@ -8,7 +8,11 @@ Truemail.configure do |config|
 end
 
 all_subscribers = Subscriber.all
+p all_subscribers
+p "deleting invalid subscribers"
 all_subscribers.each do |s|
   validation = Truemail.validate('s.email', with: :regex)
-  validation.result[0] ? "" : s.delete
+  p s
+  p validation.result[0]
+  validation.result[0] ? s : s.delete
 end
