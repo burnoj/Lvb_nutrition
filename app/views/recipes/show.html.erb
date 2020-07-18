@@ -39,7 +39,7 @@
 
           <p>--------------------------------------</p>
 
-          <h2>Instructions</h2>
+          <h3>Instructions</h3>
 
           <% array = @recipe.instructions.split("/") %>
           <% array.each_with_index do |r, i| %>
@@ -49,7 +49,7 @@
            <p>--------------------------------------</p>
 
           <% if @recipe.fact != nil %>
-            <h2>Super Nutrition fact</h2>
+            <h3>Super Nutrition fact</h3>
             <p><%= @recipe.fact %></p>
           <% else %>
           <% end %>
