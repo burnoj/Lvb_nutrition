@@ -1,7 +1,7 @@
 .books-container {
   height: auto;
   display: grid;
-  grid-template-rows: 16vh 1fr 1fr 1fr 100vh 100vh 100vh;
+  grid-template-rows: 16vh 1fr 1fr 1fr 1fr 100vh 100vh 100vh;
   grid-template-columns: 1fr;
 }
 
@@ -65,10 +65,17 @@
   background-position: center;
 }
 
+.book-4-img {
+  width: 12em;
+  height: 15em;
+  background: image-url('book_4.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
 @media screen and (min-width: 1000px) {
   .books-container {
-    grid-template-rows: 16vh 100vh 100vh 100vh 100vh 100vh 100vh;
+    grid-template-rows: 16vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh;
   }
 
   .book-content {

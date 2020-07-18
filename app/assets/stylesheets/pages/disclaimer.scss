@@ -1,0 +1,28 @@
+.disclaimer-page-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-rows: 16vh 84vh;
+  grid-template-columns: 1fr;
+}
+
+.disclaimer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disclaimer {
+  text-align: center;
+  width: 80%;
+  height: 60%;
+}
+
+@media screen and (min-width: 800px ) {
+  .disclaimer {
+    width: 40%;
+    height: 20%;
+    margin-bottom: 10em;
+  }
+}

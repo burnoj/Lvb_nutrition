@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'about', to: 'pages#about'
   get 'books', to: 'pages#books'
+  get 'disclaimer', to: 'pages#disclaimer'
   get 'user_recipes', to: 'user_recipes#index'
   get 'user_recipes/:id', to: 'user_recipes#show', as: "user_recipe"
 
