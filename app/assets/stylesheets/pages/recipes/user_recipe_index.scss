@@ -87,9 +87,12 @@
 
 .user-recipes-dietary-key {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 2em;
   width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .dietary-key-items {
@@ -98,6 +101,7 @@
   border: 1px solid #D2D2D2;
   color: $black;
   padding: 0.25em 1em;
+  border-radius: 7px;
 
 }
 
@@ -184,6 +188,11 @@
 @media screen and (min-width: 550px) {
   .user-recipes-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .user-recipes-dietary-key {
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
