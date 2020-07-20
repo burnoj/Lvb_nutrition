@@ -4,13 +4,11 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
   get 'books', to: 'pages#books'
   get 'disclaimer', to: 'pages#disclaimer'
   get 'user_recipes', to: 'user_recipes#index'
   get 'user_recipes/:id', to: 'user_recipes#show', as: "user_recipe"
-
-  match '/contacts', to: 'contacts#new', via: 'get'
-  resources "contacts", only: [:new, :create]
   resources :subscribers, only: [:new, :create]
   resources :ingredients, only: [:new, :create]
 
