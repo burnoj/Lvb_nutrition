@@ -1,24 +1,16 @@
-<%= render partial: "shared/anchor-link" %>
+<div align="center">
+  <h3>Send A message to Us</h3>
 
-<div class="contact-container"><a id="top" style="position: absolute; top: 0;"></a>
-  <%= render partial: "shared/navbar" %>
-
-  <div class="contact-form-container">
-    <div class="contact-form">
-      <h2 class="contact-us-title">Contact</h2>
-    <%= simple_form_for @contact, defaults: {required: false} do |f| %>
-      <%= f.input :name, placeholder: "John Doe"%>
-      <%= f.input :email, placeholder: "johndoe@gmail.com" %>
-      <%= f.input :message, as: :text, placeholder: "Hi Lucy...." %>
-      <div class="contact-button-container"><%= f.button :submit, "Send Message", class: "purple-button contact-button" %></div>
-    <% end %>
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+    <%= f.input :name, :required => true %>
+    <%= f.input :email, :required => true %>
+    <%= f.input :message, :as => :text, :required => true %>
+    <div class= "hidden">
+      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
     </div>
-  </div>
-
-  <%= render partial: "shared/books" %>
-
-  <%= render partial: "shared/newsletter" %>
-
-  <%= render partial: "shared/footer" %>
+    <div>
+      </br>
+      <%= f.button :submit, 'Send message', :class=> "purple-button" %>
+    </div>
+  <% end %>
 </div>
-
