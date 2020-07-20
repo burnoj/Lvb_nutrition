@@ -1,7 +1,19 @@
-<%= render partial: "shared/navbar" %>
+<div class="contact-container">
 
-<h2>Contact Lucy</h2>
+  <%= render partial: "shared/navbar" %>
 
-<p>I'd be happy to answer any of your questions</p>
-
-<%= mail_to "lucy@lucyburney.co.uk", "Email Me" %>
+  <div class="about-section-3 blue">
+    <div class="about-section-1-border box">
+      <div class="about-section-3-img-container">
+        <div class="section-3-img"></div>
+      </div>
+      <div class="section-3 content">
+        <h2>Contact</h2>
+        <p>Feeding your family is a daily necessity and can be a joy rather than a stress whatever the requirements.</p>
+        <p>I am particularly interested in hearing from you if you are catering for family members on different diets.  Feel free to contact me for help and inspiration.</p>
+        <p>If you have any other questions, I'd be more than happy to help.</p>
+        <button class="btn purple-button"><%=  mail_to "lucy@lucyburney.co.uk", "Email Me" %></button>
+      </div>
+    </div>
+  </div>
+</div>
