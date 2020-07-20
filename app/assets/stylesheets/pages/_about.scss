@@ -46,7 +46,7 @@
 
 
 .section-1-img {
-  height: 60vh;
+  height: 50vh;
   width: 25em;
   max-width: 80vw;
   background: image-url('profile_1_original.jpg');
@@ -68,7 +68,7 @@
 }
 
 .section-2-img {
-  height: 60vh;
+  height: 40vh;
   width: 30em;
   max-width: 80vw;
   background: image-url('profile_2.jpg');
@@ -91,7 +91,7 @@
 }
 
 .section-3-img {
-  height: 60vh;
+  height: 50vh;
   width: 25em;
   max-width: 80vw;
   background: image-url('profile_3.jpg');
@@ -163,14 +163,17 @@
 
     .section-1-img {
     margin: 2em 2em;
+    height: 60vh;
   }
 
    .section-2-img {
     margin: 2em 0em;
+    height: 50vh;
   }
 
    .section-3-img {
     margin: 2em 2em;
+    height: 60vh;
   }
 
 
