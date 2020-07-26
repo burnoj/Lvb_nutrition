@@ -82,21 +82,25 @@
   text-align: center;
 }
 
+.overlay p {
+  display: flex;
+  justify-content: center;
+}
+
 .overlay a {
+  width: auto;
   padding: 0.5em;
   text-decoration: none;
   font-size: 2em;
   color: $purple !important;
-  opacity: 0.8;
+  opacity: 1;
   display: block;
   transition: 0.4s;
 }
 
-.overlay a:hover {
-}
-
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+  color: $black !important;
+  opacity: 1;
 }
 
 .overlay .closebtn {
@@ -114,9 +118,7 @@
   }
 
   .overlay .closebtn {
-    position: absolute;
-    font-size: 3em;
-    cursor: pointer;
+    right: 8%;
   }
 
   .icon {
@@ -127,9 +129,5 @@
     height: 100%;
     margin-right: 4.5em;
     align-items: center;
-  }
-
-  .overlay .closebtn {
-    right: 8%;
   }
 }
