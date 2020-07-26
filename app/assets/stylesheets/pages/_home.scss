@@ -3,7 +3,7 @@
 .arrow-bottom-right {
   position: fixed;
   bottom: 5%;
-  right: 1%;
+  right: 0%;
 }
 
 
@@ -143,6 +143,12 @@
 @media screen and (min-width: 800px) {
   .home-container {
     grid-template-rows: 16vh 90vh auto 120vh 100vh 100vh 100vh;
+  }
+
+  .arrow-bottom-right {
+    position: fixed;
+    bottom: 5%;
+    right: 1%;
   }
 
   .home-banner {
