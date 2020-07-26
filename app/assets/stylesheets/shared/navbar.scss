@@ -89,7 +89,6 @@
 
 .overlay a {
   width: auto;
-  padding: 0.5em;
   text-decoration: none;
   font-size: 2em;
   color: $purple !important;
@@ -118,7 +117,9 @@
   }
 
   .overlay .closebtn {
-    right: 8%;
+    position: absolute;
+    font-size: 3em;
+    cursor: pointer;
   }
 
   .icon {
