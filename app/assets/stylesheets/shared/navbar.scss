@@ -73,12 +73,13 @@
   overflow-y: hidden;
   transition: 0.5s;
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay-content {
-  position: relative;
-  top: 15%;
-  width: 100%;
   text-align: center;
 }
 
@@ -91,7 +92,7 @@
   width: auto;
   text-decoration: none;
   font-size: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   color: $purple !important;
   opacity: 1;
   display: block;
@@ -106,7 +107,7 @@
 .overlay .closebtn {
   position: absolute;
   right: 10%;
-  top: 5%;
+  top: 3%;
   font-size: 3em;
   cursor: pointer;
 }
