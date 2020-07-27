@@ -22,18 +22,7 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
-// -------------------- Smooth Scroll  -------------------- //
-function smoothScroll () {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
-    });
-  });
-}
 
 
 // External imports
@@ -45,7 +34,6 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
    gtag('config', 'UA-172748466-1', {'page_location': event.data.url});
-   smoothScroll();
   // initSelect2();.
 });
 
