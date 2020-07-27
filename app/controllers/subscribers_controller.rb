@@ -6,7 +6,7 @@ class SubscribersController < ApplicationController
   def create
     @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
-      redirect_to root_path, notice: 'Great! You are now Subcribed'
+      redirect_to root_path, notice: 'Great! You are now Subscribed'
     else
       redirect_to root_path, alert: 'Invalid Email, try again.'
     end
