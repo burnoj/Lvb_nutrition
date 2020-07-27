@@ -1,7 +1,7 @@
 .books-container {
   height: auto;
   display: grid;
-  grid-template-rows: 16vh 1fr 1fr 1fr 1fr 100vh 100vh 100vh;
+  grid-template-rows: 16vh auto auto auto auto 100vh 100vh 100vh;
   grid-template-columns: 1fr;
 }
 
