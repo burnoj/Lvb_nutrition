@@ -81,7 +81,7 @@ puts "seeding first 10 recipes with ingredients"
   salmon_fishcakes =  Recipe.create(
     name: "Salmon Fishcakes",
     description: "Salmon fishcakes are a family favourite for all ages. Once you have made them, you will be hooked! Salmon is rich in omega-3 essential fatty acids that play an important part in immune health. They also exhibit anti-inflammatory properties, useful in protecting against disease. Either fresh or canned salmon works well in this recipe.",
-    instructions: "Cover the salmon and bake, drizzled with olive oil and seasoned for 20-25 mins (depending on quantity) until cooked through. Once cooled remove skin and flake into a large mixing bowl./Peel and chop the potatoes and boil for 30 mins until soft. Mash and add to the salmon. Add the beaten egg and mix well./Chop the parsley and add to the bowl./Mix well, season and form into fish cakes/Cook in a little olive oil until golden brown on each side – don’t turn until the fishcake has turned brown golden and formed a crust./Serve with lots of green veg and your favourite sauce. My children love ‘pink sauce’ which is an equal quantity of mayonnaise and tomato sauce mixed well.",
+    instructions: "Cover the salmon and bake, drizzled with olive oil and seasoned for 20-25 mins (depending on quantity) until cooked through. Once cooled remove skin and flake into a large mixing bowl./Peel and chop the potatoes and boil for 30 mins until soft. Mash and add to the salmon. Add the beaten egg and mix well./Chop the parsley and add to the bowl./Mix well, season and form into fish cakes/Cook in a little olive oil until golden brown on each side – don’t turn until the fishcake has turned golden brown and formed a crust./Serve with lots of green veg and your favourite sauce. My children love ‘pink sauce’ which is an equal quantity of mayonnaise and tomato sauce mixed well.",
     image_url: "https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c3.0.1434.1434a/s640x640/97951797_961854617567085_1974269730559594976_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=109&_nc_ohc=stAHMi3DTBsAX8UHU5b&oh=99ecce692aa841033209cc01cba3b310&oe=5F34BEB1",
     vegan: false,
     vegetarian: false,
@@ -106,7 +106,7 @@ puts "seeding first 10 recipes with ingredients"
   panna = Recipe.create(
     name: "Panna",
     description: "You can’t beat this super easy, nutrient packed, recipe. I first published it in “Boost Your Child’s Immune System”. This new and improved version has a slightly more sophisticated twist but can be adapted to suit young children as well as older families. A fabulous superfood staple for all as well as students looking for healthy budget meals",
-    instructions: "In a pan, cook the onion and fennel in the olive oil on a gentle heat until soft./Add the spinach, garlic and couple of tbsps of water./Continue cooking gently until the spinach has wilted./Put all the ingredients in a blender and whizz for a couple of minutes. Use a spatula to sweep round the sides and do another quick blitz./Allow to cool and then pop in the fridge, covered, for a couple of hours./Serve with wholegrain bread, crackers, seed biscuits and salad or crudités.",
+    instructions: "In a pan, cook the onion and fennel in the olive oil on a gentle heat until soft./Add the spinach, garlic and couple of tbsps of water./Continue cooking gently until the spinach has wilted and the water has evaporated./Put all the ingredients in a blender and whizz for a couple of minutes. Use a spatula to sweep round the sides and do another quick blitz./Allow to cool and then pop in the fridge, covered, for a couple of hours./Serve with wholegrain bread, crackers, seed biscuits and salad or crudités.",
     image_url: "https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/104194165_3105328692848008_2271348305934889006_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=104&_nc_ohc=TqEnnr19InwAX-uXrZe&oh=c67aa67fc27d09210f21bbfb7822f2b8&oe=5F32A71E",
     vegan: false,
     vegetarian: false,
@@ -135,7 +135,7 @@ puts "seeding first 10 recipes with ingredients"
   RecipeIngredient.create(amount: "1 clove of", ingredient_id: garlic.id, recipe_id: panna.id, extra_info:"chopped")
   RecipeIngredient.create(amount: "A handful of", ingredient_id: parsley.id, recipe_id: panna.id, extra_info:"")
   RecipeIngredient.create(amount: "2 hard boiled", ingredient_id: eggs.id, recipe_id: panna.id, extra_info:"")
-  RecipeIngredient.create(amount: "1 tin 120g sardines", ingredient_id: sardines.id, recipe_id: panna.id, extra_info:"drained")
+  RecipeIngredient.create(amount: "1 tin 120g", ingredient_id: sardines.id, recipe_id: panna.id, extra_info:"drained")
   RecipeIngredient.create(amount: "5 fresh", ingredient_id: anchovy_fillets.id, recipe_id: panna.id, extra_info:"50g, or 1/2 a small tin: optional")
   RecipeIngredient.create(amount: "Juice of half a", ingredient_id: lemon.id, recipe_id: panna.id, extra_info:"")
 
@@ -189,8 +189,8 @@ puts "seeding first 10 recipes with ingredients"
   coriander = Ingredient.create(name: 'coriander')
 
   RecipeIngredient.create(amount: "400g", ingredient_id: raw_prawns.id, recipe_id: prawn_courgetti.id, extra_info:"100g per person")
-  RecipeIngredient.create(amount: "4 large", ingredient_id: courgettes.id, recipe_id: prawn_courgetti.id, extra_info:"spiralled")
-  RecipeIngredient.create(amount: "3 large", ingredient_id: carrots.id, recipe_id: prawn_courgetti.id, extra_info:"spiralled")
+  RecipeIngredient.create(amount: "4 large", ingredient_id: courgettes.id, recipe_id: prawn_courgetti.id, extra_info:"spiralized")
+  RecipeIngredient.create(amount: "3 large", ingredient_id: carrots.id, recipe_id: prawn_courgetti.id, extra_info:"spiralized")
   RecipeIngredient.create(amount: "4", ingredient_id: rice_noodle_nests.id, recipe_id: prawn_courgetti.id, extra_info:"")
   RecipeIngredient.create(amount: "2 cloves of", ingredient_id: garlic.id, recipe_id: prawn_courgetti.id, extra_info:"chopped")
   RecipeIngredient.create(amount: "1 tsp", ingredient_id: chilli_flakes.id, recipe_id: prawn_courgetti.id, extra_info:"optional")
@@ -227,7 +227,7 @@ puts "seeding first 10 recipes with ingredients"
   RecipeIngredient.create(amount: "4-5", ingredient_id: apples.id, recipe_id: apple_cake.id, extra_info:"roughly 500g, peeled and chopped")
   RecipeIngredient.create(amount: "125g, just over 1/2 a cup brown", ingredient_id: sugar.id, recipe_id: apple_cake.id, extra_info:"or sugar free Zucrin Gold")
   RecipeIngredient.create(amount: "2", ingredient_id: eggs.id, recipe_id: apple_cake.id, extra_info:"beaten")
-  RecipeIngredient.create(amount: "250g (2 cups) wholemeal", ingredient_id: flour.id, recipe_id: apple_cake.id, extra_info:"or self raising gluten free. If using plain  make sure you use some 1/2 tsp xanthum gum to blend the flour properly")
+  RecipeIngredient.create(amount: "250g (2 cups) wholemeal", ingredient_id: flour.id, recipe_id: apple_cake.id, extra_info:"or self raising gluten free (If using plain make sure you use some 1/2 tsp xanthum gum to blend the flour properly)")
   RecipeIngredient.create(amount: "2 tsp", ingredient_id: baking_powder.id, recipe_id: apple_cake.id, extra_info:"")
   RecipeIngredient.create(amount: "1 tsp", ingredient_id: mixed_spice.id, recipe_id: apple_cake.id, extra_info:"or ground cinnamon if none")
   RecipeIngredient.create(amount: "150 ml", ingredient_id: sunflower_oil.id, recipe_id: apple_cake.id, extra_info:"")

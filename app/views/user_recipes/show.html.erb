@@ -21,6 +21,10 @@
             <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
             <p><i class="far fa-clock" style="padding: 0 0.5em;"></i><%= @recipe.cooking_time %> mins</p>
             <p><i class="fas fa-user-friends" style="padding: 0 0.5em;"></i><%= @recipe.serves %></p>
+            <p style="padding-left: 1em;"><%= "VE" if @recipe.vegan %> </p>
+            <p style="padding-left: 0.5em;">  <%= "V" if @recipe.vegetarian %> </p>
+            <p style="padding-left: 0.5em;"> <%= "DF" if @recipe.dairy_free %> </p>
+            <p style="padding-left: 0.5em;"> <%= "GF" if @recipe.gluten_free %> </p>
           </div>
 
           <p><%= @recipe.description %></p>
