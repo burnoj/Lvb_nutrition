@@ -97,7 +97,7 @@ puts "seeding first 10 recipes with ingredients"
   parsley = Ingredient.create(name: 'parsley')
 
   RecipeIngredient.create(amount: "4", ingredient_id: salmon_fillet.id, recipe_id: salmon_fishcakes.id, extra_info:"1 per person")
-  RecipeIngredient.create(amount: "4", ingredient_id: potato.id, recipe_id: salmon_fishcakes.id, extra_info:"1per person")
+  RecipeIngredient.create(amount: "4", ingredient_id: potato.id, recipe_id: salmon_fishcakes.id, extra_info:"1 per person")
   RecipeIngredient.create(amount: "1", ingredient_id: egg.id, recipe_id: salmon_fishcakes.id, extra_info:"beaten")
   RecipeIngredient.create(amount: "1 large handful of", ingredient_id: parsley.id, recipe_id: salmon_fishcakes.id, extra_info:"or any herb of your liking, e.g chives, wild garlic")
 
