@@ -95,15 +95,16 @@
   width: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border: 1px solid #D2D2D2;
+  border-radius: 7px;
 }
 
 .dietary-key-items {
   margin: 0.25em !important;
   font-size: 0.8em;
-  border: 1px solid #D2D2D2;
   color: $black;
   padding: 0.25em 1em;
-  border-radius: 7px;
+  text-align: center;
 
 }
 
