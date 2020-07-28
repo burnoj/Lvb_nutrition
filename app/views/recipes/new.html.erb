@@ -1,13 +1,13 @@
 <%= simple_form_for(@recipe) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :instructions %>
+  <%= f.input :instructions, label: "Instructions (between each instruction, please insert a forward slash /, with no spaces either side)", placeholder: "e.g: Fill the bowl./Empty the bowl." %>
   <%= f.input :vegan, as: :boolean, checked_value: true, unchecked_value: false%>
   <%= f.input :vegetarian, as: :boolean, checked_value: true, unchecked_value: false%>
   <%= f.input :dairy_free, as: :boolean, checked_value: true, unchecked_value: false%>
   <%= f.input :gluten_free, as: :boolean, checked_value: true, unchecked_value: false%>
   <%= f.input :cooking_time, label: "Total Cooking Time (mins)"%>
-  <%= f.input :serves, collection: 1..8 %>
-  <%= f.input :image_url %>
+  <%= f.input :serves, collection: 1..10, label: "Serves (select 10 if for lots of people, will come out as 10+ on real page)" %>
+  <%= f.input :image_url, label: "Image Url: Get image url from instagram instructions: 1. Right click on insta page, 2. click inspect, 3. click the top left button of the window that just popped out, 4. click on the image you want, you will see a blue strip selected, 5. click the little arrow on the line above (left of <div class= KL4bH), 6. double click on first blue link you see, once it's hightlighted, delete it. double click the next blue link (should say src= just before the start) and paste it into the image url field in form on your website." %>
   <%= f.button :submit %>
 <% end %>
