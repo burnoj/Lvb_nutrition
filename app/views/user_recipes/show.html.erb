@@ -30,7 +30,7 @@
           <h4 class="ingredients">INGREDIENTS</h4>
           <ul>
           <% @recipe.recipe_ingredients.each do |ri| %>
-            <li><%= ri.amount %> <%= ri.ingredient.name %> (<%= ri.extra_info %>)</li>
+            <li><%= ri.amount %> <%= ri.ingredient.name %> <%= ri.extra_info %></li>
           <% end %>
           </ul>
 

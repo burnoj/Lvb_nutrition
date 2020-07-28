@@ -69,12 +69,12 @@ puts "seeding first 10 recipes with ingredients"
   medjool_dates = Ingredient.create(name: 'medjool dates')
   water = Ingredient.create(name: "water")
 
-  RecipeIngredient.create(amount: "3", ingredient_id: flour.id, recipe_id: date_and_almond_slices.id, extra_info: "or gluten free")
-  RecipeIngredient.create(amount: "1 large raw", ingredient_id: almonds.id, recipe_id: date_and_almond_slices.id, extra_info: "")
-  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: porridge_oats.id, recipe_id: date_and_almond_slices.id, extra_info: "")
-  RecipeIngredient.create(amount: "Chopped", ingredient_id: butter.id, recipe_id: date_and_almond_slices.id, extra_info: "vegan butter or unhydrogenated margarine")
-  RecipeIngredient.create(amount: "", ingredient_id: medjool_dates.id, recipe_id: date_and_almond_slices.id, extra_info: "pitted, or dried dates soaked in a little boiled water to soften")
-  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: water.id, recipe_id: date_and_almond_slices.id, extra_info: "")
+  RecipeIngredient.create(amount: "100g", ingredient_id: flour.id, recipe_id: date_and_almond_slices.id, extra_info: "or gluten free")
+  RecipeIngredient.create(amount: "75g", ingredient_id: almonds.id, recipe_id: date_and_almond_slices.id, extra_info: "")
+  RecipeIngredient.create(amount: "175g", ingredient_id: porridge_oats.id, recipe_id: date_and_almond_slices.id, extra_info: "")
+  RecipeIngredient.create(amount: "175g", ingredient_id: butter.id, recipe_id: date_and_almond_slices.id, extra_info: "vegan butter or unhydrogenated margarine")
+  RecipeIngredient.create(amount: "12", ingredient_id: medjool_dates.id, recipe_id: date_and_almond_slices.id, extra_info: "pitted, or dried dates soaked in a little boiled water to soften")
+  RecipeIngredient.create(amount: "2/3 tbsps", ingredient_id: water.id, recipe_id: date_and_almond_slices.id, extra_info: "")
 
 # -------------------- Salmon Fishcakes -------------------- #
 
@@ -97,7 +97,7 @@ puts "seeding first 10 recipes with ingredients"
   parsley = Ingredient.create(name: 'parsley')
 
   RecipeIngredient.create(amount: "4", ingredient_id: salmon_fillet.id, recipe_id: salmon_fishcakes.id, extra_info:"1 per person")
-  RecipeIngredient.create(amount: "4", ingredient_id: potato.id, recipe_id: salmon_fishcakes.id, extra_info:"1 per person")
+  RecipeIngredient.create(amount: "4", ingredient_id: potato.id, recipe_id: salmon_fishcakes.id, extra_info:"1per person")
   RecipeIngredient.create(amount: "1", ingredient_id: egg.id, recipe_id: salmon_fishcakes.id, extra_info:"beaten")
   RecipeIngredient.create(amount: "1 large handful of", ingredient_id: parsley.id, recipe_id: salmon_fishcakes.id, extra_info:"or any herb of your liking, e.g chives, wild garlic")
 
