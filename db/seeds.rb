@@ -218,7 +218,7 @@ puts "seeding first 10 recipes with ingredients"
   apples = Ingredient.create(name: 'apples')
   sugar = Ingredient.create(name: 'sugar')
   flour = Ingredient.create(name: 'flour')
-  baking_powder = Ingredient.create(name: 'baking_powder')
+  baking_powder = Ingredient.create(name: 'baking powder')
   mixed_spice = Ingredient.create(name: 'mixed spice')
   sunflower_oil = Ingredient.create(name: 'sunflower oil')
   cream_cheese = Ingredient.create(name: 'cream cheese')
