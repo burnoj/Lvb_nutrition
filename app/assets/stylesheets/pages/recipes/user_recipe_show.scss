@@ -45,11 +45,7 @@
   background-position: center;
 }
 
-.recipe-dietary-info-container {
-  display: flex;
-}
-
-  .recipe-dietary-info {
+ .recipe-dietary-info {
     margin-left: 0.5em;
   }
 
@@ -95,6 +91,15 @@
   .cooking-time-and-serves-show {
     display:flex;
     align-items: flex-start;
+  }
+
+  .recipe-dietary-info-container {
+  display: flex;
+}
+
+ .recipe-dietary-info {
+    margin-left: 0;
+    margin-right: 0.5em;
   }
 
   .info-1 {
