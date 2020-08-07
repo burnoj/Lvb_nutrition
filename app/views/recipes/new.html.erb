@@ -9,7 +9,7 @@
   <%= f.input :gluten_free, as: :boolean, checked_value: true, unchecked_value: false%>
   <%= f.input :cooking_time, label: "Total Cooking Time (mins)"%>
   <%= f.input :serves, collection: 1..10, label: "Serves (select 10 if for lots of people, will come out as 10+ on real page)" %>
-  <%= f.input :image_url, label: "Image Url: Get image url from instagram instructions: 1. Right click on insta page, 2. click inspect, 3. click the top left button of the window that just popped out, 4. click on the image you want, you will see a blue strip selected, 5. click the little arrow on the line above (left of <div class= KL4bH), 6. double click on first blue link you see, once it's hightlighted, delete it. double click the next blue link (should say src= just before the start) and paste it into the image url field in form on your website." %>
+  <%= f.input :image_url, label: "Image Url: copy the relevant link from the list (in your email) and paste it below" %>
   <%= f.button :submit %>
 <% end %>
 </div>
