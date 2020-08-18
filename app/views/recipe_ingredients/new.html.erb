@@ -1,8 +1,0 @@
-<%= render partial: "shared/navbar" %>
-
-<%= simple_form_for [@recipe, @recipe_ingredient] do |f| %>
-  <%= f.input :amount, placeholder: "e.g 1 slice of.. (everything preceding the ingredient basically)" %>
-  <%= f.input :ingredient_id, collection: Ingredient.all %>
-  <%= f.input :extra_info, placeholder: "e.g (chopped in chunks)" %>
-  <%= f.submit %>
-<% end %>
