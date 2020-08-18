@@ -35,6 +35,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'sendgrid-ruby'
 gem 'aws-sdk', '~> 3'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'pry-byebug'
