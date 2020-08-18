@@ -35,12 +35,8 @@
 
           <h4 class="ingredients">INGREDIENTS</h4>
           <ul>
-          <% @recipe.recipe_ingredients.each do |ri| %>
-            <% if ri.extra_info == "" %>
-            <li><%= ri.amount %> <%= ri.ingredient.name %></li>
-            <% else %>
-            <li><%= ri.amount %> <%= ri.ingredient.name %> (<%= ri.extra_info %>)</li>
-            <% end %>
+          <% @recipe.ingredients.each do |i| %>
+            <li><%= i.name %></li>
           <% end %>
           </ul>
 

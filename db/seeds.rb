@@ -23,29 +23,20 @@ puts "seeding first 10 recipes with ingredients"
     fact: "This recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!"
   )
 
-  carrots = Ingredient.create(name: 'carrots')
-  beetroot = Ingredient.create(name: 'beetroot')
-  sesame_seeds =Ingredient.create(name: 'sesame seeds')
-  walnuts = Ingredient.create(name: 'walnuts')
-  raisins = Ingredient.create(name: 'raisins')
-  salad_dressing = Ingredient.create(name: "Lucy's salad dressing")
-  dijon = Ingredient.create(name: 'dijon mustard')
-  honey = Ingredient.create(name: 'cold pressed runny honey')
-  garlic = Ingredient.create(name: 'small clove of garlic')
-  cider_vinegar = Ingredient.create(name: 'apple cider vinegar')
-  olive_oil = Ingredient.create(name: 'olive oil')
+  beetroot_salad.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "3", ingredient_id: carrots.id, recipe_id: beetroot_salad.id, extra_info:"peeled and grated")
-  RecipeIngredient.create(amount: "1 large raw", ingredient_id: beetroot.id, recipe_id: beetroot_salad.id, extra_info:"peeled and grated")
-  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: sesame_seeds.id, recipe_id: beetroot_salad.id, extra_info:"")
-  RecipeIngredient.create(amount: "Chopped", ingredient_id: walnuts.id, recipe_id: beetroot_salad.id, extra_info:"optional")
-  RecipeIngredient.create(amount: "", ingredient_id: raisins.id, recipe_id: beetroot_salad.id, extra_info:"optional")
-  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: salad_dressing.id, recipe_id: beetroot_salad.id, extra_info:"")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: dijon.id, recipe_id: beetroot_salad.id, extra_info:"")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: honey.id, recipe_id: beetroot_salad.id, extra_info:"")
-  RecipeIngredient.create(amount: "1", ingredient_id: garlic.id, recipe_id: beetroot_salad.id, extra_info:"crushed")
-  RecipeIngredient.create(amount: "3 tbsps", ingredient_id: cider_vinegar.id, recipe_id: beetroot_salad.id, extra_info:"")
-  RecipeIngredient.create(amount: "6 tbsps", ingredient_id: olive_oil.id, recipe_id: beetroot_salad.id, extra_info:"")
+  Ingredient.create(name: 'carrots', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'beetroot', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'sesame seeds', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'walnuts', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'raisins', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: "Lucy's salad dressing", recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'dijon mustard', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'cold pressed runny honey', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'small clove of garlic', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'apple cider vinegar', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'olive oil', recipe_id: beetroot_salad.id)
+
 
 # -------------------- Date and Almond Slices -------------------- #
 
@@ -62,19 +53,15 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10
   )
 
-  flour = Ingredient.create(name: 'plain wholemeal flour')
-  almonds = Ingredient.create(name: 'ground almonds')
-  porridge_oats =Ingredient.create(name: 'porridge oats')
-  butter = Ingredient.create(name: 'butter')
-  medjool_dates = Ingredient.create(name: 'medjool dates')
-  water = Ingredient.create(name: "water")
+  date_and_almond_slices.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "100g", ingredient_id: flour.id, recipe_id: date_and_almond_slices.id, extra_info: "or gluten free")
-  RecipeIngredient.create(amount: "75g", ingredient_id: almonds.id, recipe_id: date_and_almond_slices.id, extra_info: "")
-  RecipeIngredient.create(amount: "175g", ingredient_id: porridge_oats.id, recipe_id: date_and_almond_slices.id, extra_info: "")
-  RecipeIngredient.create(amount: "175g", ingredient_id: butter.id, recipe_id: date_and_almond_slices.id, extra_info: "vegan butter or unhydrogenated margarine")
-  RecipeIngredient.create(amount: "12", ingredient_id: medjool_dates.id, recipe_id: date_and_almond_slices.id, extra_info: "pitted, or dried dates soaked in a little boiled water to soften")
-  RecipeIngredient.create(amount: "2/3 tbsps", ingredient_id: water.id, recipe_id: date_and_almond_slices.id, extra_info: "")
+  Ingredient.create(name: 'plain wholemeal flour', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: 'ground almonds', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: 'porridge oats', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: 'butter', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: 'medjool dates', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: "water", recipe_id: date_and_almond_slices.id)
+
 
 # -------------------- Salmon Fishcakes -------------------- #
 
@@ -91,15 +78,13 @@ puts "seeding first 10 recipes with ingredients"
     serves: 4
   )
 
-  salmon_fillet = Ingredient.create(name: 'salmon fillet')
-  potato = Ingredient.create(name: 'large potato')
-  egg = Ingredient.create(name: 'egg')
-  parsley = Ingredient.create(name: 'parsley')
+  salmon_fishcakes.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "4", ingredient_id: salmon_fillet.id, recipe_id: salmon_fishcakes.id, extra_info:"1 per person")
-  RecipeIngredient.create(amount: "4", ingredient_id: potato.id, recipe_id: salmon_fishcakes.id, extra_info:"1 per person")
-  RecipeIngredient.create(amount: "1", ingredient_id: egg.id, recipe_id: salmon_fishcakes.id, extra_info:"beaten")
-  RecipeIngredient.create(amount: "1 large handful of", ingredient_id: parsley.id, recipe_id: salmon_fishcakes.id, extra_info:"or any herb of your liking, e.g chives, wild garlic")
+  Ingredient.create(name: 'salmon fillet', recipe_id: salmon_fishcakes.id )
+  Ingredient.create(name: 'large potato', recipe_id: salmon_fishcakes.id )
+  Ingredient.create(name: 'egg', recipe_id: salmon_fishcakes.id )
+  Ingredient.create(name: 'parsley', recipe_id: salmon_fishcakes.id )
+
 
   # -------------------- Salmon Fishcakes -------------------- #
 
@@ -116,28 +101,19 @@ puts "seeding first 10 recipes with ingredients"
     serves: 6
   )
 
-  olive_oil = Ingredient.create(name: 'olive oil')
-  onion = Ingredient.create(name: 'onion')
-  fennel = Ingredient.create(name: 'fennel bulb')
-  spinach = Ingredient.create(name: 'spinach')
-  tarragon = Ingredient.create(name: 'tarragon')
-  garlic = Ingredient.create(name: 'garlic')
-  eggs = Ingredient.create(name: 'eggs')
-  sardines = Ingredient.create(name: 'sardines')
-  anchovy_fillets = Ingredient.create(name: 'anchovy fillets')
-  lemon = Ingredient.create(name: 'lemon')
+  panna.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "1-2 tbsp", ingredient_id: olive_oil.id, recipe_id: panna.id, extra_info:"")
-  RecipeIngredient.create(amount: "1/2 a large", ingredient_id: onion.id, recipe_id: panna.id, extra_info:"chopped")
-  RecipeIngredient.create(amount: "1/2 a", ingredient_id: fennel.id, recipe_id: panna.id, extra_info:"chopped")
-  RecipeIngredient.create(amount: "A large bunch of", ingredient_id: spinach.id, recipe_id: panna.id, extra_info:"washed, shredded from stalks and chopped")
-  RecipeIngredient.create(amount: "a sprig of", ingredient_id: tarragon.id, recipe_id: panna.id, extra_info:"or 1 tsp dried tarragon")
-  RecipeIngredient.create(amount: "1 clove of", ingredient_id: garlic.id, recipe_id: panna.id, extra_info:"chopped")
-  RecipeIngredient.create(amount: "A handful of", ingredient_id: parsley.id, recipe_id: panna.id, extra_info:"")
-  RecipeIngredient.create(amount: "2 hard boiled", ingredient_id: eggs.id, recipe_id: panna.id, extra_info:"")
-  RecipeIngredient.create(amount: "1 tin 120g", ingredient_id: sardines.id, recipe_id: panna.id, extra_info:"drained")
-  RecipeIngredient.create(amount: "5 fresh", ingredient_id: anchovy_fillets.id, recipe_id: panna.id, extra_info:"50g, or 1/2 a small tin: optional")
-  RecipeIngredient.create(amount: "Juice of half a", ingredient_id: lemon.id, recipe_id: panna.id, extra_info:"")
+  Ingredient.create(name: 'olive oil', recipe_id: panna.id)
+  Ingredient.create(name: 'onion', recipe_id: panna.id)
+  Ingredient.create(name: 'fennel bulb', recipe_id: panna.id)
+  Ingredient.create(name: 'spinach', recipe_id: panna.id)
+  Ingredient.create(name: 'tarragon', recipe_id: panna.id)
+  Ingredient.create(name: 'garlic', recipe_id: panna.id)
+  Ingredient.create(name: 'eggs', recipe_id: panna.id)
+  Ingredient.create(name: 'sardines', recipe_id: panna.id)
+  Ingredient.create(name: 'anchovy fillets', recipe_id: panna.id)
+  Ingredient.create(name: 'lemon', recipe_id: panna.id)
+
 
 # -------------------- Elderflower Squash -------------------- #
 
@@ -154,16 +130,13 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10
   )
 
-  elder_flowers = Ingredient.create(name: 'elder flowers')
-  caster_sugar = Ingredient.create(name: 'caster sugar')
-  lemons = Ingredient.create(name: 'lemons')
-  apple_cider_vinegar = Ingredient.create(name: 'apple cider vinegar')
+  elderflower_squash.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "5 big heads of", ingredient_id: elder_flowers.id, recipe_id: elderflower_squash.id, extra_info:"shredded from their stalks")
-  RecipeIngredient.create(amount: "250g (11/2 cups)", ingredient_id: caster_sugar.id, recipe_id: elderflower_squash.id, extra_info:"or 3 tsp of liquid steviol")
-  RecipeIngredient.create(amount: "2 tbsps", ingredient_id: apple_cider_vinegar.id, recipe_id: elderflower_squash.id, extra_info:"")
-  RecipeIngredient.create(amount: "4 litres", ingredient_id: water.id, recipe_id: elderflower_squash.id, extra_info:"")
-  RecipeIngredient.create(amount: "2", ingredient_id: lemons.id, recipe_id: elderflower_squash.id, extra_info:"squeezed and quartered")
+  Ingredient.create(name: 'elder flowers', recipe_id: elderflower_squash.id)
+  Ingredient.create(name: 'caster sugar', recipe_id: elderflower_squash.id)
+  Ingredient.create(name: 'lemons', recipe_id: elderflower_squash.id)
+  Ingredient.create(name: 'apple cider vinegar', recipe_id: elderflower_squash.id)
+
 
   # -------------------- Prawn Courgetti -------------------- #
 
@@ -180,25 +153,16 @@ puts "seeding first 10 recipes with ingredients"
     serves: 3
   )
 
-  raw_prawns = Ingredient.create(name: 'raw prawns')
-  courgettes = Ingredient.create(name: 'courgettes')
-  rice_noodle_nests = Ingredient.create(name: 'rice noodle nests')
-  chilli_flakes = Ingredient.create(name: 'chilli flakes')
-  ginger = Ingredient.create(name: 'ginger')
-  sesame_oil = Ingredient.create(name: 'sesame oil')
-  coriander = Ingredient.create(name: 'coriander')
+  prawn_courgetti.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "400g", ingredient_id: raw_prawns.id, recipe_id: prawn_courgetti.id, extra_info:"100g per person")
-  RecipeIngredient.create(amount: "4 large", ingredient_id: courgettes.id, recipe_id: prawn_courgetti.id, extra_info:"spiralized")
-  RecipeIngredient.create(amount: "3 large", ingredient_id: carrots.id, recipe_id: prawn_courgetti.id, extra_info:"spiralized")
-  RecipeIngredient.create(amount: "4", ingredient_id: rice_noodle_nests.id, recipe_id: prawn_courgetti.id, extra_info:"")
-  RecipeIngredient.create(amount: "2 cloves of", ingredient_id: garlic.id, recipe_id: prawn_courgetti.id, extra_info:"chopped")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: chilli_flakes.id, recipe_id: prawn_courgetti.id, extra_info:"optional")
-  RecipeIngredient.create(amount: "A knob of", ingredient_id: ginger.id, recipe_id: prawn_courgetti.id, extra_info:"grated, thumbnail size")
-  RecipeIngredient.create(amount: "1-2 tbsps", ingredient_id: olive_oil.id, recipe_id: prawn_courgetti.id, extra_info:"")
-  RecipeIngredient.create(amount: "Juice of 1/2 a", ingredient_id: lemon.id, recipe_id: prawn_courgetti.id, extra_info:"")
-  RecipeIngredient.create(amount: "Sprinkle of", ingredient_id: sesame_oil.id, recipe_id: prawn_courgetti.id, extra_info:"and tamari sauce for noodles")
-  RecipeIngredient.create(amount: "Handful of fresh ", ingredient_id: coriander.id, recipe_id: prawn_courgetti.id, extra_info:"chopped")
+  Ingredient.create(name: 'raw prawns', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'courgettes', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'rice noodle nests', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'chilli flakes', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'ginger', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'sesame oil', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'coriander', recipe_id: prawn_courgetti.id)
+
 
   # -------------------- Salmon Fishcakes -------------------- #
 
@@ -215,25 +179,17 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10
   )
 
-  apples = Ingredient.create(name: 'apples')
-  sugar = Ingredient.create(name: 'sugar')
-  flour = Ingredient.create(name: 'flour')
-  baking_powder = Ingredient.create(name: 'baking powder')
-  mixed_spice = Ingredient.create(name: 'mixed spice')
-  sunflower_oil = Ingredient.create(name: 'sunflower oil')
-  cream_cheese = Ingredient.create(name: 'cream cheese')
-  vanilla_essence = Ingredient.create(name: 'vanilla essence')
+  apple_cake.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "4-5", ingredient_id: apples.id, recipe_id: apple_cake.id, extra_info:"roughly 500g, peeled and chopped")
-  RecipeIngredient.create(amount: "125g, just over 1/2 a cup brown", ingredient_id: sugar.id, recipe_id: apple_cake.id, extra_info:"or sugar free Zucrin Gold")
-  RecipeIngredient.create(amount: "2", ingredient_id: eggs.id, recipe_id: apple_cake.id, extra_info:"beaten")
-  RecipeIngredient.create(amount: "250g (2 cups) wholemeal", ingredient_id: flour.id, recipe_id: apple_cake.id, extra_info:"or self raising gluten free (If using plain make sure you use some 1/2 tsp xanthum gum to blend the flour properly)")
-  RecipeIngredient.create(amount: "2 tsp", ingredient_id: baking_powder.id, recipe_id: apple_cake.id, extra_info:"")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: mixed_spice.id, recipe_id: apple_cake.id, extra_info:"or ground cinnamon if none")
-  RecipeIngredient.create(amount: "150 ml", ingredient_id: sunflower_oil.id, recipe_id: apple_cake.id, extra_info:"")
-  RecipeIngredient.create(amount: "150g light", ingredient_id: cream_cheese.id, recipe_id: apple_cake.id, extra_info:"you can use more or less as you like")
-  RecipeIngredient.create(amount: "1 tbsp light brown", ingredient_id: sugar.id, recipe_id: apple_cake.id, extra_info:"or icing sugar")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: vanilla_essence.id, recipe_id: apple_cake.id, extra_info:"optional")
+  Ingredient.create(name: 'apples', recipe_id: apple_cake.id )
+  Ingredient.create(name: 'sugar', recipe_id: apple_cake.id )
+  Ingredient.create(name: 'flour', recipe_id: apple_cake.id )
+  Ingredient.create(name: 'baking powder', recipe_id: apple_cake.id )
+  Ingredient.create(name: 'mixed spice', recipe_id: apple_cake.id )
+  Ingredient.create(name: 'sunflower oil', recipe_id: apple_cake.id )
+  Ingredient.create(name: 'cream cheese', recipe_id: apple_cake.id )
+  Ingredient.create(name: 'vanilla essence', recipe_id: apple_cake.id )
+
 
   # -------------------- Stuffed Mushrooms -------------------- #
 
@@ -250,21 +206,15 @@ puts "seeding first 10 recipes with ingredients"
     serves: 4
   )
 
-  portabello_mushrooms = Ingredient.create(name: 'portabello mushrooms')
-  red_onion = Ingredient.create(name: 'red onion')
-  red_pepper = Ingredient.create(name: 'red pepper')
-  courgette = Ingredient.create(name: 'courgette')
-  chorizo = Ingredient.create(name: 'chorizo')
-  ricotta = Ingredient.create(name: 'ricotta')
+  stuffed_mushrooms.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "4 large", ingredient_id: portabello_mushrooms.id, recipe_id: stuffed_mushrooms.id, extra_info:"stalks removed")
-  RecipeIngredient.create(amount: "1", ingredient_id: red_onion.id, recipe_id: stuffed_mushrooms.id, extra_info:"chopped finely")
-  RecipeIngredient.create(amount: "1", ingredient_id: red_pepper.id, recipe_id: stuffed_mushrooms.id, extra_info:"diced")
-  RecipeIngredient.create(amount: "1", ingredient_id: courgette.id, recipe_id: stuffed_mushrooms.id, extra_info:"diced")
-  RecipeIngredient.create(amount: "2 cloves of", ingredient_id: garlic.id, recipe_id: stuffed_mushrooms.id, extra_info:"pressed")
-  RecipeIngredient.create(amount: "10cm length of", ingredient_id: chorizo.id, recipe_id: stuffed_mushrooms.id, extra_info:"diced, or puy lentils for vegan alternative")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: ricotta.id, recipe_id: stuffed_mushrooms.id, extra_info:"vegan cream cheese for each mushroom")
-  RecipeIngredient.create(amount: "a handful of", ingredient_id: parsley.id, recipe_id: stuffed_mushrooms.id, extra_info:"and basil, chopped")
+  Ingredient.create(name: 'portabello mushrooms', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: 'red onion', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: 'red pepper', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: 'courgette', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: 'chorizo', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: 'ricotta', recipe_id: stuffed_mushrooms.id)
+
 
   # -------------------- Seeded Oatcakes -------------------- #
 
@@ -281,15 +231,12 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10
   )
 
-  oats = Ingredient.create(name: 'oats')
-  chia_seeds = Ingredient.create(name: 'chia seeds')
-  vegan_margarine = Ingredient.create(name: 'vegan margarine')
+  oat_cakes.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "250g", ingredient_id: oats.id, recipe_id: oat_cakes.id, extra_info:"1 used porridge oats as all I had, Blitz half the oats in a food processor until finely ground. You can also use oatmeal but I haven’t tried this so let me know")
-  RecipeIngredient.create(amount: "2 tbsps", ingredient_id: chia_seeds.id, recipe_id: oat_cakes.id, extra_info:"covered in water and soaked for 30 mins")
-  RecipeIngredient.create(amount: "50 g (just under 1/2 cup)", ingredient_id: sesame_seeds.id, recipe_id: oat_cakes.id, extra_info:"")
-  RecipeIngredient.create(amount: "50g (1/4 cup)", ingredient_id: vegan_margarine.id, recipe_id: oat_cakes.id, extra_info:"or butter, melted")
-  RecipeIngredient.create(amount: "75ml (1/3 cup)", ingredient_id: water.id, recipe_id: oat_cakes.id, extra_info:"")
+  Ingredient.create(name: 'oats', recipe_id: oat_cakes.id )
+  Ingredient.create(name: 'chia seeds', recipe_id: oat_cakes.id )
+  Ingredient.create(name: 'vegan margarine', recipe_id: oat_cakes.id )
+
 
 
   # -------------------- Soda Bread -------------------- #
@@ -307,21 +254,14 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10
   )
 
-  natural_yoghurt = Ingredient.create(name: 'natural yoghurt')
-  bicarbonate_of_soda = Ingredient.create(name: 'bicarbonate of soda')
-  sea_salt = Ingredient.create(name: 'sea salt')
-  mixed_seeds = Ingredient.create(name: 'mixed seeds')
-  cumin_seeds = Ingredient.create(name: 'cumin seeds')
+  soda_bread.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "450g (1lb) wholemeal", ingredient_id: flour.id, recipe_id: soda_bread.id, extra_info:"")
-  RecipeIngredient.create(amount: "300ml (1heaped cup)", ingredient_id: natural_yoghurt.id, recipe_id: soda_bread.id, extra_info:"or buttermilk")
-  RecipeIngredient.create(amount: "1 heaped tsp", ingredient_id: bicarbonate_of_soda.id, recipe_id: soda_bread.id, extra_info:"")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: sea_salt.id, recipe_id: soda_bread.id, extra_info:"")
-  RecipeIngredient.create(amount: "1 tsp", ingredient_id: butter.id, recipe_id: soda_bread.id, extra_info:"melted")
-  RecipeIngredient.create(amount: "40ml (1/2 cup)", ingredient_id: water.id, recipe_id: soda_bread.id, extra_info:"")
-  RecipeIngredient.create(amount: "Melted", ingredient_id: butter.id, recipe_id: soda_bread.id, extra_info:"to brush surface")
-  RecipeIngredient.create(amount: "Handful", ingredient_id: mixed_seeds.id, recipe_id: soda_bread.id, extra_info:"")
-  RecipeIngredient.create(amount: "A sprinkle of", ingredient_id: cumin_seeds.id, recipe_id: soda_bread.id, extra_info:"optional")
+  Ingredient.create(name: 'natural yoghurt', recipe_id: soda_bread.id)
+  Ingredient.create(name: 'bicarbonate of soda', recipe_id: soda_bread.id)
+  Ingredient.create(name: 'sea salt', recipe_id: soda_bread.id)
+  Ingredient.create(name: 'mixed seeds', recipe_id: soda_bread.id)
+  Ingredient.create(name: 'cumin seeds', recipe_id: soda_bread.id)
+
 
   # -------------------- The Ultimate Cake -------------------- #
 
@@ -338,21 +278,11 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10
   )
 
-  sunflower_seeds = Ingredient.create(name: 'sunflower seeds')
-  dates = Ingredient.create(name: 'dates')
-  coconut_sugar = Ingredient.create(name: 'coconut sugar')
+  ultimate_cake.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-  RecipeIngredient.create(amount: "11/2 cups (200g) wholemeal", ingredient_id: flour.id, recipe_id: ultimate_cake.id, extra_info:"or gluten free")
-  RecipeIngredient.create(amount: "2 cups (240g)", ingredient_id: oats.id, recipe_id: ultimate_cake.id, extra_info:"I used porridge oats as all I had")
-  RecipeIngredient.create(amount: "2 tsp", ingredient_id: mixed_spice.id, recipe_id: ultimate_cake.id, extra_info:"cinnamon would do")
-  RecipeIngredient.create(amount: "3 level tsp", ingredient_id: baking_powder.id, recipe_id: ultimate_cake.id, extra_info:"")
-  RecipeIngredient.create(amount: "1/2 cup (75g)", ingredient_id: sunflower_seeds.id, recipe_id: ultimate_cake.id, extra_info:"")
-  RecipeIngredient.create(amount: "1 cup (100g)", ingredient_id: walnuts.id, recipe_id: ultimate_cake.id, extra_info:"broken into small pieces")
-  RecipeIngredient.create(amount: "500g", ingredient_id: dates.id, recipe_id: ultimate_cake.id, extra_info:"combine with other dried fruits if you don’t have enough dates) Soak them in boiling water for 1/2 hour, drain and blend lightly to create a mush")
-  RecipeIngredient.create(amount: "1", ingredient_id: courgette.id, recipe_id: ultimate_cake.id, extra_info:"grated")
-  RecipeIngredient.create(amount: "2", ingredient_id: carrots.id, recipe_id: ultimate_cake.id, extra_info:"grated")
-  RecipeIngredient.create(amount: "4 large organic", ingredient_id: eggs.id, recipe_id: ultimate_cake.id, extra_info:"")
-  RecipeIngredient.create(amount: "2 cups (440ml)", ingredient_id: sunflower_oil.id, recipe_id: ultimate_cake.id, extra_info:"")
-  RecipeIngredient.create(amount: " 1/4 cup (55g)", ingredient_id: coconut_sugar.id, recipe_id: ultimate_cake.id, extra_info:"or brown sugar, or sugar alternative")
+  Ingredient.create(name: 'sunflower seeds', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: 'dates', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: 'coconut sugar', recipe_id: ultimate_cake.id )
+
 
 puts "seeding done"

@@ -5,7 +5,7 @@
 <div class="recipes-show-recipe-container">
     <div class="recipes-show-recipe">
       <div class="recipe-show-img-container">
-        <div class='recipe-show-img' style="background-image: url(<%= @recipe.image_url %>)"></div>
+        <!-- <div class='recipe-show-img' style="background-image: url(<%= @recipe.image_url %>)"></div> -->
       </div>
 
       <div class="recipe-show-content-container">
@@ -25,15 +25,14 @@
           <p>--------------------------------------</p>
 
           <h4>INGREDIENTS</h4>
-          <p><%= link_to "create ingredient", new_ingredient_path %></p>
-          <p><%= link_to "add ingredient", new_recipe_recipe_ingredient_path(@recipe) %></p>
+          <p><%= link_to "add ingredient", new_ingredient_path(@recipe) %></p>
 
-          <% @recipe.recipe_ingredients.each do |ri| %>
+          <% @recipe.ingredients.each do |i| %>
            <%=  link_to "Delete ingredient",
-            recipe_ingredient_path(ri),
+            ingredient_path(i),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
-            <li><%= ri.amount %> <%= ri.ingredient.name %> <%= ri.extra_info %></li>
+            <li><%= i.name %></li>
           <% end %>
           </ul>
 
