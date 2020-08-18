@@ -1,7 +1,6 @@
 puts "resetting recipes & ingredients"
 
 Recipe.destroy_all
-Ingredient.destroy_all
 
 puts "resetting done"
 
@@ -19,10 +18,9 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 5,
     serves: 6,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/beetroot_salad.jpg",
     fact: "This recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!"
   )
-
-  # beetroot_salad.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'carrots', recipe_id: beetroot_salad.id)
   Ingredient.create(name: 'beetroot', recipe_id: beetroot_salad.id)
@@ -48,10 +46,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: true,
     dairy_free: true,
     cooking_time: 60,
-    serves: 10
+    serves: 10,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/date_and_almond_slices.jpg"
   )
-
-  # date_and_almond_slices.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'plain wholemeal flour', recipe_id: date_and_almond_slices.id)
   Ingredient.create(name: 'ground almonds', recipe_id: date_and_almond_slices.id)
@@ -72,10 +69,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: true,
     dairy_free: true,
     cooking_time: 50,
-    serves: 4
+    serves: 4,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/salmon_fishcakes.jpg"
   )
-
-  # salmon_fishcakes.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'salmon fillet', recipe_id: salmon_fishcakes.id )
   Ingredient.create(name: 'large potato', recipe_id: salmon_fishcakes.id )
@@ -94,10 +90,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: true,
     dairy_free: true,
     cooking_time: 30,
-    serves: 6
+    serves: 6,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/panna.jpg"
   )
-
-  # panna.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'olive oil', recipe_id: panna.id)
   Ingredient.create(name: 'onion', recipe_id: panna.id)
@@ -122,10 +117,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: true,
     dairy_free: true,
     cooking_time: 5,
-    serves: 10
+    serves: 10,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/elderflower_squash.jpg"
   )
-
-  # elderflower_squash.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'elder flowers', recipe_id: elderflower_squash.id)
   Ingredient.create(name: 'caster sugar', recipe_id: elderflower_squash.id)
@@ -144,10 +138,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: true,
     dairy_free: true,
     cooking_time: 30,
-    serves: 3
+    serves: 3,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/prawn_courgetti.jpg"
   )
-
-  # prawn_courgetti.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'raw prawns', recipe_id: prawn_courgetti.id)
   Ingredient.create(name: 'courgettes', recipe_id: prawn_courgetti.id)
@@ -169,10 +162,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: false,
     dairy_free: false,
     cooking_time: 55,
-    serves: 10
+    serves: 10,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/apple_cake.jpg"
   )
-
-  # apple_cake.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'apples', recipe_id: apple_cake.id )
   Ingredient.create(name: 'sugar', recipe_id: apple_cake.id )
@@ -195,10 +187,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: true,
     dairy_free: true,
     cooking_time: 30,
-    serves: 4
+    serves: 4,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/soda_bread.jpg"
   )
-
-  # stuffed_mushrooms.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'portabello mushrooms', recipe_id: stuffed_mushrooms.id)
   Ingredient.create(name: 'red onion', recipe_id: stuffed_mushrooms.id)
@@ -219,10 +210,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: true,
     dairy_free: true,
     cooking_time: 50,
-    serves: 10
+    serves: 10,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/oat_cakes.jpg"
   )
-
-  # oat_cakes.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'oats', recipe_id: oat_cakes.id )
   Ingredient.create(name: 'chia seeds', recipe_id: oat_cakes.id )
@@ -241,10 +231,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: true,
     dairy_free: true,
     cooking_time: 45,
-    serves: 10
+    serves: 10,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/soda_bread.jpg"
   )
-
-  # soda_bread.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'natural yoghurt', recipe_id: soda_bread.id)
   Ingredient.create(name: 'bicarbonate of soda', recipe_id: soda_bread.id)
@@ -264,10 +253,9 @@ puts "seeding first 10 recipes with ingredients"
     gluten_free: true,
     dairy_free: true,
     cooking_time: 75,
-    serves: 10
+    serves: 10,
+    image_url: "https://lucyburneyphotos.s3.eu-west-2.amazonaws.com/ultimate_cake.jpg"
   )
-
-  # ultimate_cake.image.attach(io: File.open('app/assets/images/pic.png'), filename: 'pic.png', content_type: 'image/png')
 
   Ingredient.create(name: 'sunflower seeds', recipe_id: ultimate_cake.id )
   Ingredient.create(name: 'dates', recipe_id: ultimate_cake.id )
