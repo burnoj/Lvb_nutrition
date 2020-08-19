@@ -8,10 +8,10 @@ Truemail.configure do |config|
   config.validation_type_for = { 'somedomain.com' => :mx }
 end
 
-all_subscribers = Subscriber.all
-p all_subscribers
-p "deleting invalid subscribers"
-all_subscribers.each do |s|
-  validation = Truemail.validate("#{s.email}", with: :regex)
-  validation.result[0] ? s : s.delete
+# all_subscribers = Subscriber.all
+# p all_subscribers
+# p "deleting invalid subscribers"
+# all_subscribers.each do |s|
+#   validation = Truemail.validate("#{s.email}", with: :regex)
+#   validation.result[0] ? s : s.delete
 end
