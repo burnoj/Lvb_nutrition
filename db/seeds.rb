@@ -1,3 +1,5 @@
+require "open-uri"
+
 puts "resetting recipes & ingredients"
 
 Recipe.destroy_all
@@ -18,9 +20,11 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 5,
     serves: 6,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767703/beetroot_salad_tinhel.jpg",
     fact: "This recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!"
   )
+
+  bs = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767703/beetroot_salad_tinhel.jpg')
+  beetroot_salad.image.attach(io: bs, filename: 'beetroot_salad_tinhel.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'carrots', recipe_id: beetroot_salad.id)
   Ingredient.create(name: 'beetroot', recipe_id: beetroot_salad.id)
@@ -47,8 +51,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 60,
     serves: 10,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767736/date_and_almond_slices_rarofs.jpg"
   )
+
+  daas = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767736/date_and_almond_slices_rarofs.jpg')
+  date_and_almond_slices.image.attach(io: daas, filename: 'date_and_almond_slices_rarofs.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'plain wholemeal flour', recipe_id: date_and_almond_slices.id)
   Ingredient.create(name: 'ground almonds', recipe_id: date_and_almond_slices.id)
@@ -70,8 +76,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 50,
     serves: 4,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767743/salmon_fishcakes_llehss.jpg"
   )
+
+  sf = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767736/date_and_almond_slices_rarofs.jpg')
+  salmon_fishcakes.image.attach(io: sf, filename: 'salmon_fishcakes_llehss.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'salmon fillet', recipe_id: salmon_fishcakes.id )
   Ingredient.create(name: 'large potato', recipe_id: salmon_fishcakes.id )
@@ -91,8 +99,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 30,
     serves: 6,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767742/panna_lbpx3q.jpg"
   )
+
+  pn = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767742/panna_lbpx3q.jpg')
+  panna.image.attach(io: pn, filename: 'panna_lbpx3q.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'olive oil', recipe_id: panna.id)
   Ingredient.create(name: 'onion', recipe_id: panna.id)
@@ -118,8 +128,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 5,
     serves: 10,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767747/elderflower_squash_kaym0a.jpg"
   )
+
+  eld = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767747/elderflower_squash_kaym0a.jpg')
+  elderflower_squash.image.attach(io: eld, filename: 'elderflower_squash_kaym0a.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'elder flowers', recipe_id: elderflower_squash.id)
   Ingredient.create(name: 'caster sugar', recipe_id: elderflower_squash.id)
@@ -139,8 +151,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 30,
     serves: 3,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767742/prawn_courgetti_mj6l84.jpg"
   )
+
+  pra = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767742/prawn_courgetti_mj6l84.jpg')
+  prawn_courgetti.image.attach(io: pra, filename: 'prawn_courgetti_mj6l84.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'raw prawns', recipe_id: prawn_courgetti.id)
   Ingredient.create(name: 'courgettes', recipe_id: prawn_courgetti.id)
@@ -163,8 +177,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: false,
     cooking_time: 55,
     serves: 10,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767673/apple_cake_l19ijz.jpg"
   )
+
+  app = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767673/apple_cake_l19ijz.jpg')
+  apple_cake.image.attach(io: app, filename: 'apple_cake_l19ijz.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'apples', recipe_id: apple_cake.id )
   Ingredient.create(name: 'sugar', recipe_id: apple_cake.id )
@@ -188,8 +204,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 30,
     serves: 4,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767744/stuffed_mushrooms_u9r2iz.jpg"
   )
+
+  stuf = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767744/stuffed_mushrooms_u9r2iz.jpg')
+  stuffed_mushrooms.image.attach(io: stuf, filename: 'stuffed_mushrooms_u9r2iz.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'portabello mushrooms', recipe_id: stuffed_mushrooms.id)
   Ingredient.create(name: 'red onion', recipe_id: stuffed_mushrooms.id)
@@ -211,8 +229,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 50,
     serves: 10,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767739/oat_cakes_nzx1zg.jpg"
   )
+
+  oat = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767739/oat_cakes_nzx1zg.jpg')
+  oat_cakes.image.attach(io: oat, filename: 'oat_cakes_nzx1zg.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'oats', recipe_id: oat_cakes.id )
   Ingredient.create(name: 'chia seeds', recipe_id: oat_cakes.id )
@@ -232,8 +252,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 45,
     serves: 10,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767749/soda_bread_rs0okl.jpg"
   )
+
+  soda = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767749/soda_bread_rs0okl.jpg')
+  soda_bread.image.attach(io: soda, filename: 'soda_bread_rs0okl.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'natural yoghurt', recipe_id: soda_bread.id)
   Ingredient.create(name: 'bicarbonate of soda', recipe_id: soda_bread.id)
@@ -254,8 +276,10 @@ puts "seeding first 10 recipes with ingredients"
     dairy_free: true,
     cooking_time: 75,
     serves: 10,
-    image_url: "https://res.cloudinary.com/du2453yi8/image/upload/v1597767745/ultimate_cake_ntxvm4.jpg"
   )
+
+  ult = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767745/ultimate_cake_ntxvm4.jpg')
+  ultimate_cake.image.attach(io: ult, filename: 'ultimate_cake_ntxvm4.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: 'sunflower seeds', recipe_id: ultimate_cake.id )
   Ingredient.create(name: 'dates', recipe_id: ultimate_cake.id )
