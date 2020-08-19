@@ -26,17 +26,17 @@ puts "seeding first 10 recipes with ingredients"
   bs = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767703/beetroot_salad_tinhel.jpg')
   beetroot_salad.image.attach(io: bs, filename: 'beetroot_salad_tinhel.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'carrots', recipe_id: beetroot_salad.id)
-  Ingredient.create(name: 'beetroot', recipe_id: beetroot_salad.id)
-  Ingredient.create(name: 'sesame seeds', recipe_id: beetroot_salad.id)
-  Ingredient.create(name: 'walnuts', recipe_id: beetroot_salad.id)
-  Ingredient.create(name: 'raisins', recipe_id: beetroot_salad.id)
-  Ingredient.create(name: "Lucy's salad dressing", recipe_id: beetroot_salad.id)
-  Ingredient.create(name: 'dijon mustard', recipe_id: beetroot_salad.id)
-  Ingredient.create(name: 'cold pressed runny honey', recipe_id: beetroot_salad.id)
-  Ingredient.create(name: 'small clove of garlic', recipe_id: beetroot_salad.id)
-  Ingredient.create(name: 'apple cider vinegar', recipe_id: beetroot_salad.id)
-  Ingredient.create(name: 'olive oil', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: '3 carrots (peeled and grated)', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: '1 large raw beetroot (peeled and grated)', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: '3 tbsps sesame seeds', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'Chopped walnuts (optional)', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: 'Raisins (optional)', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: "Lucy's salad dressing:", recipe_id: beetroot_salad.id)
+  Ingredient.create(name: '1 tsp dijon mustard', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: '1 tsp cold pressed runny honey', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: '1 small clove of garlic', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: '3 tbsps apple cider vinegar', recipe_id: beetroot_salad.id)
+  Ingredient.create(name: '6 tbspsolive oil', recipe_id: beetroot_salad.id)
 
 
 # -------------------- Date and Almond Slices -------------------- #
@@ -56,12 +56,12 @@ puts "seeding first 10 recipes with ingredients"
   daas = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767736/date_and_almond_slices_rarofs.jpg')
   date_and_almond_slices.image.attach(io: daas, filename: 'date_and_almond_slices_rarofs.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'plain wholemeal flour', recipe_id: date_and_almond_slices.id)
-  Ingredient.create(name: 'ground almonds', recipe_id: date_and_almond_slices.id)
-  Ingredient.create(name: 'porridge oats', recipe_id: date_and_almond_slices.id)
-  Ingredient.create(name: 'butter', recipe_id: date_and_almond_slices.id)
-  Ingredient.create(name: 'medjool dates', recipe_id: date_and_almond_slices.id)
-  Ingredient.create(name: "water", recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: '100g plain wholemeal flour (or gluten free)', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: '75g ground almonds', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: '175g porridge oats', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: '175g butter (vegan butter or unhydrogenated margarine)', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: '12 dates (pitted, or dried dates soaked in a little boiled water to soften)', recipe_id: date_and_almond_slices.id)
+  Ingredient.create(name: "2/3 tbsps water", recipe_id: date_and_almond_slices.id)
 
 
 # -------------------- Salmon Fishcakes -------------------- #
@@ -81,10 +81,10 @@ puts "seeding first 10 recipes with ingredients"
   sf = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767736/date_and_almond_slices_rarofs.jpg')
   salmon_fishcakes.image.attach(io: sf, filename: 'salmon_fishcakes_llehss.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'salmon fillet', recipe_id: salmon_fishcakes.id )
-  Ingredient.create(name: 'large potato', recipe_id: salmon_fishcakes.id )
-  Ingredient.create(name: 'egg', recipe_id: salmon_fishcakes.id )
-  Ingredient.create(name: 'parsley', recipe_id: salmon_fishcakes.id )
+  Ingredient.create(name: '4 salmon fillet (1 per person)', recipe_id: salmon_fishcakes.id )
+  Ingredient.create(name: '4 large potato (1 per person)', recipe_id: salmon_fishcakes.id )
+  Ingredient.create(name: '1 egg (beaten)', recipe_id: salmon_fishcakes.id )
+  Ingredient.create(name: '1 large handful of parsley (or any herb of your liking, e.g chives, wild garlic)', recipe_id: salmon_fishcakes.id )
 
 
   # -------------------- Salmon Fishcakes -------------------- #
@@ -104,16 +104,17 @@ puts "seeding first 10 recipes with ingredients"
   pn = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767742/panna_lbpx3q.jpg')
   panna.image.attach(io: pn, filename: 'panna_lbpx3q.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'olive oil', recipe_id: panna.id)
-  Ingredient.create(name: 'onion', recipe_id: panna.id)
-  Ingredient.create(name: 'fennel bulb', recipe_id: panna.id)
-  Ingredient.create(name: 'spinach', recipe_id: panna.id)
-  Ingredient.create(name: 'tarragon', recipe_id: panna.id)
-  Ingredient.create(name: 'garlic', recipe_id: panna.id)
-  Ingredient.create(name: 'eggs', recipe_id: panna.id)
-  Ingredient.create(name: 'sardines', recipe_id: panna.id)
-  Ingredient.create(name: 'anchovy fillets', recipe_id: panna.id)
-  Ingredient.create(name: 'lemon', recipe_id: panna.id)
+  Ingredient.create(name: '1-2 tbsps olive oil', recipe_id: panna.id)
+  Ingredient.create(name: '1/2 a large onion (chopped)', recipe_id: panna.id)
+  Ingredient.create(name: '1/2 a fennel bulb (chopped)', recipe_id: panna.id)
+  Ingredient.create(name: 'A large bunch of spinach (washed, shredded from stalks and chopped)', recipe_id: panna.id)
+  Ingredient.create(name: 'a sprig of tarragon (or 1 tsp dried tarragon)', recipe_id: panna.id)
+  Ingredient.create(name: '1 clove of garlic (chopped)', recipe_id: panna.id)
+  Ingredient.create(name: 'A handful of parsley', recipe_id: panna.id)
+  Ingredient.create(name: '2 hard boiled eggs', recipe_id: panna.id)
+  Ingredient.create(name: '1 tin 120g sardines (drained)', recipe_id: panna.id)
+  Ingredient.create(name: '5 fresh anchovy fillets (50g, or 1/2 a small tin: optional)', recipe_id: panna.id)
+  Ingredient.create(name: 'Juice of half a lemon', recipe_id: panna.id)
 
 
 # -------------------- Elderflower Squash -------------------- #
@@ -133,10 +134,10 @@ puts "seeding first 10 recipes with ingredients"
   eld = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767747/elderflower_squash_kaym0a.jpg')
   elderflower_squash.image.attach(io: eld, filename: 'elderflower_squash_kaym0a.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'elder flowers', recipe_id: elderflower_squash.id)
-  Ingredient.create(name: 'caster sugar', recipe_id: elderflower_squash.id)
-  Ingredient.create(name: 'lemons', recipe_id: elderflower_squash.id)
-  Ingredient.create(name: 'apple cider vinegar', recipe_id: elderflower_squash.id)
+  Ingredient.create(name: '5 big heads of elder flowers (shredded from their stalks)', recipe_id: elderflower_squash.id)
+  Ingredient.create(name: '250g (11/2 cups) caster sugar (or 3 tsp of liquid steviol)', recipe_id: elderflower_squash.id)
+  Ingredient.create(name: '4 litres of water', recipe_id: elderflower_squash.id)
+  Ingredient.create(name: '2 lemons (squeezed and quartered)', recipe_id: elderflower_squash.id)
 
 
   # -------------------- Prawn Courgetti -------------------- #
@@ -156,13 +157,16 @@ puts "seeding first 10 recipes with ingredients"
   pra = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767742/prawn_courgetti_mj6l84.jpg')
   prawn_courgetti.image.attach(io: pra, filename: 'prawn_courgetti_mj6l84.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'raw prawns', recipe_id: prawn_courgetti.id)
-  Ingredient.create(name: 'courgettes', recipe_id: prawn_courgetti.id)
-  Ingredient.create(name: 'rice noodle nests', recipe_id: prawn_courgetti.id)
-  Ingredient.create(name: 'chilli flakes', recipe_id: prawn_courgetti.id)
-  Ingredient.create(name: 'ginger', recipe_id: prawn_courgetti.id)
-  Ingredient.create(name: 'sesame oil', recipe_id: prawn_courgetti.id)
-  Ingredient.create(name: 'coriander', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: '400g raw prawns (100g per person)', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: '4 large courgettes (spiralized)', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: '3 large carrots (spiralized)', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: '4 rice noodle nests', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: '2 cloves of garlic (chopped)', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'Juice of 1/2 a lemon', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: '1 tsp chilli flakes (optional)', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'A knob of ginger (grated, thumbnail size)', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'Sprinkle of sesame oil (and tamari sauce for noodles)', recipe_id: prawn_courgetti.id)
+  Ingredient.create(name: 'Handful of fresh coriander (chopped)', recipe_id: prawn_courgetti.id)
 
 
   # -------------------- Salmon Fishcakes -------------------- #
@@ -182,14 +186,15 @@ puts "seeding first 10 recipes with ingredients"
   app = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767673/apple_cake_l19ijz.jpg')
   apple_cake.image.attach(io: app, filename: 'apple_cake_l19ijz.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'apples', recipe_id: apple_cake.id )
-  Ingredient.create(name: 'sugar', recipe_id: apple_cake.id )
-  Ingredient.create(name: 'flour', recipe_id: apple_cake.id )
-  Ingredient.create(name: 'baking powder', recipe_id: apple_cake.id )
-  Ingredient.create(name: 'mixed spice', recipe_id: apple_cake.id )
-  Ingredient.create(name: 'sunflower oil', recipe_id: apple_cake.id )
-  Ingredient.create(name: 'cream cheese', recipe_id: apple_cake.id )
-  Ingredient.create(name: 'vanilla essence', recipe_id: apple_cake.id )
+  Ingredient.create(name: '4-5 apples (roughly 500g, peeled and chopped)', recipe_id: apple_cake.id )
+  Ingredient.create(name: '125g, just over 1/2 a cup brown sugar (or sugar free Zucrin Gold)', recipe_id: apple_cake.id )
+  Ingredient.create(name: '2 eggs (beaten)', recipe_id: apple_cake.id )
+  Ingredient.create(name: '250g (2 cups) wholemeal flour (or self raising gluten free (If using plain make sure you use some 1/2 tsp xanthum gum to blend the flour properly))', recipe_id: apple_cake.id )
+  Ingredient.create(name: '2 tsp baking powder', recipe_id: apple_cake.id )
+  Ingredient.create(name: '1 tsp mixed spice (or ground cinnamon if none)', recipe_id: apple_cake.id )
+  Ingredient.create(name: '150ml sunflower oil', recipe_id: apple_cake.id )
+  Ingredient.create(name: '150g light cream cheese', recipe_id: apple_cake.id )
+  Ingredient.create(name: '1 tsp vanilla essence', recipe_id: apple_cake.id )
 
 
   # -------------------- Stuffed Mushrooms -------------------- #
@@ -209,12 +214,14 @@ puts "seeding first 10 recipes with ingredients"
   stuf = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767744/stuffed_mushrooms_u9r2iz.jpg')
   stuffed_mushrooms.image.attach(io: stuf, filename: 'stuffed_mushrooms_u9r2iz.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'portabello mushrooms', recipe_id: stuffed_mushrooms.id)
-  Ingredient.create(name: 'red onion', recipe_id: stuffed_mushrooms.id)
-  Ingredient.create(name: 'red pepper', recipe_id: stuffed_mushrooms.id)
-  Ingredient.create(name: 'courgette', recipe_id: stuffed_mushrooms.id)
-  Ingredient.create(name: 'chorizo', recipe_id: stuffed_mushrooms.id)
-  Ingredient.create(name: 'ricotta', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: '4 large portabello mushrooms (stalks removed)', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: '1 red onion (chopped finely)', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: '1 red pepper (diced)', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: '1 courgette (diced)', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: '2 cloves of garlic (pressed)', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: '10cm length of chorizo (diced, or puy lentils for vegan alternative)', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: '1 tsp ricotta (vegan cream cheese for each mushroom)', recipe_id: stuffed_mushrooms.id)
+  Ingredient.create(name: 'a handful of parsley (and basil, chopped)', recipe_id: stuffed_mushrooms.id)
 
 
   # -------------------- Seeded Oatcakes -------------------- #
@@ -234,9 +241,11 @@ puts "seeding first 10 recipes with ingredients"
   oat = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767739/oat_cakes_nzx1zg.jpg')
   oat_cakes.image.attach(io: oat, filename: 'oat_cakes_nzx1zg.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'oats', recipe_id: oat_cakes.id )
-  Ingredient.create(name: 'chia seeds', recipe_id: oat_cakes.id )
-  Ingredient.create(name: 'vegan margarine', recipe_id: oat_cakes.id )
+  Ingredient.create(name: '250g oats (1 used porridge oats as all I had, Blitz half the oats in a food processor until finely ground. You can also use oatmeal but I haven’t tried this so let me know)', recipe_id: oat_cakes.id )
+  Ingredient.create(name: '2 tbsps chia seeds (covered in water and soaked for 30 mins)', recipe_id: oat_cakes.id )
+  Ingredient.create(name: '50 g (just under 1/2 cup) sesame seeds', recipe_id: oat_cakes.id )
+  Ingredient.create(name: '50g (1/4 cup) vegan margarine (or butter, melted)', recipe_id: oat_cakes.id )
+  Ingredient.create(name: '75ml (1/3 cup) water', recipe_id: oat_cakes.id )
 
 
 
@@ -257,11 +266,15 @@ puts "seeding first 10 recipes with ingredients"
   soda = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767749/soda_bread_rs0okl.jpg')
   soda_bread.image.attach(io: soda, filename: 'soda_bread_rs0okl.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'natural yoghurt', recipe_id: soda_bread.id)
-  Ingredient.create(name: 'bicarbonate of soda', recipe_id: soda_bread.id)
-  Ingredient.create(name: 'sea salt', recipe_id: soda_bread.id)
-  Ingredient.create(name: 'mixed seeds', recipe_id: soda_bread.id)
-  Ingredient.create(name: 'cumin seeds', recipe_id: soda_bread.id)
+  Ingredient.create(name: '450g (1lb) wholemeal flour', recipe_id: soda_bread.id)
+  Ingredient.create(name: '300ml (1heaped cup) natural yoghurt (or buttermilk)', recipe_id: soda_bread.id)
+  Ingredient.create(name: '1 heaped tsp bicarbonate of soda', recipe_id: soda_bread.id)
+  Ingredient.create(name: '1 tsp sea salt', recipe_id: soda_bread.id)
+  Ingredient.create(name: '1 tsp butter (melted)', recipe_id: soda_bread.id)
+  Ingredient.create(name: '40ml (1/2 cup) water', recipe_id: soda_bread.id)
+  Ingredient.create(name: 'Melted butter (to brush surface)', recipe_id: soda_bread.id)
+  Ingredient.create(name: 'Handful mixed seeds', recipe_id: soda_bread.id)
+  Ingredient.create(name: 'A sprinkle of cumin seeds (optional)', recipe_id: soda_bread.id)
 
 
   # -------------------- The Ultimate Cake -------------------- #
@@ -281,9 +294,18 @@ puts "seeding first 10 recipes with ingredients"
   ult = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597767745/ultimate_cake_ntxvm4.jpg')
   ultimate_cake.image.attach(io: ult, filename: 'ultimate_cake_ntxvm4.jpg', content_type: 'image/jpg')
 
-  Ingredient.create(name: 'sunflower seeds', recipe_id: ultimate_cake.id )
-  Ingredient.create(name: 'dates', recipe_id: ultimate_cake.id )
-  Ingredient.create(name: 'coconut sugar', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '11/2 cups (200g) wholemeal flour (or gluten free)', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '2 cups (240g) oats (I used porridge oats as all I had)', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '2 tsp mixed spice (cinnamon would do)', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '3 level tsp baking powder', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '1/2 cup (75g) sunflower seeds', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '1 cup (100g) walnuts (broken into small pieces)', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '500g dates (combine with other dried fruits if you don’t have enough dates) Soak them in boiling water for 1/2 hour, drain and blend lightly to create a mush)', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '1 courgette (grated)', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '2 carrots (grated)', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '4 large organic eggs', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '2 cups (440ml) sunflower oil', recipe_id: ultimate_cake.id )
+  Ingredient.create(name: '1/4 cup (55g) coconut sugar (or brown sugar, or sugar alternative)', recipe_id: ultimate_cake.id )
 
 
 puts "seeding done"
