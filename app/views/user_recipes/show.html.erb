@@ -35,7 +35,7 @@
           <% @recipe.ingredients.each do |i| %>
             <% if i.name.include?(":") %>
               <p>-------</p>
-              <li><strong><%= i.name %></strong></li>
+              <strong><%= i.name %></strong>
             <% else %>
               <li><%= i.name %></li>
             <% end %>
@@ -50,7 +50,7 @@
           <% array.each do |r| %>
             <% if r.include?(":") %>
               <p>-------</p>
-              <li><strong><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></strong></li>
+              <strong><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></strong>
             <% else %>
               <li><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></li>
             <% end %>
