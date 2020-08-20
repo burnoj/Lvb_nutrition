@@ -23,7 +23,7 @@ puts "seeding first 10 recipes with ingredients"
     fact: "This recipe supplies a powerhouse of nutrients including betacarotene, vitamin C, folic acid, calcium, iron and potassium. A perfect immune booster!"
   )
 
-  bs = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597858931/IMG_4854_xzvray.jpg')
+  bs = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859740/z9vq402ca8bj8e0b9tbnhi6e7nj8.jpg')
   beetroot_salad.image.attach(io: bs, filename: 'beetroot_salad_tinhel.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '3 carrots (peeled and grated)', recipe_id: beetroot_salad.id)
@@ -53,7 +53,7 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10,
   )
 
-  daas = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859194/IMG_4723_q9ib4i.jpg')
+  daas = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859744/lyd1lcwrbvzl93i2yh7dhruir573.jpg')
   date_and_almond_slices.image.attach(io: daas, filename: 'date_and_almond_slices_rarofs.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '100g plain wholemeal flour (or gluten free)', recipe_id: date_and_almond_slices.id)
@@ -78,7 +78,7 @@ puts "seeding first 10 recipes with ingredients"
     serves: 4,
   )
 
-  sf = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859307/IMG_3204_kftwec.jpg')
+  sf = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859747/1rls24vd7cv0c561fqhxz9y1zxwj.jpg')
   salmon_fishcakes.image.attach(io: sf, filename: 'salmon_fishcakes_llehss.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '4 salmon fillet (1 per person)', recipe_id: salmon_fishcakes.id )
@@ -101,7 +101,7 @@ puts "seeding first 10 recipes with ingredients"
     serves: 6,
   )
 
-  pn = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859205/IMG_4335_jsoxqb.jpg')
+  pn = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859749/eqzs6d41x0c1bm1mmb8shaj286fm.jpg')
   panna.image.attach(io: pn, filename: 'panna_lbpx3q.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '1-2 tbsps olive oil', recipe_id: panna.id)
@@ -154,7 +154,7 @@ puts "seeding first 10 recipes with ingredients"
     serves: 3,
   )
 
-  pra = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859259/IMG_4056_o69qv6.jpg')
+  pra = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859754/g8n6cmz2tro7rr4p6adj0mswozg1.jpg')
   prawn_courgetti.image.attach(io: pra, filename: 'prawn_courgetti_mj6l84.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '400g raw prawns (100g per person)', recipe_id: prawn_courgetti.id)
@@ -183,7 +183,7 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10,
   )
 
-  app = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859282/IMG_4318_rlc44o.jpg')
+  app = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859757/cxz3ll011a8wim0cecz1uibrnfnb.jpg')
   apple_cake.image.attach(io: app, filename: 'apple_cake_l19ijz.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '4-5 apples (roughly 500g, peeled and chopped)', recipe_id: apple_cake.id )
@@ -211,7 +211,7 @@ puts "seeding first 10 recipes with ingredients"
     serves: 4,
   )
 
-  stuf = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859446/IMG_4478_fsanev.jpg')
+  stuf = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859760/dyn25g0bb5goetoii4spswupthd7.jpg')
   stuffed_mushrooms.image.attach(io: stuf, filename: 'stuffed_mushrooms_u9r2iz.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '4 large portabello mushrooms (stalks removed)', recipe_id: stuffed_mushrooms.id)
@@ -238,7 +238,7 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10,
   )
 
-  oat = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859244/IMG_3486_utwekk.jpg')
+  oat = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859762/dnqtes74hyx4ktexo138wa83gr1r.jpg')
   oat_cakes.image.attach(io: oat, filename: 'oat_cakes_nzx1zg.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '250g oats (1 used porridge oats as all I had, Blitz half the oats in a food processor until finely ground. You can also use oatmeal but I haven’t tried this so let me know)', recipe_id: oat_cakes.id )
@@ -263,7 +263,7 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10,
   )
 
-  soda = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859115/IMG_3244_auoqgd.jpg')
+  soda = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859764/fl9i501q6mhvapwij2z5h9vxqg97.jpg')
   soda_bread.image.attach(io: soda, filename: 'soda_bread_rs0okl.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '450g (1lb) wholemeal flour', recipe_id: soda_bread.id)
@@ -291,7 +291,7 @@ puts "seeding first 10 recipes with ingredients"
     serves: 10,
   )
 
-  ult = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859514/IMG_3684_uci02k.jpg')
+  ult = URI.open('https://res.cloudinary.com/du2453yi8/image/upload/v1597859767/48j08a3bl4k8n7d1rs1alrihdvwh.jpg')
   ultimate_cake.image.attach(io: ult, filename: 'ultimate_cake_ntxvm4.jpg', content_type: 'image/jpg')
 
   Ingredient.create(name: '11/2 cups (200g) wholemeal flour (or gluten free)', recipe_id: ultimate_cake.id )
