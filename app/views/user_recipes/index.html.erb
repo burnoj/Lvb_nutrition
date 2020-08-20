@@ -30,9 +30,7 @@
   </div>
 
   <div class="user-recipe-section-container">
-      <div>
-        <h2 style="text-align: center; font-size: 3em; padding-bottom: 0.5em; "> Lucy's Recipes </h2>
-      </div>
+    <div><h2 style="text-align: center; font-size: 3em; padding-bottom: 0.5em; "> Lucy's Recipes </h2></div>
     <div class="user-recipe-grid-top">
       <div class="user-recipes-dietary-key">
         <p class="dietary-key-items">V: Vegan </p>
@@ -40,7 +38,6 @@
         <p class="dietary-key-items">DF: Dairy Free </p>
         <p class="dietary-key-items">GF: Gluten Free</p>
       </div>
-
     </div>
 
     <div class="user-recipes-grid-container">
@@ -66,17 +63,19 @@
                 <% if r.gluten_free %>
                   <p class="white">GF</p>
                 <% end %>
-
               </div>
+
               <div class="recipe-name">
                 <h3><%= link_to r.name, user_recipe_path(r) %></h3>
               </div>
+
               <div class="cooking-time-and-serves">
                 <p><i class="far fa-clock" style="color: white; padding: 0 0.5em;"></i><%= r.cooking_time %> mins</p>
                 <p><i class="fas fa-user-friends" style="color: white; padding: 0 0.5em;"></i><%= r.serves == 10 ? "10+" : r.serves %></p>
               </div>
             </div>
           <% end %>
+
           </div>
         <% end %>
       </div>

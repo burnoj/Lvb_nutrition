@@ -1,6 +1,7 @@
 <%= render partial: "shared/anchor-link" %>
 
 <div class="recipes-show-container">
+
   <%= render partial: "shared/navbar" %>
 
   <div class="recipes-show-recipe-container"><a id="top" style="position: absolute; top: 0;"></a>
@@ -46,7 +47,11 @@
           <ol>
           <% array = @recipe.instructions.split("/") %>
           <% array.each do |r| %>
-            <li><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></li>
+            <% if r.include?(":") %>
+              <li><strong><u><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></u></strong></li>
+            <% else %>
+              <li><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></li>
+            <% end %>
           <% end %>
           </ol>
 
