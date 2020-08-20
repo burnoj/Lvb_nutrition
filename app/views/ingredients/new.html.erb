@@ -1,6 +1,6 @@
 <%= render partial: "shared/navbar" %>
 
-<%= simple_form_for(@ingredient) do |f| %>
+<%= simple_form_for [@recipe, @ingredient] do |f| %>
   <%= f.input :name, placeholder: "e.g carrot..." %>
   <%= f.button :submit %>
 <% end %>

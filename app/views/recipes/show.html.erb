@@ -29,7 +29,7 @@
 
           <% @recipe.ingredients.each do |i| %>
            <%=  link_to "Delete ingredient",
-            ingredient_path(i),
+            recipe_ingredients_path(i),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
             <li><%= i.name %></li>

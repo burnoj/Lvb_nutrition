@@ -1,10 +1,13 @@
 class IngredientsController < ApplicationController
   def new
+    @recipe = Recipe.find(params[:recipe_id])
     @ingredient = Ingredient.new
   end
 
   def create
+    @recipe = Recipe.find(params[:recipe_id])
     @ingredient = Ingredient.new(ingredient_params)
+    @ingredient.recipe = @recipe
     if @ingredient.save
       redirect_to recipes_path, notice: "ingredient added"
     else
