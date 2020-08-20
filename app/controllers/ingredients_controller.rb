@@ -9,7 +9,7 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new(ingredient_params)
     @ingredient.recipe = @recipe
     if @ingredient.save
-      redirect_to recipes_path, notice: "ingredient added"
+      redirect_to recipe_path(@recipe), notice: "ingredient added"
     else
       render :new, alert: "ingredient invalid or already exists"
     end

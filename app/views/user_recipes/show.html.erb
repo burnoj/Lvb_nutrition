@@ -32,7 +32,11 @@
           <h4 class="ingredients">INGREDIENTS</h4>
           <ul>
           <% @recipe.ingredients.each do |i| %>
-            <li><%= i.name %></li>
+            <% if i.name.include?(":") %>
+              <li><strong><%= i.name %></strong></li>
+            <% else %>
+              <li><%= i.name %></li>
+            <% end %>
           <% end %>
           </ul>
 
