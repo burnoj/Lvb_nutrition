@@ -48,6 +48,7 @@
           <% array = @recipe.instructions.split("/") %>
           <% array.each do |r| %>
             <% if r.include?(":") %>
+              <p>-------</p>
               <li><strong><u><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></u></strong></li>
             <% else %>
               <li><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></li>
