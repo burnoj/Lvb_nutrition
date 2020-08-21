@@ -7,7 +7,7 @@
   <%= f.input :dairy_free, as: :boolean, checked_value: true, unchecked_value: false%>
   <%= f.input :gluten_free, as: :boolean, checked_value: true, unchecked_value: false%>
   <%= f.input :cooking_time%>
-  <%= f.input :serves, collection: 1..8 %>
+  <%= f.input :serves, collection: 1..10 %>
   <%= f.input :image, as: :file %>
   <%= f.button :submit %>
 <% end %>
