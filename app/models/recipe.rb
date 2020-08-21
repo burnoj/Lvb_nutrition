@@ -7,4 +7,5 @@ class Recipe < ApplicationRecord
   validates :description, presence: true
   validates :instructions, presence: true
   validates :cooking_time, presence: true
+  validates :image, presence: true
 end
