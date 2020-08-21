@@ -21,8 +21,8 @@
             <p><i class="far fa-clock" style="padding: 0 0.5em;"></i><%= @recipe.cooking_time %> mins</p>
             <p><i class="fas fa-user-friends" style="padding: 0 0.5em;"></i><%= @recipe.serves %></p>
             <div class="recipe-dietary-info-container">
-              <p class="recipe-dietary-info info-1"><%= "VE" if @recipe.vegan %> </p>
-              <p class="recipe-dietary-info">  <%= "V" if @recipe.vegetarian %> </p>
+              <p class="recipe-dietary-info info-1"><%= "V" if @recipe.vegan %> </p>
+              <p class="recipe-dietary-info">  <%= "Ve" if @recipe.vegetarian %> </p>
               <p class="recipe-dietary-info"> <%= "DF" if @recipe.dairy_free %> </p>
               <p class="recipe-dietary-info"> <%= "GF" if @recipe.gluten_free %> </p>
             </div>
