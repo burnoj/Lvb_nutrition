@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   resources :subscribers, only: [:new, :create]
 
   resources :recipes do
-    resources :ingredients
+    resources :ingredients, only: [:new, :create, :edit, :update]
   end
+  resources :ingredients, only: [:destroy]
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
