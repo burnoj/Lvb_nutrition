@@ -1,11 +1,13 @@
-<%= render partial: "shared/navbar" %>
+<%= render partial: "shared/anchor-link" %>
 
+<div class="recipes-show-container">
 
+  <%= render partial: "shared/navbar" %>
 
-<div class="recipes-show-recipe-container">
+  <div class="recipes-show-recipe-container"><a id="top" style="position: absolute; top: 0;"></a>
     <div class="recipes-show-recipe">
       <div class="recipe-show-img-container">
-        <!-- <div class='recipe-show-img' style="background-image: url(<%= @recipe.image_url %>)"></div> -->
+        <div class='recipe-show-img' style="background-image: url('<%=cl_image_path @recipe.image.key, width: 400, height: 480, :fetch_format => :auto%>')"></div>
       </div>
 
       <div class="recipe-show-content-container">
@@ -13,39 +15,56 @@
           <h3><%= @recipe.name %></h3>
           <p><%= link_to "edit recipe", edit_recipe_path %></p>
           <p><%= link_to "Delete recipe", recipe_path(@recipe), method: :delete, data: { confirm: "Are you sure?" } %></p>
-          <div class="cooking-time-and-serves">
+          <div class="cooking-time-and-serves-show">
             <% mins = (@recipe.cooking_time.to_f % 60).to_i %>
             <% hours = ((@recipe.cooking_time - mins) / 60).to_i %>
-            <p> <%= hours == 0 ? "#{mins} mins" : "#{hours} hrs #{mins} mins" %></p>
-            <p>Serves <%= @recipe.serves %></p>
+            <p><i class="far fa-clock" style="padding: 0 0.5em;"></i><%= @recipe.cooking_time %> mins</p>
+            <p><i class="fas fa-user-friends" style="padding: 0 0.5em;"></i><%= @recipe.serves %></p>
+            <div class="recipe-dietary-info-container">
+              <p class="recipe-dietary-info info-1"><%= "VE" if @recipe.vegan %> </p>
+              <p class="recipe-dietary-info">  <%= "V" if @recipe.vegetarian %> </p>
+              <p class="recipe-dietary-info"> <%= "DF" if @recipe.dairy_free %> </p>
+              <p class="recipe-dietary-info"> <%= "GF" if @recipe.gluten_free %> </p>
+            </div>
           </div>
 
           <p><%= @recipe.description %></p>
 
-          <p>--------------------------------------</p>
+          <p>------------------------</p>
 
-          <h4>INGREDIENTS</h4>
+          <h4 class="ingredients">INGREDIENTS</h4>
           <p><%= link_to "add ingredient", new_recipe_ingredient_path(@recipe) %></p>
-
+          <ul>
           <% @recipe.ingredients.each do |i| %>
-           <%=  link_to "Delete ingredient",
+            <%=  link_to "Delete ingredient",
             recipe_ingredients_path(i),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
-            <li><%= i.name %></li>
+            <% if i.name.include?(":") %>
+              <p>-------</p>
+              <strong><%= i.name %></strong>
+            <% else %>
+              <li><%= i.name %></li>
+            <% end %>
           <% end %>
           </ul>
 
-          <p>--------------------------------------</p>
+          <p>------------------------</p>
 
-          <h3>Instructions</h3>
-
+          <h4 class="recipe-instructions">INSTRUCTIONS</h4>
+          <ol>
           <% array = @recipe.instructions.split("/") %>
-          <% array.each_with_index do |r, i| %>
-            <p><%= "#{i + 1}. #{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></p>
+          <% array.each do |r| %>
+            <% if r.include?(":") %>
+              <p>-------</p>
+              <strong><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></strong>
+            <% else %>
+              <li><%= "#{r.split(' ')[0].capitalize} #{r.split(' ')[1..-1].join(' ')}" %></li>
+            <% end %>
           <% end %>
+          </ol>
 
-           <p>--------------------------------------</p>
+           <p>------------------------</p>
 
           <% if @recipe.fact != nil %>
             <h3>Super Nutrition fact</h3>
@@ -58,3 +77,9 @@
       </div>
     </div>
   </div>
+
+  <%= render partial: "shared/books" %>
+
+  <%= render partial: "shared/footer" %>
+
+</div>

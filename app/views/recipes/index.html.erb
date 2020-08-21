@@ -1,26 +1,27 @@
+
+<%= render partial: "shared/anchor-link" %>
+
 <div class="recipes-index-container">
 
   <%= render partial: "shared/navbar" %>
 
-    <div class="recipe-of-the-day-container">
-        <p>------------------------------</p>
-        <%= link_to "new recipe", new_recipe_path %>
-        <p>------------------------------</p>
+  <div class="recipe-of-the-day-container"><a id="top" style="position: absolute; top: 0;"></a>
+    <p>------------------------------</p>
+    <%= link_to "new recipe", new_recipe_path %>
+    <p>------------------------------</p>
     <div class="recipe-of-the-day-border">
       <div class="recipe-of-the-day">
         <div class="recipe-of-the-day-img-container">
-          <!-- <div class="recipe-of-the-day-img" style="background-image: url(<%= @recipe_of_the_day.image_url %>)"> -->
-
-          </div>
+          <div class="recipe-of-the-day-img" style="background-image: url('<%=cl_image_path @recipe_of_the_day.image.key, width: 320, height: 420, :fetch_format => :auto%>')"></div>
         </div>
         <div class="recipe-of-the-day-content-container">
           <div class="recipe-of-the-day-content">
-            <h2 class="recipe-of-the-day-title">Recipe of the day</h2>
+            <h2 class="recipe-of-the-day-title">Recipe of the Day</h2>
             <h5><%= link_to @recipe_of_the_day.name, recipe_path(@recipe) %></h5>
-            <p class="recipe-of-the-day-description"><%= @recipe_of_the_day.description.split(".")[0] %></p>
+            <p class="recipe-of-the-day-description"><%= @recipe_of_the_day.description.split(".")[0] %>...</p>
             <h4>INGREDIENTS</h4>
-            <ul>
-            <% @recipe_of_the_day.ingredients.first(6).each do |i| %>
+            <ul class="recipe-of-the-day-ingredient-list">
+            <% @recipe_of_the_day.ingredients.first(3).each do |i| %>
             <li><%= i.name %></li>
             <% end %>
             </ul>
@@ -32,52 +33,58 @@
     </div>
   </div>
 
-  <div class="user-recipes-grid-container">
-    <div class="user-recipes-grid">
-      <% @recipes.each do |r| %>
-        <div class="recipe-index-img" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 100%, rgba(255, 255, 255, 0) 104.37%), url(<%= r.image_url %>)">
-        <%= link_to recipe_path(r) do %>
+  <div class="user-recipe-section-container">
+    <div><h2 style="text-align: center; font-size: 3em; padding-bottom: 0.5em; "> Lucy's Recipes </h2></div>
+    <div class="user-recipe-grid-top">
+      <div class="user-recipes-dietary-key">
+        <p class="dietary-key-items">V: Vegan </p>
+        <p class="dietary-key-items">Ve: Vegetarian </p>
+        <p class="dietary-key-items">DF: Dairy Free </p>
+        <p class="dietary-key-items">GF: Gluten Free</p>
+      </div>
+    </div>
 
-          <div class="recipe-grid">
-            <div class="recipe-type">
+    <div class="user-recipes-grid-container">
+      <div class="user-recipes-grid">
+        <% @recipes.each do |r| %>
+          <div class="recipe-index-img" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 100%, rgba(255, 255, 255, 0) 104.37%), url('<%=cl_image_path r.image.key, width: 290, height: 365, :fetch_format => :auto, :quality => :auto%>')">
+          <%= link_to recipe_path(r) do %>
 
-              <% if r.vegan %>
-               <div class="white-box">
-                 <div class="diet-icon vegan"></div>
+            <div class="recipe-grid">
+              <div class="recipe-type">
+                <% if r.vegan %>
+                  <p class="white">V</p>
+                <% end %>
+
+                <% if r.vegetarian %>
+                    <p class="white">Ve</p>
+                <% end %>
+
+                <% if r.dairy_free %>
+                  <p class="white">DF</p>
+                <% end %>
+
+                <% if r.gluten_free %>
+                  <p class="white">GF</p>
+                <% end %>
               </div>
-              <% end %>
 
-              <% if r.vegetarian %>
-              <div class="white-box">
-                 <div class="diet-icon vegetarian"></div>
+              <div class="recipe-name">
+                <h3><%= link_to r.name, recipe_path(r) %></h3>
               </div>
-              <% end %>
 
-              <% if r.dairy_free %>
-              <div class="white-box">
-                 <div class="diet-icon dairy_free"></div>
+              <div class="cooking-time-and-serves">
+                <p><i class="far fa-clock" style="color: white; padding: 0 0.5em;"></i><%= r.cooking_time %> mins</p>
+                <p><i class="fas fa-user-friends" style="color: white; padding: 0 0.5em;"></i><%= r.serves == 10 ? "10+" : r.serves %></p>
               </div>
-              <% end %>
-
-              <% if r.gluten_free %>
-              <div class="white-box">
-                 <div class="diet-icon gluten_free"></div>
-              </div>
-              <% end %>
-
             </div>
-            <div class="recipe-name">
-              <h3><%= link_to r.name, recipe_path(r) %></h3>
-            </div>
-            <div class="cooking-time-and-serves">
-              <p><%= r.cooking_time %> mins</p>
-              <p>Serves <%= r.serves %></p>
-            </div>
+          <% end %>
+
           </div>
         <% end %>
-        </div>
-      <% end %>
+      </div>
     </div>
+
   </div>
 
   <%= render partial: "shared/books" %>
