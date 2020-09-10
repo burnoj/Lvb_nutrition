@@ -8,10 +8,16 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
 
     number_generator = Random.new(daystamp)
-
-    random_recipe_id = number_generator.rand(1..25)
-    Recipe.find(random_recipe_id)
-    @recipe_of_the_day = Recipe.find(random_recipe_id - 5)
+    min_recipe_id = Recipe.minimum(:id)
+    max_recipe_id = Recipe.maximum(:id)
+    ids = @recipes.map { |r| r.id }
+    p ids
+    random_recipe_id = number_generator.rand(min_recipe_id..max_recipe_id)
+    if ids.include?(random_recipe_id)
+      @recipe_of_the_day = Recipe.find(random_recipe_id )
+    else
+      @recipe_of_the_day = Recipe.last
+    end
 
     @recipe = @recipe_of_the_day.id
   end
