@@ -8,9 +8,9 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
 
     number_generator = Random.new(daystamp)
-    ids = @recipes.map {|r| r.id}
 
     random_recipe_id = number_generator.rand(1..25)
+    Recipe.find(random_recipe_id)
     @recipe_of_the_day = Recipe.find(random_recipe_id - 5)
 
     @recipe = @recipe_of_the_day.id
