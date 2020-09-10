@@ -1,5 +1,4 @@
 class UserRecipesController < ApplicationController
-
   def daystamp
     Time.now.strftime("%y%m%d").to_i
   end
@@ -18,6 +17,10 @@ class UserRecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    render json: user
+  rescue ActiveRecord::RecordNotFound => e
+    logger.info e
+    return render json: { message: 'user id not found' }, status: :not_found
   end
 end
 
