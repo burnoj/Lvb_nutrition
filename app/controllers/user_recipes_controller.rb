@@ -9,8 +9,13 @@ class UserRecipesController < ApplicationController
     number_generator = Random.new(daystamp)
     min_recipe_id = Recipe.minimum(:id)
     max_recipe_id = Recipe.maximum(:id)
+    ids = @recipes.map { |r| r.id }
     random_recipe_id = number_generator.rand(min_recipe_id..max_recipe_id)
-    @recipe_of_the_day = Recipe.find(random_recipe_id)
+    if ids.include?(random_recipe_id)
+      @recipe_of_the_day = Recipe.find(random_recipe_id )
+    else
+      @recipe_of_the_day = Recipe.last
+    end
 
     @recipe = @recipe_of_the_day.id
   end
